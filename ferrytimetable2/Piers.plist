@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Central</string>
+		<key>location-lat</key>
+		<string>22.287319438993627</string>
+		<key>location-long</key>
+		<string>114.1593325138092</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NorthPoint</string>
+		<key>location-lat</key>
+		<string>22.294134380887005</string>
+		<key>location-long</key>
+		<string>114.20089066028595</string>
+	</dict>
+</array>
+</plist>

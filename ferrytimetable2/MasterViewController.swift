@@ -12,7 +12,12 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = NSMutableArray()
-
+    var islands = NSMutableArray()
+    
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+        self.changePier("Central")
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,13 +31,15 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = controllers[controllers.endIndex-1].topViewController as? DetailViewController
-        }
+        
+        let selectPierButton = UIBarButtonItem(title: "Select Pier", style: .Bordered, target: self, action: "selectPier:")
+        self.navigationItem.rightBarButtonItem = selectPierButton
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+//        self.navigationItem.rightBarButtonItem = addButton
+//        if let split = self.splitViewController {
+//            let controllers = split.viewControllers
+//            self.detailViewController = controllers[controllers.endIndex-1].topViewController as? DetailViewController
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,20 +73,20 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return islands.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = objects[indexPath.row] as NSDate
+        let object = islands[indexPath.row].objectForKey("name") as NSString
         cell.textLabel.text = object.description
         return cell
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -98,6 +105,19 @@ class MasterViewController: UITableViewController {
         }
     }
 
-
+    // #pragma mark - Data Source
+    
+    func selectPier (sender:UIBarButtonItem){
+        let selectViewController = UIViewController()
+        selectViewController.modalPresentationStyle = .Popover
+        let popPC = selectViewController.popoverPresentationController
+        popPC.barButtonItem = sender
+        popPC.permittedArrowDirections = .Any
+        presentModalViewController(selectViewController, animated: true)
+    }
+    func changePier (pier:NSString){
+        var path = NSBundle.mainBundle().pathForResource("Central", ofType: "plist");
+        islands = NSMutableArray(contentsOfFile: path);
+    }
 }
 

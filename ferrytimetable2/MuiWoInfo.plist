@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ToIslandPlistNormal</key>
+	<string>ToMuiWoNormal</string>
+	<key>ToIslandPlistSaturday</key>
+	<string>ToMuiWoSaturday</string>
+	<key>FromIslandPlistNormal</key>
+	<string>FromMuiWoNormal</string>
+	<key>ToIslandPlistHoliday</key>
+	<string>ToMuiWoHoliday</string>
+	<key>FromIslandPlistHoliday</key>
+	<string>FromMuiWoHoliday</string>
+	<key>TimeOfJourney-Slow</key>
+	<string>50</string>
+	<key>TimeOfJourney-Fast</key>
+	<string>35</string>
+	<key>PriceNormalSlow</key>
+	<string>$14.50</string>
+	<key>PriceNormalFast</key>
+	<string>$28.40</string>
+	<key>PriceHolidaySlow</key>
+	<string>$21.40</string>
+	<key>PriceHolidayFast</key>
+	<string>$40.80</string>
+	<key>dataLastRefreshTime</key>
+	<string>16/11/2013</string>
+	<key>pier-lat</key>
+	<string>22.265028337892318</string>
+	<key>pier-long</key>
+	<string>114.00212556123734</string>
+</dict>
+</plist>
