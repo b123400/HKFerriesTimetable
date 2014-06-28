@@ -138,14 +138,14 @@
 		CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWHoliday.plist; sourceTree = "<group>"; };
 		CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWNormal.plist; sourceTree = "<group>"; };
 		CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PierSelectTableViewController.swift; sourceTree = "<group>"; };
-		CFB6E09E195D439E00F83035 /* ferrytimetable2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ferrytimetable2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB6E09E195D439E00F83035 /* ferriestimetable2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ferriestimetable2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB6E0A2195D439E00F83035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB6E0A3195D439E00F83035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB6E0A5195D439E00F83035 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		CFB6E0A7195D439E00F83035 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CFB6E0AA195D439E00F83035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFB6E0AC195D439E00F83035 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CFB6E0B2195D439E00F83035 /* ferrytimetable2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ferrytimetable2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ferriestimetable2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB6E0B7195D439E00F83035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferrytimetable2Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,8 +322,8 @@
 		CFB6E09F195D439E00F83035 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFB6E09E195D439E00F83035 /* ferrytimetable2.app */,
-				CFB6E0B2195D439E00F83035 /* ferrytimetable2Tests.xctest */,
+				CFB6E09E195D439E00F83035 /* ferriestimetable2.app */,
+				CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,9 +371,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFB6E09D195D439E00F83035 /* ferrytimetable2 */ = {
+		CFB6E09D195D439E00F83035 /* ferriestimetable2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferrytimetable2" */;
+			buildConfigurationList = CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2" */;
 			buildPhases = (
 				CFB6E09A195D439E00F83035 /* Sources */,
 				CFB6E09B195D439E00F83035 /* Frameworks */,
@@ -383,14 +383,14 @@
 			);
 			dependencies = (
 			);
-			name = ferrytimetable2;
+			name = ferriestimetable2;
 			productName = ferrytimetable2;
-			productReference = CFB6E09E195D439E00F83035 /* ferrytimetable2.app */;
+			productReference = CFB6E09E195D439E00F83035 /* ferriestimetable2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFB6E0B1195D439E00F83035 /* ferrytimetable2Tests */ = {
+		CFB6E0B1195D439E00F83035 /* ferriestimetable2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferrytimetable2Tests" */;
+			buildConfigurationList = CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */;
 			buildPhases = (
 				CFB6E0AE195D439E00F83035 /* Sources */,
 				CFB6E0AF195D439E00F83035 /* Frameworks */,
@@ -401,9 +401,9 @@
 			dependencies = (
 				CFB6E0B4195D439E00F83035 /* PBXTargetDependency */,
 			);
-			name = ferrytimetable2Tests;
+			name = ferriestimetable2Tests;
 			productName = ferrytimetable2Tests;
-			productReference = CFB6E0B2195D439E00F83035 /* ferrytimetable2Tests.xctest */;
+			productReference = CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -424,7 +424,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferrytimetable2" */;
+			buildConfigurationList = CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferriestimetable2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -437,8 +437,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFB6E09D195D439E00F83035 /* ferrytimetable2 */,
-				CFB6E0B1195D439E00F83035 /* ferrytimetable2Tests */,
+				CFB6E09D195D439E00F83035 /* ferriestimetable2 */,
+				CFB6E0B1195D439E00F83035 /* ferriestimetable2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -542,7 +542,7 @@
 /* Begin PBXTargetDependency section */
 		CFB6E0B4195D439E00F83035 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CFB6E09D195D439E00F83035 /* ferrytimetable2 */;
+			target = CFB6E09D195D439E00F83035 /* ferriestimetable2 */;
 			targetProxy = CFB6E0B3195D439E00F83035 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,7 +645,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ferriestimetable2;
 			};
 			name = Debug;
 		};
@@ -656,7 +656,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ferriestimetable2;
 			};
 			name = Release;
 		};
@@ -675,7 +675,7 @@
 				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ferriestimetable2Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -691,7 +691,7 @@
 				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ferriestimetable2Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -699,7 +699,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferrytimetable2" */ = {
+		CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferriestimetable2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFB6E0BA195D439E00F83035 /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferrytimetable2" */ = {
+		CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFB6E0BD195D439E00F83035 /* Debug */,
@@ -717,7 +717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferrytimetable2Tests" */ = {
+		CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFB6E0C0195D439E00F83035 /* Debug */,
