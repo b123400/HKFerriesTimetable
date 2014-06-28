@@ -8,15 +8,14 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var objects = NSMutableArray()
+    var currentPier : Pier = Pier.Central
     var islands = NSMutableArray()
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-        self.changePier("Central")
     }
 
     override func awakeFromNib() {
@@ -29,17 +28,11 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.changePier(.Central)
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         let selectPierButton = UIBarButtonItem(title: "Select Pier", style: .Bordered, target: self, action: "selectPier:")
         self.navigationItem.rightBarButtonItem = selectPierButton
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-//        self.navigationItem.rightBarButtonItem = addButton
-//        if let split = self.splitViewController {
-//            let controllers = split.viewControllers
-//            self.detailViewController = controllers[controllers.endIndex-1].topViewController as? DetailViewController
-//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,23 +40,14 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        if objects == nil {
-            objects = NSMutableArray()
-        }
-        objects.insertObject(NSDate.date(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-
     // #pragma mark - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            let object = objects[indexPath.row] as NSDate
-            ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).detailItem = object
-        }
+//        if segue.identifier == "showDetail" {
+//            let indexPath = self.tableView.indexPathForSelectedRow()
+//            let object = objects[indexPath.row] as NSDate
+//            ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).detailItem = object
+//        }
     }
 
     // #pragma mark - Table View
@@ -84,40 +68,39 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return false
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            let object = objects[indexPath.row] as NSDate
-            self.detailViewController!.detailItem = object
-        }
-    }
-
     // #pragma mark - Data Source
     
     func selectPier (sender:UIBarButtonItem){
-        let selectViewController = UIViewController()
+        let selectViewController = PierSelectTableViewController(selectedPier: currentPier)
+        selectViewController.delegate = self
         selectViewController.modalPresentationStyle = .Popover
         let popPC = selectViewController.popoverPresentationController
         popPC.barButtonItem = sender
         popPC.permittedArrowDirections = .Any
+        popPC.delegate = self
         presentModalViewController(selectViewController, animated: true)
     }
-    func changePier (pier:NSString){
-        var path = NSBundle.mainBundle().pathForResource("Central", ofType: "plist");
+    func changePier (pier:Pier){
+        currentPier = pier
+        var path = NSBundle.mainBundle().pathForResource(pier.toRaw(), ofType: "plist");
         islands = NSMutableArray(contentsOfFile: path);
+        tableView.reloadData()
+    }
+    
+    func pierSelectTableViewController(vc:PierSelectTableViewController,didSelected pier:Pier){
+        changePier(pier)
+        dismissModalViewControllerAnimated(true)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+        return .FullScreen
+    }
+    
+    func presentationController(controller: UIPresentationController!,
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+        
+            let navController = UINavigationController(rootViewController: controller.presentedViewController)
+            return navController
     }
 }
 
