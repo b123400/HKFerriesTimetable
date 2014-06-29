@@ -31,8 +31,8 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         self.changePier(.Central)
         // Do any additional setup after loading the view, typically from a nib.
         
-        let selectPierButton = UIBarButtonItem(title: "Select Pier", style: .Bordered, target: self, action: "selectPier:")
-        self.navigationItem.rightBarButtonItem = selectPierButton
+//        let selectPierButton = UIBarButtonItem(title: "Select Pier", style: .Bordered, target: self, action: "selectPier:")
+//        self.navigationItem.rightBarButtonItem = selectPierButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +85,16 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         var path = NSBundle.mainBundle().pathForResource(pier.toRaw(), ofType: "plist");
         islands = NSMutableArray(contentsOfFile: path);
         tableView.reloadData()
+    }
+    @IBAction func changePier(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            changePier(.Central)
+        case 1:
+            changePier(.NorthPoint)
+        default:
+            break
+        }
     }
     
     func pierSelectTableViewController(vc:PierSelectTableViewController,didSelected pier:Pier){
