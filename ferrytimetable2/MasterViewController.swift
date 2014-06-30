@@ -47,8 +47,6 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             let islandDict = islands[indexPath.row] as NSDictionary
             let island = Island(dictionary: islandDict)
-            let detailNavController = splitViewController.viewControllers[1] as UINavigationController
-            let detailController = detailNavController.topViewController as DetailViewController
             ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).island = island
         }
     }
@@ -119,9 +117,13 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     
     // #pragma mark - Split view
     
-    func splitViewController(splitController: UISplitViewController, willHideViewController viewController: UIViewController, withBarButtonItem barButtonItem: UIBarButtonItem, forPopoverController popoverController: UIPopoverController) {
+    func splitViewController(
+                                splitController  : UISplitViewController,
+         willHideViewController viewController   : UIViewController,
+              withBarButtonItem barButtonItem    : UIBarButtonItem,
+           forPopoverController popoverController: UIPopoverController) {
 //        barButtonItem.title = "Master" // NSLocalizedString(@"Master", @"Master")
-        self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
+//        self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
 //        self.masterPopoverController = popoverController
     }
     
@@ -133,6 +135,10 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     func splitViewController(splitController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
         return true
+    }
+    
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController!) -> UISplitViewControllerDisplayMode{
+        return .AllVisible
     }
     
 //    func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController!) -> Int {

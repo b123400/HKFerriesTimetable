@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[0] as UINavigationController
         splitViewController.delegate = navigationController.topViewController as MasterViewController
+        splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         return true
     }
 
