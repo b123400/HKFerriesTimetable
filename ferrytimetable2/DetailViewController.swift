@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet var detailDescriptionLabel: UILabel
+    @IBOutlet var tableView: UITableView
 //    var masterPopoverController: UIPopoverController? = nil
 
     var island: Island? {
@@ -26,11 +26,6 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: Island = self.island {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.name
-            }
-        }
     }
 
     override func viewDidLoad() {
