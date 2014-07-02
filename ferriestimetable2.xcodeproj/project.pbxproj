@@ -70,6 +70,7 @@
 		CFB6E0AB195D439E00F83035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0A9195D439E00F83035 /* Main.storyboard */; };
 		CFB6E0AD195D439E00F83035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0AC195D439E00F83035 /* Images.xcassets */; };
 		CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */; };
+		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ferriestimetable2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB6E0B7195D439E00F83035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferrytimetable2Tests.swift; sourceTree = "<group>"; };
+		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 				CFB6E0A9195D439E00F83035 /* Main.storyboard */,
 				CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */,
 				CF6515B2196062DD005626C0 /* Island.swift */,
+				CFDA3C72196434710079E924 /* Ferry.swift */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
 				CFB6E0AC195D439E00F83035 /* Images.xcassets */,
 				CFB6E0A1195D439E00F83035 /* Supporting Files */,
@@ -525,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDA3C73196434710079E924 /* Ferry.swift in Sources */,
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
 				CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */,
 				CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */,

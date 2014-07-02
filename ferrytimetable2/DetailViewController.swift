@@ -8,13 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView
 //    var masterPopoverController: UIPopoverController? = nil
-
+    var currentTimetable : Ferry[] = []
+    
     var island: Island? {
         didSet {
+            currentTimetable = island!.getFerriesForDate(NSDate())
             // Update the view.
             self.configureView()
             
@@ -26,6 +28,7 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
+        tableView?.reloadData()
     }
 
     override func viewDidLoad() {
@@ -37,6 +40,24 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // #pragma mark - Table View
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentTimetable.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
+        let ferry = currentTimetable[indexPath.row]
+        cell.textLabel.text = ferry.time
+        return cell
     }
 }
 
