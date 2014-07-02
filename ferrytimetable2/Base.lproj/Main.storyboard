@@ -35,19 +35,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="flh-cW-Hty">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="44" id="flh-cW-Hty" customClass="FerryTimeTableViewCell" customModule="ferriestimetable2" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flh-cW-Hty" id="vFd-fl-o1r">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXG-PI-TAX">
-                                                    <rect key="frame" x="34" y="11" width="251" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXG-PI-TAX">
+                                                    <rect key="frame" x="20" y="11" width="251" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="251" id="7Rr-x1-qfF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
+                                                    <rect key="frame" x="460" y="1" width="20" height="45"/>
+                                                    <color key="backgroundColor" red="1" green="0.0020682545409999998" blue="0.50217481019999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="fCb-qY-n7n"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="1" id="6YL-Yi-dhx"/>
+                                                <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="M8K-TM-1lD"/>
+                                                <constraint firstAttribute="bottom" secondItem="qXG-PI-TAX" secondAttribute="bottom" constant="11" id="Qbg-eA-HNg"/>
+                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vFd-fl-o1r" secondAttribute="top" constant="1" id="T1X-UN-FP7"/>
+                                                <constraint firstItem="qXG-PI-TAX" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="11" id="T3B-gO-Wbo"/>
+                                                <constraint firstItem="qXG-PI-TAX" firstAttribute="leading" secondItem="vFd-fl-o1r" secondAttribute="leading" constant="20" id="p4s-UR-H1S"/>
+                                                <constraint firstAttribute="bottom" secondItem="97w-Mu-dzz" secondAttribute="bottom" constant="-3" id="u5z-he-A6d"/>
+                                                <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="ukX-RI-mQX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="qXG-PI-TAX" id="o3v-x2-pla"/>
+                                            <outlet property="typeColorView" destination="97w-Mu-dzz" id="8bT-fJ-jRd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -73,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="29"/>
+            <point key="canvasLocation" x="604" y="27"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

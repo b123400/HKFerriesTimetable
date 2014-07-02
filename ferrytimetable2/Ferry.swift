@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum FerryType : String{
+    case Slow = "slow"
+    case Fast = "fast"
+    case Optional = "optional"
+}
+
 class Ferry: NSObject {
     let dict:NSDictionary
     init(dictionary:NSDictionary) {
@@ -18,6 +24,14 @@ class Ferry: NSObject {
     var time : String {
         get {
             return dict.objectForKey("time") as String
+        }
+    }
+    
+    var type : FerryType {
+        get {
+            let kind = dict.objectForKey("kind") as String
+            let type = FerryType.fromRaw(kind)
+            return type!
         }
     }
 }

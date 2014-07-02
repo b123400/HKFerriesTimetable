@@ -20,9 +20,6 @@ class DetailViewController: UIViewController, UITableViewDataSource {
             // Update the view.
             self.configureView()
             
-//            if self.masterPopoverController != nil {
-//                self.masterPopoverController!.dismissPopoverAnimated(true)
-//            }
         }
     }
 
@@ -35,6 +32,8 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,10 +52,20 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as FerryTimeTableViewCell
+        
         let ferry = currentTimetable[indexPath.row]
-        cell.textLabel.text = ferry.time
+        cell.timeLabel.text = ferry.time
+        switch ferry.type {
+        case .Slow:
+            cell.typeColorView.backgroundColor = UIColor(red: 53/255.0, green: 221/255.0, blue: 112/255.0, alpha: 1.0)
+        case .Optional:
+            cell.typeColorView.backgroundColor = UIColor(red:244/255.0, green: 209/255.0, blue:70/255.0, alpha: 1.0)
+        case .Fast:
+            cell.typeColorView.backgroundColor = UIColor(red:255/255.0, green: 1/255.0, blue:128/255.0, alpha: 1.0)
+        default:
+            break;
+        }
         return cell
     }
 }
