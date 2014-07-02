@@ -81,10 +81,6 @@
 		<string>slow</string>
 	</dict>
 	<dict>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
 		<key>time</key>
 		<string>1130</string>
 		<key>kind</key>
@@ -97,16 +93,8 @@
 		<string>slow</string>
 	</dict>
 	<dict>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
 		<key>time</key>
 		<string>1330</string>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
 		<key>kind</key>
 		<string>slow</string>
 	</dict>
@@ -125,10 +113,6 @@
 	<dict>
 		<key>time</key>
 		<string>1630</string>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
 		<key>kind</key>
 		<string>slow</string>
 	</dict>
