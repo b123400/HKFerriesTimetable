@@ -14,6 +14,11 @@ enum FerryType : String{
     case Optional = "optional"
 }
 
+enum Direction {
+    case ToIsland, FromIsland
+    case Unknown
+}
+
 class Ferry: NSObject {
     let dict:NSDictionary
     init(dictionary:NSDictionary) {
@@ -34,4 +39,6 @@ class Ferry: NSObject {
             return type!
         }
     }
+    
+    var direction : Direction = .Unknown;
 }

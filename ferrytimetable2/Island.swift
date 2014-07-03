@@ -32,8 +32,16 @@ class Island: NSObject {
         }
     }
     
-    func getFerriesForDate(date:NSDate) -> Ferry[] {
-        let timeString = detailDict.objectForKey("ToIslandPlistNormal")as String
+    func getFerriesForDate(date:NSDate, direction:Direction) -> Ferry[] {
+        var directionString:String;
+        if direction == Direction.ToIsland {
+            directionString = "To"
+        } else {
+            directionString = "From"
+        }
+        let dateString:String = date.isHoliday() ? "Holiday" : "Normal"
+        NSLog( dateString )
+        let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)")as String
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
         let ferries = arr.map({
             (var thisTime) -> Ferry in

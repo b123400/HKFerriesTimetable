@@ -16,7 +16,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     
     var island: Island? {
         didSet {
-            currentTimetable = island!.getFerriesForDate(NSDate())
+            currentTimetable = island!.getFerriesForDate(NSDate(), direction: .ToIsland)
             // Update the view.
             self.configureView()
             
