@@ -40,7 +40,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         // Dispose of any resources that can be recreated.
     }
 
-    // #pragma mark - Segues
+    // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
@@ -51,7 +51,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         }
     }
 
-    // #pragma mark - Table View
+    // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,7 +69,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         return cell
     }
 
-    // #pragma mark - Data Source
+    // MARK: - Data Source
     
     // for popover, disabled now
     func selectPier (sender:UIBarButtonItem){
@@ -115,7 +115,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
             return navController
     }
     
-    // #pragma mark - Split view
+    // MARK: - Split view
     
     func splitViewController(
                                 splitController  : UISplitViewController,

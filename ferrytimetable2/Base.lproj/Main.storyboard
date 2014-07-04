@@ -50,7 +50,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
-                                                    <rect key="frame" x="460" y="1" width="20" height="45"/>
+                                                    <rect key="frame" x="460" y="0.0" width="20" height="43"/>
                                                     <color key="backgroundColor" red="1" green="0.0020682545409999998" blue="0.50217481019999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="fCb-qY-n7n"/>
@@ -58,13 +58,12 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="1" id="6YL-Yi-dhx"/>
                                                 <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="M8K-TM-1lD"/>
                                                 <constraint firstAttribute="bottom" secondItem="qXG-PI-TAX" secondAttribute="bottom" constant="11" id="Qbg-eA-HNg"/>
-                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vFd-fl-o1r" secondAttribute="top" constant="1" id="T1X-UN-FP7"/>
+                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" id="T1X-UN-FP7"/>
                                                 <constraint firstItem="qXG-PI-TAX" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="11" id="T3B-gO-Wbo"/>
                                                 <constraint firstItem="qXG-PI-TAX" firstAttribute="leading" secondItem="vFd-fl-o1r" secondAttribute="leading" constant="20" id="p4s-UR-H1S"/>
-                                                <constraint firstAttribute="bottom" secondItem="97w-Mu-dzz" secondAttribute="bottom" constant="-3" id="u5z-he-A6d"/>
+                                                <constraint firstAttribute="bottom" secondItem="97w-Mu-dzz" secondAttribute="bottom" id="u5z-he-A6d"/>
                                                 <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="ukX-RI-mQX"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -80,17 +79,28 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4qd-fJ-3fJ" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="EmF-zM-lqM"/>
                             <constraint firstItem="4qd-fJ-3fJ" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="Gpx-HG-BUw"/>
                             <constraint firstAttribute="trailing" secondItem="4qd-fJ-3fJ" secondAttribute="trailing" id="fpj-kn-A3i"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="4qd-fJ-3fJ" secondAttribute="bottom" id="t9L-uZ-cdr"/>
+                            <constraint firstAttribute="bottom" secondItem="4qd-fJ-3fJ" secondAttribute="bottom" id="jZq-b7-MlU"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <toolbarItems>
+                        <barButtonItem title="Set Date" id="nEu-EN-GTf"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JoJ-Ga-aPo"/>
+                        <barButtonItem title="Alarm" id="OkL-ds-0jr"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
+                        <barButtonItem key="rightBarButtonItem" title="Flip" id="aF2-c8-xXg">
+                            <connections>
+                                <action selector="flipButtonTapped:" destination="JEX-9P-axG" id="Jly-ix-CqS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="4qd-fJ-3fJ" id="Zug-zb-gSI"/>
                     </connections>

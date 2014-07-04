@@ -11,15 +11,15 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView
-//    var masterPopoverController: UIPopoverController? = nil
     var currentTimetable : Ferry[] = []
+    
+    var currentDirection = Direction.ToIsland
     
     var island: Island? {
         didSet {
-            currentTimetable = island!.getFerriesForDate(NSDate(), direction: .ToIsland)
+            currentTimetable = island!.getFerriesForDate(NSDate(), direction: currentDirection)
             // Update the view.
             self.configureView()
-            
         }
     }
 
@@ -41,7 +41,17 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    // #pragma mark - Table View
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController.setToolbarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController.setToolbarHidden(true, animated: false)
+    }
+    
+    // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -67,6 +77,26 @@ class DetailViewController: UIViewController, UITableViewDataSource {
             break;
         }
         return cell
+    }
+    // MARK: - Interaction
+    @IBAction func flipButtonTapped(sender: AnyObject) {
+        if currentDirection == Direction.ToIsland {
+            currentDirection = .FromIsland
+        } else {
+            currentDirection = .ToIsland
+        }
+//        let context = UIGraphicsGetCurrentContext()
+//        UIView.beginAnimations(nil, context: UIGraphicsGetCurrentContext())
+//        UIView.setAnimationDuration(0.5)
+//        UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: tableView, cache: true)
+//        UIView.commitAnimations()
+        UIView.transitionWithView(tableView, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
+            [strong self] in
+            self.currentTimetable = self.island!.getFerriesForDate(NSDate(), direction: self.currentDirection)
+            // Update the view.
+            self.configureView()
+        }, completion: nil)
+        
     }
 }
 
