@@ -89,7 +89,11 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Set Date" id="nEu-EN-GTf"/>
+                        <barButtonItem title="Set Date" id="nEu-EN-GTf">
+                            <connections>
+                                <action selector="dateButtonTapped:" destination="JEX-9P-axG" id="TiI-KX-uOm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JoJ-Ga-aPo"/>
                         <barButtonItem title="Alarm" id="OkL-ds-0jr"/>
                     </toolbarItems>

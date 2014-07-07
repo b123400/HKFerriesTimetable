@@ -8,19 +8,23 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPresentationControllerDelegate, PDTSimpleCalendarViewDelegate {
 
     @IBOutlet var tableView: UITableView
     var currentTimetable : Ferry[] = []
-    
+    var currentDate:NSDate = NSDate()
     var currentDirection = Direction.ToIsland
     
     var island: Island? {
         didSet {
-            currentTimetable = island!.getFerriesForDate(NSDate(), direction: currentDirection)
-            // Update the view.
-            self.configureView()
+            reloadTimetable()
         }
+    }
+    
+    func reloadTimetable() {
+        currentTimetable = island!.getFerriesForDate(currentDate, direction: currentDirection)
+        // Update the view.
+        self.configureView()
     }
 
     func configureView() {
@@ -92,11 +96,51 @@ class DetailViewController: UIViewController, UITableViewDataSource {
 //        UIView.commitAnimations()
         UIView.transitionWithView(tableView, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
             [strong self] in
-            self.currentTimetable = self.island!.getFerriesForDate(NSDate(), direction: self.currentDirection)
-            // Update the view.
-            self.configureView()
+            self.reloadTimetable()
         }, completion: nil)
         
     }
+    
+    // MARK: - Date picker
+    @IBAction func dateButtonTapped(sender: UIBarButtonItem) {
+        let calendarViewController = CustomCalendarViewController()
+        calendarViewController.delegate = self
+        calendarViewController.modalPresentationStyle = .Popover
+        let popPC = calendarViewController.popoverPresentationController
+        popPC.barButtonItem = sender
+        popPC.permittedArrowDirections = .Any
+        popPC.delegate = self
+        presentModalViewController(calendarViewController, animated: true)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+        return .FullScreen
+    }
+    
+    func presentationController(controller: UIPresentationController!,
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+            
+            let navController = UINavigationController(rootViewController: controller.presentedViewController)
+            return navController
+    }
+    
+    
+    
+    func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, didSelectDate date: NSDate){
+        controller.dismissModalViewControllerAnimated(true)
+        currentDate = date
+        reloadTimetable()
+    }
+    func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, shouldUseCustomColorsForDate date:NSDate) -> Bool {
+        return date.isHoliday()
+    }
+    
+    func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, circleColorForDate date:NSDate) -> UIColor {
+        return UIColor.redColor()
+    }
+    func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, textColorForDate date:NSDate) -> UIColor {
+        return UIColor.whiteColor()
+    }
+    
 }
 
