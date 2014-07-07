@@ -18,6 +18,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     var island: Island? {
         didSet {
             reloadTimetable()
+            if let _island = self.island as? Island {
+                self.title = _island.name
+            }
         }
     }
     
@@ -142,5 +145,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         return UIColor.whiteColor()
     }
     
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "ferry" {
+//            presentModalViewController(segue.destinationViewController as UIViewController, animated: true)
+//        }
+    }
 }
 
