@@ -50,10 +50,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
-                                                    <rect key="frame" x="460" y="0.0" width="20" height="43"/>
+                                                    <rect key="frame" x="470" y="0.0" width="10" height="43"/>
                                                     <color key="backgroundColor" red="1" green="0.0020682545409999998" blue="0.50217481019999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="fCb-qY-n7n"/>
+                                                        <constraint firstAttribute="width" constant="10" id="fCb-qY-n7n"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -70,7 +70,7 @@
                                         <connections>
                                             <outlet property="timeLabel" destination="qXG-PI-TAX" id="o3v-x2-pla"/>
                                             <outlet property="typeColorView" destination="97w-Mu-dzz" id="8bT-fJ-jRd"/>
-                                            <segue destination="QZ2-7R-V0f" kind="presentation" id="KLU-95-nnh"/>
+                                            <segue destination="QZ2-7R-V0f" kind="presentation" identifier="showFerry" id="Ejm-1i-qyR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,7 +129,7 @@
         <!--Ferry View Controller-->
         <scene sceneID="WEk-q6-F7m">
             <objects>
-                <viewController modalPresentationStyle="formSheet" id="dcn-Td-TSL" customClass="FerryViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ferryViewController" modalPresentationStyle="formSheet" id="dcn-Td-TSL" customClass="FerryViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1eM-Yc-cK2"/>
                         <viewControllerLayoutGuide type="bottom" id="qE2-dT-5yr"/>
@@ -217,13 +217,25 @@
                                     <constraint firstAttribute="height" constant="87" id="qPM-hr-nH6"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 ~ 12:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA0-aG-fel">
+                                <rect key="frame" x="0.0" y="262" width="480" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9eX-yS-TxL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bA0-aG-fel" firstAttribute="top" secondItem="vSO-8X-tp9" secondAttribute="bottom" constant="8" id="6iv-CS-wYi"/>
                             <constraint firstItem="NTu-v0-eKh" firstAttribute="trailing" secondItem="KPN-Ou-jzY" secondAttribute="trailing" id="HeR-bd-A6m"/>
                             <constraint firstItem="KPN-Ou-jzY" firstAttribute="top" secondItem="vSO-8X-tp9" secondAttribute="bottom" constant="37" id="P04-J7-5na"/>
                             <constraint firstAttribute="centerX" secondItem="vSO-8X-tp9" secondAttribute="centerX" id="UtK-eW-4vc"/>
+                            <constraint firstItem="bA0-aG-fel" firstAttribute="leading" secondItem="U1P-q0-P0W" secondAttribute="leading" id="bkR-6M-k41"/>
                             <constraint firstItem="vSO-8X-tp9" firstAttribute="top" secondItem="1eM-Yc-cK2" secondAttribute="bottom" constant="10" id="bzC-Cv-rn1"/>
+                            <constraint firstAttribute="trailing" secondItem="bA0-aG-fel" secondAttribute="trailing" id="f1w-mS-qfL"/>
                             <constraint firstAttribute="centerX" secondItem="KPN-Ou-jzY" secondAttribute="centerX" id="fzX-Lt-V7s"/>
                             <constraint firstItem="NTu-v0-eKh" firstAttribute="top" secondItem="haH-ca-bx4" secondAttribute="top" id="huX-aL-6wu"/>
                             <constraint firstItem="haH-ca-bx4" firstAttribute="top" secondItem="KPN-Ou-jzY" secondAttribute="bottom" constant="28" id="w8Y-Rx-7d9"/>
@@ -231,12 +243,21 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LqX-YP-rwA"/>
+                    <navigationItem key="navigationItem" id="LqX-YP-rwA">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="RzM-qc-Tha">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="dcn-Td-TSL" id="21A-0a-ueO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="bA0-aG-fel" id="4dh-mp-2Pu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9o-mB-M2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="30"/>
+            <point key="canvasLocation" x="484" y="648"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xJW-Tb-eIl">
@@ -266,12 +287,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYI-t0-odi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="30"/>
+            <point key="canvasLocation" x="1018" y="648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZmB-IL-nfd">
             <objects>
-                <navigationController modalPresentationStyle="formSheet" id="QZ2-7R-V0f" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ferryNavigationController" modalPresentationStyle="formSheet" id="QZ2-7R-V0f" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yjq-ec-0aW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -282,7 +303,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k36-9T-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="27"/>
+            <point key="canvasLocation" x="-38" y="645"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

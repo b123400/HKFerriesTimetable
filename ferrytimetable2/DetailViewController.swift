@@ -148,9 +148,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "ferry" {
-//            presentModalViewController(segue.destinationViewController as UIViewController, animated: true)
-//        }
+        if segue.identifier == "showFerry" {
+            let navController = segue.destinationViewController as UINavigationController
+            let ferryController = navController.topViewController as FerryViewController
+            let ferry = currentTimetable[ tableView.indexPathForSelectedRow().row ]
+            ferryController.ferry = ferry
+        }
     }
 }
 

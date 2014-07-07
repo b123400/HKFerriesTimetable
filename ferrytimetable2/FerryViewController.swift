@@ -9,6 +9,11 @@
 import UIKit
 
 class FerryViewController: UIViewController {
+    var ferry : Ferry? {
+        didSet {
+            configureView()
+        }
+    }
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -21,7 +26,7 @@ class FerryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureView()
         // Do any additional setup after loading the view.
     }
 
@@ -31,6 +36,9 @@ class FerryViewController: UIViewController {
     }
     
 
+    @IBAction func closeButtonTapped(sender: UIBarButtonItem) {
+        dismissModalViewControllerAnimated(true)
+    }
     /*
     // #pragma mark - Navigation
 
@@ -40,5 +48,12 @@ class FerryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: - layout
+    @IBOutlet var timeLabel: UILabel
+    func configureView() {
+        if timeLabel != nil {
+            timeLabel.text = ferry?.time
+        }
+    }
 }
