@@ -16,6 +16,6 @@ class CustomCalendarViewController: PDTSimpleCalendarViewController {
     }
     
     func cancelButtonTapped(sender:UIBarButtonItem) {
-        self.dismissModalViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -85,6 +85,6 @@ class PierSelectTableViewController: UITableViewController {
     }
     
     func done(sender:UIBarButtonItem){
-        dismissModalViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -80,7 +80,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         popPC.barButtonItem = sender
         popPC.permittedArrowDirections = .Any
         popPC.delegate = self
-        presentModalViewController(selectViewController, animated: true)
+        presentViewController(selectViewController, animated: true, completion: nil)
     }
     func changePier (pier:Pier){
         currentPier = pier
@@ -101,7 +101,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     
     func pierSelectTableViewController(vc:PierSelectTableViewController,didSelected pier:Pier){
         changePier(pier)
-        dismissModalViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{

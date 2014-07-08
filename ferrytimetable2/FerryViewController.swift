@@ -37,7 +37,7 @@ class FerryViewController: UIViewController {
     
 
     @IBAction func closeButtonTapped(sender: UIBarButtonItem) {
-        dismissModalViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     /*
     // #pragma mark - Navigation

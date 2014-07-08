@@ -32,7 +32,7 @@ class Island: NSObject {
         }
     }
     
-    func getFerriesForDate(date:NSDate, direction:Direction) -> Ferry[] {
+    func getFerriesForDate(date:NSDate, direction:Direction) -> [Ferry] {
         var directionString:String;
         if direction == Direction.ToIsland {
             directionString = "To"

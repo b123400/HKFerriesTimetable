@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPresentationControllerDelegate, PDTSimpleCalendarViewDelegate {
 
     @IBOutlet var tableView: UITableView
-    var currentTimetable : Ferry[] = []
+    var currentTimetable : [Ferry] = []
     var currentDate:NSDate = NSDate()
     var currentDirection = Direction.ToIsland
     
@@ -113,7 +113,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         popPC.barButtonItem = sender
         popPC.permittedArrowDirections = .Any
         popPC.delegate = self
-        presentModalViewController(calendarViewController, animated: true)
+        presentViewController(calendarViewController, animated: true, completion: nil)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
@@ -130,7 +130,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     
     func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, didSelectDate date: NSDate){
-        controller.dismissModalViewControllerAnimated(true)
+        controller.dismissViewControllerAnimated(true, completion: nil)
         currentDate = date
         reloadTimetable()
     }
