@@ -54,7 +54,19 @@ class FerryViewController: UIViewController {
     @IBOutlet var timeLabel: UILabel
     func configureView() {
         if timeLabel != nil {
-            timeLabel.text = "\(ferry!.leavingTime(date))"
+//            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//            [formatter setDateFormat:@"yyyy"];
+//            
+//            //Optionally for time zone converstions
+//            [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+//            
+//            NSString *stringFromDate = [formatter stringFromDate:myNSDateInstance];
+            
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let leavingString = "\(formatter.stringFromDate(ferry!.leavingTime(date)))"
+            let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime(date)))"
+            timeLabel.text = "\(leavingString) ~ \(arrivingString)"
         }
     }
 }
