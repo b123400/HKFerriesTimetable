@@ -20,9 +20,11 @@ enum Direction {
 }
 
 class Ferry: NSObject {
-    let dict:NSDictionary
-    init(dictionary:NSDictionary) {
+    let dict : NSDictionary
+    let island : Island
+    init(dictionary:NSDictionary, _island : Island) {
         dict = dictionary
+        island = _island
         super.init()
     }
     
@@ -41,4 +43,32 @@ class Ferry: NSObject {
     }
     
     var direction : Direction = .Unknown;
+    
+    func convertTime(time:String, fromDate date:NSDate) -> NSDate {
+        
+        let startHour = time.substringToIndex(2).toInt()
+        let startMinutes = time.substringFromIndex(2).toInt()
+        
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth|NSCalendarUnit.CalendarUnitDay, fromDate: date)
+        
+        let thisComponents = NSDateComponents()
+        thisComponents.year = components.year
+        thisComponents.month = components.month
+        thisComponents.day = components.day
+        thisComponents.hour = startHour!
+        thisComponents.minute = startMinutes!
+        
+        return NSCalendar.currentCalendar().dateFromComponents(thisComponents)
+    }
+    
+    func leavingTime(date:NSDate) -> NSDate {
+        return convertTime(time, fromDate: date)
+    }
+    
+    func arrvingTime(date:NSDate) -> NSDate {
+        let thisLeavingTime = leavingTime(date)
+        let arrvingTime = NSDate(timeInterval: island.getDurationMinutesForType(self.type)!, sinceDate: thisLeavingTime)
+        return arrvingTime
+    }
 }

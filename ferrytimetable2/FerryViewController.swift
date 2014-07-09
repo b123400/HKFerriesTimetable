@@ -9,6 +9,7 @@
 import UIKit
 
 class FerryViewController: UIViewController {
+    var date = NSDate()
     var ferry : Ferry? {
         didSet {
             configureView()
@@ -53,7 +54,7 @@ class FerryViewController: UIViewController {
     @IBOutlet var timeLabel: UILabel
     func configureView() {
         if timeLabel != nil {
-            timeLabel.text = ferry?.time
+            timeLabel.text = "\(ferry!.leavingTime(date))"
         }
     }
 }

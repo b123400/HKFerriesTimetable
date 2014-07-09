@@ -153,6 +153,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             let ferryController = navController.topViewController as FerryViewController
             let ferry = currentTimetable[ tableView.indexPathForSelectedRow().row ]
             ferryController.ferry = ferry
+            ferryController.date = currentDate
         }
     }
 }

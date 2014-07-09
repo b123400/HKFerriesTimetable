@@ -45,8 +45,19 @@ class Island: NSObject {
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
         let ferries = arr.map({
             (var thisTime) -> Ferry in
-            return Ferry(dictionary: thisTime as Dictionary)
+            return Ferry(dictionary: thisTime as Dictionary, _island : self)
         })
         return ferries
+    }
+    
+    func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
+        switch type {
+        case .Slow:
+            return (_detailDict!.objectForKey("TimeOfJourney-Slow") as NSString).doubleValue
+        case .Fast:
+            return (_detailDict!.objectForKey("TimeOfJourney-Fast") as NSString).doubleValue
+        default:
+            return nil;
+        }
     }
 }

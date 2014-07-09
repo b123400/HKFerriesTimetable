@@ -218,8 +218,8 @@
 		CF47A639195F36DF0066D9EE /* Cheung Chau */ = {
 			isa = PBXGroup;
 			children = (
-				CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */,
 				CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */,
+				CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */,
 				CF47A5CB195F350E0066D9EE /* CheungChauToHoliday.plist */,
 				CF47A5CE195F350E0066D9EE /* FromCheungChauNormal.plist */,
 				CF47A5EC195F350E0066D9EE /* ToCheungChauSaturday.plist */,
