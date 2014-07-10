@@ -45,7 +45,7 @@ class Island: NSObject {
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
         let ferries = arr.map({
             (var thisTime) -> Ferry in
-            return Ferry(dictionary: thisTime as Dictionary, _island : self)
+            return Ferry(dictionary: thisTime as Dictionary, island : self)
         })
         return ferries
     }

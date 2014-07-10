@@ -9,6 +9,7 @@
 import UIKit
 
 class FerryViewController: UIViewController {
+    @IBOutlet var clockView: BRClockView
     var date = NSDate()
     var ferry : Ferry? {
         didSet {
@@ -67,6 +68,11 @@ class FerryViewController: UIViewController {
             let leavingString = "\(formatter.stringFromDate(ferry!.leavingTime(date)))"
             let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime(date)))"
             timeLabel.text = "\(leavingString) ~ \(arrivingString)"
+        }
+        if clockView {
+            if ferry {
+                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: true)
+            }
         }
     }
 }

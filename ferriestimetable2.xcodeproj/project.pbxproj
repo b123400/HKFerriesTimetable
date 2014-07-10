@@ -77,6 +77,7 @@
 		CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
+		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 		CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryTimeTableViewCell.swift; sourceTree = "<group>"; };
+		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 				CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */,
 				CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */,
 				CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */,
+				CFFB943F196E6C14004ED1F3 /* BRClockView.swift */,
 				CFDA3C7419647B8F0079E924 /* Model */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
 				CFC0E0A9196ABE1900B4CB4A /* Date Picker */,
@@ -617,6 +620,7 @@
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
 				CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */,
 				CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */,
+				CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */,
 				CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */,
 				CF6515B3196062DD005626C0 /* Island.swift in Sources */,
 				CFB6E0A4195D439E00F83035 /* AppDelegate.swift in Sources */,
