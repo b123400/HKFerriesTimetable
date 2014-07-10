@@ -139,7 +139,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-8X-tp9" customClass="BRClockView" customModule="ferriestimetable2" customModuleProvider="target">
                                 <rect key="frame" x="150" y="74" width="180" height="180"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.87026687956204385" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="YT6-se-nYA"/>
                                     <constraint firstAttribute="height" constant="180" id="vGP-F7-t66"/>

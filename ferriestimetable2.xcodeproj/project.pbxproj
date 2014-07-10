@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */; };
+		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
 		CF47A600195F350F0066D9EE /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CF47A601195F350F0066D9EE /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
 		CF47A602195F350F0066D9EE /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
@@ -78,6 +79,7 @@
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
+		CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 /* Begin PBXFileReference section */
 		3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.xcconfig"; path = "Pods/Pods-ferriestimetable2.xcconfig"; sourceTree = "<group>"; };
 		442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF153FFD196EEF40007599D3 /* BRClockLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRClockLayer.h; sourceTree = "<group>"; };
+		CF153FFE196EEF40007599D3 /* BRClockLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRClockLayer.m; sourceTree = "<group>"; };
 		CF47A5C8195F350E0066D9EE /* Central.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Central.plist; sourceTree = "<group>"; };
 		CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauFromHoliday.plist; sourceTree = "<group>"; };
 		CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauInfo.plist; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 		CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryTimeTableViewCell.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
+		CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */,
 				CFB016AF196B0790007D0068 /* MapKit.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
 			);
@@ -363,6 +369,8 @@
 				CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */,
 				CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */,
 				CFFB943F196E6C14004ED1F3 /* BRClockView.swift */,
+				CF153FFD196EEF40007599D3 /* BRClockLayer.h */,
+				CF153FFE196EEF40007599D3 /* BRClockLayer.m */,
 				CFDA3C7419647B8F0079E924 /* Model */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
 				CFC0E0A9196ABE1900B4CB4A /* Date Picker */,
@@ -419,6 +427,7 @@
 		EDDFDE51F070466C97896290 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */,
 				CFB016AE196B0790007D0068 /* MapKit.framework */,
 				442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */,
 			);
@@ -620,6 +629,7 @@
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
 				CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */,
 				CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */,
+				CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */,
 				CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */,
 				CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */,
 				CF6515B3196062DD005626C0 /* Island.swift in Sources */,
