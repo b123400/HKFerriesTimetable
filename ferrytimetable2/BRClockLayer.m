@@ -69,7 +69,7 @@
     UIGraphicsPushContext(ctx);
     
     float outerRadius = MIN(self.bounds.size.width, self.bounds.size.height)/2.0;
-    float innerRadius = outerRadius-10.0;
+    float innerRadius = outerRadius - 15.0;
     
     //draw arc
     CGPoint center = CGPointMake(self.bounds.size.width/2,self.bounds.size.height/2);

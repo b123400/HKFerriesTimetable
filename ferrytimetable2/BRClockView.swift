@@ -14,17 +14,33 @@ class BRClockView: UIView {
     var toDate:NSDate?
     
     let shapeLayer = BRClockLayer()
+    let frameLayer = CALayer()
     
     init(frame: CGRect) {
         super.init(frame: frame)
-        shapeLayer.frame = self.bounds
-        self.layer.addSublayer(shapeLayer)
+        setupLayers()
     }
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-        shapeLayer.frame = self.bounds
-        self.layer.addSublayer(shapeLayer)
+        setupLayers()
+    }
+    
+    func setupLayers() {
+        self.layer.cornerRadius = self.bounds.size.width/2
+        
+        shapeLayer.frame = CGRectInset(self.bounds, 8, 8)
+        self.layer.insertSublayer(shapeLayer, atIndex: 0)
+        
+        self.layer.insertSublayer(frameLayer, above: shapeLayer)
+        frameLayer.frame = self.bounds
+        frameLayer.borderColor = UIColor.whiteColor().CGColor
+        frameLayer.borderWidth = 8
+        frameLayer.cornerRadius = self.bounds.size.width/2
+        frameLayer.shadowOffset = CGSizeMake(0,1)
+        frameLayer.shadowRadius = 1
+        frameLayer.shadowColor = UIColor.blackColor().CGColor
+        frameLayer.shadowOpacity = 0.5
     }
     
     func setTimeRange(fromDate _from:NSDate, toDate _to:NSDate, animated:Bool) {

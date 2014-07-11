@@ -265,6 +265,7 @@
 		CF47A63C195F37420066D9EE /* Kowloon City */ = {
 			isa = PBXGroup;
 			children = (
+				CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */,
 				CF47A5D4195F350E0066D9EE /* FromKowloonCityHoliday.plist */,
 				CF47A5D5195F350E0066D9EE /* FromKowloonCityNormal.plist */,
 				CF47A5F2195F350E0066D9EE /* ToKowloonCityHoliday.plist */,
@@ -279,7 +280,6 @@
 				CF47A5E6195F350E0066D9EE /* MuiWoInfo.plist */,
 				CF47A5D6195F350E0066D9EE /* FromMuiWoHoliday.plist */,
 				CF47A5D7195F350E0066D9EE /* FromMuiWoNormal.plist */,
-				CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */,
 				CF47A5F4195F350E0066D9EE /* ToMuiWoHoliday.plist */,
 				CF47A5F5195F350E0066D9EE /* ToMuiWoNormal.plist */,
 				CF47A5F6195F350E0066D9EE /* ToMuiWoSaturday.plist */,
@@ -302,10 +302,10 @@
 		CF47A63F195F38930066D9EE /* Yung Shue Wan */ = {
 			isa = PBXGroup;
 			children = (
+				CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */,
 				CF47A5DF195F350E0066D9EE /* FromYSWHoliday.plist */,
 				CF47A5E0195F350E0066D9EE /* FromYSWNormal.plist */,
 				CF47A5E1195F350E0066D9EE /* FromYSWNormalSaturday.plist */,
-				CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */,
 				CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */,
 				CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */,
 			);
@@ -329,9 +329,9 @@
 		CF47A641195F38C80066D9EE /* Peng Chau */ = {
 			isa = PBXGroup;
 			children = (
+				CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */,
 				CF47A5DB195F350E0066D9EE /* FromPengChauHoliday.plist */,
 				CF47A5DC195F350E0066D9EE /* FromPengChauNormal.plist */,
-				CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */,
 				CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */,
 				CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */,
 			);

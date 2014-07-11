@@ -31,6 +31,15 @@ class FerryViewController: UIViewController {
         configureView()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if clockView {
+            if ferry {
+                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: true)
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,7 +80,7 @@ class FerryViewController: UIViewController {
         }
         if clockView {
             if ferry {
-                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: true)
+                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.leavingTime(date), animated: false)
             }
         }
     }

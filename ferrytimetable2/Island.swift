@@ -53,9 +53,9 @@ class Island: NSObject {
     func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
         switch type {
         case .Slow:
-            return (detailDict.objectForKey("TimeOfJourney-Slow") as NSString).doubleValue * 60
+            return (detailDict.objectForKey("TimeOfJourney-Slow") as NSNumber).doubleValue * 60
         case .Fast:
-            return (detailDict.objectForKey("TimeOfJourney-Fast") as NSString).doubleValue * 60
+            return (detailDict.objectForKey("TimeOfJourney-Fast") as NSNumber).doubleValue * 60
         default:
             return nil;
         }

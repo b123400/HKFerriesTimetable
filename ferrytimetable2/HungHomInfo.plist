@@ -11,7 +11,7 @@
 	<key>FromIslandPlistHoliday</key>
 	<string>FromHungHomHoliday</string>
 	<key>TimeOfJourney-Slow</key>
-	<string>8</string>
+	<integer>8</integer>
 	<key>PriceNormalSlow</key>
 	<string>$5.50</string>
 	<key>dataLastRefreshTime</key>

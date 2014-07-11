@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>TimeOfJourney-Fast</key>
+	<integer>30</integer>
+	<key>TimeOfJourney-Slow</key>
+	<integer>40</integer>
 	<key>ToIslandPlistNormal</key>
 	<string>ToPengChauNormal</string>
 	<key>FromIslandPlistNormal</key>

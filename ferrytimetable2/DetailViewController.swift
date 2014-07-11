@@ -128,7 +128,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     }
     
     
-    
     func simpleCalendarViewController(controller : PDTSimpleCalendarViewController, didSelectDate date: NSDate){
         controller.dismissViewControllerAnimated(true, completion: nil)
         currentDate = date
