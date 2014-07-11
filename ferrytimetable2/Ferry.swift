@@ -69,7 +69,17 @@ class Ferry: NSObject {
     
     func arrvingTime(date:NSDate) -> NSDate {
         let thisLeavingTime = leavingTime(date)
-        let arrvingTime = NSDate(timeInterval: island.getDurationMinutesForType(self.type)!, sinceDate: thisLeavingTime)
+        let arrvingTime = NSDate(timeInterval: duration!, sinceDate: thisLeavingTime)
         return arrvingTime
+    }
+    
+    var duration : NSTimeInterval? {
+    get {
+        return island.getDurationMinutesForType(self.type)
+    }
+    }
+    
+    func getPriceWithDate(date:NSDate) -> String {
+        return island.getPriceForType(type, date: date)
     }
 }

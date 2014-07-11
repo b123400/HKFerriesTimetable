@@ -11,6 +11,8 @@ import UIKit
 class FerryViewController: UIViewController {
     @IBOutlet var priceView: UIView
     @IBOutlet var clockView: BRClockView
+    @IBOutlet var priceLabel: UILabel
+    @IBOutlet var durationLabel: UILabel
     var shown = false
     var date = NSDate()
     var ferry : Ferry? {
@@ -91,6 +93,13 @@ class FerryViewController: UIViewController {
                     clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.leavingTime(date), animated: false)
                 }
             }
+        }
+        if priceLabel {
+            priceLabel.text = ferry?.getPriceWithDate(date)
+        }
+        if durationLabel {
+            let seconds = ferry?.duration
+            durationLabel.text = NSString(format: "%.fmin", seconds!/60)
         }
     }
 }

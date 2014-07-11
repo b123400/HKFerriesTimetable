@@ -62,4 +62,24 @@ class Island: NSObject {
             return nil;
         }
     }
+    
+    func getPriceForType(type:FerryType, date:NSDate) -> String{
+        switch (type, date.isHoliday()) {
+            
+        case (FerryType.Slow, false):
+            return detailDict.objectForKey("PriceNormalSlow") as String
+            
+        case (FerryType.Slow, true):
+            return detailDict.objectForKey("PriceHolidaySlow") as String
+            
+        case (FerryType.Fast, false):
+            return detailDict.objectForKey("PriceNormalFast") as String
+            
+        case (FerryType.Fast, true):
+            return detailDict.objectForKey("PriceHolidayFast") as String
+            
+        default:
+            return ""
+        }
+    }
 }
