@@ -9,11 +9,18 @@
 import UIKit
 
 class FerryViewController: UIViewController {
+    @IBOutlet var priceView: UIView
     @IBOutlet var clockView: BRClockView
+    var shown = false
     var date = NSDate()
     var ferry : Ferry? {
         didSet {
             configureView()
+            if ferry!.direction == Direction.ToIsland {
+                self.title = "\(ferry!.island.pier.toRaw()) → \(ferry!.island.name)"
+            } else {
+                self.title = "\(ferry!.island.name) → \(ferry!.island.pier.toRaw())"
+            }
         }
     }
     
@@ -29,16 +36,14 @@ class FerryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        priceView.layer.borderColor = UIColor(red: 217.0/255.0, green: 217.0/255.0, blue: 217.0/255.0, alpha: 1.0).CGColor
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if clockView {
-            if ferry {
-                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: true)
-            }
-        }
+        shown = true
+        configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,7 +85,11 @@ class FerryViewController: UIViewController {
         }
         if clockView {
             if ferry {
-                clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.leavingTime(date), animated: false)
+                if shown {
+                    clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: false)
+                } else {
+                    clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.leavingTime(date), animated: false)
+                }
             }
         }
     }

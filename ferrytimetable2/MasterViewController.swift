@@ -46,7 +46,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         if segue.identifier == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow()
             let islandDict = islands[indexPath.row] as NSDictionary
-            let island = Island(dictionary: islandDict)
+            let island = Island(dictionary: islandDict, pier:currentPier)
             ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).island = island
         }
     }

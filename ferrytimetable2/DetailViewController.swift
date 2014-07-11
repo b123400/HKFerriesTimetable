@@ -18,9 +18,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     var island: Island? {
         didSet {
             reloadTimetable()
-            if let _island = self.island as? Island {
-                self.title = _island.name
-            }
         }
     }
     
@@ -33,6 +30,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     func configureView() {
         // Update the user interface for the detail item.
         tableView?.reloadData()
+        
+        if let _island = self.island as? Island {
+            if currentDirection == Direction.ToIsland {
+                self.title = "To \(_island.name)"
+            } else {
+                self.title = "From \(_island.name)"
+            }
+        }
     }
 
     override func viewDidLoad() {

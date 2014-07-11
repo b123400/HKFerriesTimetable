@@ -22,9 +22,10 @@ enum Direction {
 class Ferry: NSObject {
     let dict : NSDictionary
     let island : Island
-    init(dictionary:NSDictionary, island _island : Island) {
+    init(dictionary:NSDictionary, island _island : Island, direction _direction: Direction) {
         dict = dictionary
         island = _island
+        direction = _direction
         super.init()
     }
     

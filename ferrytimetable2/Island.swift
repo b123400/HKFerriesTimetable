@@ -10,10 +10,12 @@ import UIKit
 
 class Island: NSObject {
     let sourceDict:NSDictionary;
-    var _detailDict:NSDictionary?;
+    var _detailDict:NSDictionary?
+    let pier:Pier
     
-    init(dictionary dict:NSDictionary){
+    init(dictionary dict:NSDictionary, pier _pier:Pier){
         sourceDict = dict
+        pier = _pier
         super.init()
     }
     
@@ -45,7 +47,7 @@ class Island: NSObject {
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
         let ferries = arr.map({
             (var thisTime) -> Ferry in
-            return Ferry(dictionary: thisTime as Dictionary, island : self)
+            return Ferry(dictionary: thisTime as Dictionary, island : self, direction: direction)
         })
         return ferries
     }
