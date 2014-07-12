@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FerryViewController: UIViewController {
+class FerryViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     @IBOutlet var priceView: UIView
     @IBOutlet var clockView: BRClockView
     @IBOutlet var priceLabel: UILabel
@@ -101,5 +101,23 @@ class FerryViewController: UIViewController {
             let seconds = ferry?.duration
             durationLabel.text = NSString(format: "%.fmin", seconds!/60)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier? == "addNotification" {
+            let popPC = (segue.destinationViewController as UIViewController).popoverPresentationController as UIPopoverPresentationController
+            popPC.delegate = self
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+        return .FullScreen
+    }
+    
+    func presentationController(controller: UIPresentationController!,
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+        
+        let navController = UINavigationController(rootViewController: controller.presentedViewController)
+        return navController
     }
 }

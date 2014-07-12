@@ -76,6 +76,7 @@
 		CFB6E0AD195D439E00F83035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0AC195D439E00F83035 /* Images.xcassets */; };
 		CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */; };
 		CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
+		CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
@@ -169,6 +170,7 @@
 		CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferrytimetable2Tests.swift; sourceTree = "<group>"; };
 		CFC0E0A8196AB8E300B4CB4A /* ferriestimetable2-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ferriestimetable2-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarViewController.swift; sourceTree = "<group>"; };
+		CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNotificationViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 		CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryTimeTableViewCell.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
@@ -368,9 +370,8 @@
 				CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */,
 				CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */,
 				CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */,
-				CFFB943F196E6C14004ED1F3 /* BRClockView.swift */,
-				CF153FFD196EEF40007599D3 /* BRClockLayer.h */,
-				CF153FFE196EEF40007599D3 /* BRClockLayer.m */,
+				CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */,
+				CFD0C9FE1971612F006A224B /* Clock View */,
 				CFDA3C7419647B8F0079E924 /* Model */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
 				CFC0E0A9196ABE1900B4CB4A /* Date Picker */,
@@ -413,6 +414,16 @@
 				CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */,
 			);
 			name = "Date Picker";
+			sourceTree = "<group>";
+		};
+		CFD0C9FE1971612F006A224B /* Clock View */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB943F196E6C14004ED1F3 /* BRClockView.swift */,
+				CF153FFD196EEF40007599D3 /* BRClockLayer.h */,
+				CF153FFE196EEF40007599D3 /* BRClockLayer.m */,
+			);
+			name = "Clock View";
 			sourceTree = "<group>";
 		};
 		CFDA3C7419647B8F0079E924 /* Model */ = {
@@ -627,6 +638,7 @@
 				CFAEB8F8196AEBCE007DB58B /* FerryViewController.swift in Sources */,
 				CFDA3C73196434710079E924 /* Ferry.swift in Sources */,
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
+				CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */,
 				CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */,
 				CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */,
 				CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */,
