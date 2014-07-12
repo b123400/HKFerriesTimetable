@@ -147,7 +147,7 @@
                                 <rect key="frame" x="150" y="74" width="180" height="180"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aC-GD-5k5">
-                                        <rect key="frame" x="157" y="79" width="10" height="21"/>
+                                        <rect key="frame" x="159" y="79" width="10" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.035294117647058823" green="0.19607843137254902" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -316,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9o-mB-M2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="637"/>
+            <point key="canvasLocation" x="1238" y="653"/>
         </scene>
         <!--Notification-->
         <scene sceneID="X3e-rn-VGH">
@@ -338,6 +338,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="426861211.62348098">
                                     <!--2014-07-12 12:33:31 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="On0-NK-BEW" eventType="valueChanged" id="yRS-dq-3Mp"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qc-Tq-VR6">
                                 <rect key="frame" x="186" y="375" width="108" height="30"/>
@@ -362,21 +365,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohV-3o-i3R">
+                                <rect key="frame" x="0.0" y="96" width="480" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="xmj-we-t6y"/>
+                                    <constraint firstAttribute="height" constant="21" id="yAK-fc-Xcf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1c7-SZ-bxn" firstAttribute="leading" secondItem="DKf-G5-Xa1" secondAttribute="leading" id="566-DK-lcA"/>
                             <constraint firstAttribute="centerX" secondItem="Lv9-SW-TaD" secondAttribute="centerX" id="GlT-8a-X7h"/>
+                            <constraint firstAttribute="centerX" secondItem="ohV-3o-i3R" secondAttribute="centerX" id="HIT-xw-pdg"/>
                             <constraint firstAttribute="trailing" secondItem="1c7-SZ-bxn" secondAttribute="trailing" id="HuZ-gp-CGK"/>
                             <constraint firstItem="5Qc-Tq-VR6" firstAttribute="top" secondItem="1c7-SZ-bxn" secondAttribute="bottom" constant="34" id="Ird-iQ-AGb"/>
                             <constraint firstItem="1c7-SZ-bxn" firstAttribute="top" secondItem="Lv9-SW-TaD" secondAttribute="bottom" constant="53" id="TzR-Gy-5Ni"/>
                             <constraint firstAttribute="centerX" secondItem="5Qc-Tq-VR6" secondAttribute="centerX" id="b6P-6v-eg3"/>
                             <constraint firstItem="Lv9-SW-TaD" firstAttribute="top" secondItem="fGG-Us-pcf" secondAttribute="bottom" constant="31" id="ef7-Gq-9Xe"/>
+                            <constraint firstItem="ohV-3o-i3R" firstAttribute="top" secondItem="Lv9-SW-TaD" secondAttribute="bottom" constant="24" id="wRU-ln-PGg"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="320"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="dateLabel" destination="ohV-3o-i3R" id="wU0-NN-88R"/>
                         <outlet property="datePicker" destination="1c7-SZ-bxn" id="Tve-T0-Qig"/>
                     </connections>
                 </viewController>
@@ -384,22 +400,22 @@
             </objects>
             <point key="canvasLocation" x="1238" y="1256"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Notifications-->
         <scene sceneID="Qwp-87-gvQ">
             <objects>
-                <tableViewController id="d9H-OE-g9j" sceneMemberID="viewController">
+                <tableViewController id="d9H-OE-g9j" customClass="NotificationTableViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ulA-YA-eke">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="EJU-vx-2Df">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="EJU-vx-2Df">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJU-vx-2Df" id="QXz-kW-sJT">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="QZ2-7R-V0f" kind="show" id="HCA-8g-J3c"/>
+                                    <segue destination="dcn-Td-TSL" kind="show" identifier="toFerry" id="HY5-pI-bQh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -408,7 +424,7 @@
                             <outlet property="delegate" destination="d9H-OE-g9j" id="u7w-gc-jwX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="NXk-UG-Dwc"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="NXk-UG-Dwc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgZ-aM-KG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYI-t0-odi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="637"/>
+            <point key="canvasLocation" x="1875" y="653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZmB-IL-nfd">
@@ -473,7 +489,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k36-9T-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="637"/>
+            <point key="canvasLocation" x="604" y="653"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -572,7 +588,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HCA-8g-J3c"/>
+        <segue reference="HY5-pI-bQh"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

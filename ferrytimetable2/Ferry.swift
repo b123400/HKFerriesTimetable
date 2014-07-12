@@ -14,19 +14,42 @@ enum FerryType : String{
     case Optional = "optional"
 }
 
-enum Direction {
-    case ToIsland, FromIsland
-    case Unknown
+enum Direction : String {
+    case ToIsland = "ToIsland"
+    case FromIsland = "FromIsland"
+    case Unknown = "Unknown"
 }
 
 class Ferry: NSObject {
     let dict : NSDictionary
     let island : Island
-    init(dictionary:NSDictionary, island _island : Island, direction _direction: Direction) {
+    var date: NSDate = NSDate()
+    
+    init(dictionary:NSDictionary, island _island : Island, direction _direction: Direction, date _date:NSDate) {
         dict = dictionary
         island = _island
         direction = _direction
+        date = _date
         super.init()
+    }
+    
+    class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Ferry {
+        let thisDict = dict["dict"]! as NSDictionary
+        let thisIsland = Island.fromDict(dictionaryRepresentation:dict["island"]! as Dictionary)
+        let thisDirection = Direction.fromRaw(dict["direction"]! as String)!
+        let thisDate = dict["date"]! as NSDate
+        return Ferry(dictionary: thisDict, island: thisIsland, direction: thisDirection, date: thisDate)
+    }
+    
+    var dictionaryRepresentation : NSDictionary {
+    get {
+        return [
+            "date" : date,
+            "island": island.dictionaryRepresentation,
+            "direction": direction.toRaw(),
+            "dict":dict
+        ]
+    }
     }
     
     var time : String {
@@ -63,14 +86,17 @@ class Ferry: NSObject {
         return NSCalendar.currentCalendar().dateFromComponents(thisComponents)
     }
     
-    func leavingTime(date:NSDate) -> NSDate {
+    var leavingTime : NSDate {
+    get{
         return convertTime(time, fromDate: date)
     }
+    }
     
-    func arrvingTime(date:NSDate) -> NSDate {
-        let thisLeavingTime = leavingTime(date)
-        let arrvingTime = NSDate(timeInterval: duration!, sinceDate: thisLeavingTime)
+    var arrvingTime : NSDate {
+    get{
+        let arrvingTime = NSDate(timeInterval: duration!, sinceDate: leavingTime)
         return arrvingTime
+    }
     }
     
     var duration : NSTimeInterval? {
@@ -79,7 +105,9 @@ class Ferry: NSObject {
     }
     }
     
-    func getPriceWithDate(date:NSDate) -> String {
+    var price :String {
+    get{
         return island.getPriceForType(type, date: date)
+    }
     }
 }

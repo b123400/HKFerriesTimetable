@@ -97,11 +97,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         } else {
             currentDirection = .ToIsland
         }
-//        let context = UIGraphicsGetCurrentContext()
-//        UIView.beginAnimations(nil, context: UIGraphicsGetCurrentContext())
-//        UIView.setAnimationDuration(0.5)
-//        UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: tableView, cache: true)
-//        UIView.commitAnimations()
         UIView.transitionWithView(tableView, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
             [strong self] in
             self.reloadTimetable()
@@ -152,12 +147,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showFerry" {
+        if segue.identifier? == "showFerry" {
             let navController = segue.destinationViewController as UINavigationController
             let ferryController = navController.topViewController as FerryViewController
             let ferry = currentTimetable[ tableView.indexPathForSelectedRow().row ]
             ferryController.ferry = ferry
-            ferryController.date = currentDate
+//            ferryController.date = currentDate
         }
     }
 }

@@ -19,6 +19,21 @@ class Island: NSObject {
         super.init()
     }
     
+    class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Island{
+        let thisDict = dict["dict"]! as NSDictionary
+        let pier = Pier.fromRaw(dict["pier"]! as String)!
+        return Island(dictionary: thisDict, pier: pier)
+    }
+    
+    var dictionaryRepresentation : NSDictionary {
+    get {
+        return [
+            "dict":sourceDict,
+            "pier":pier.toRaw()
+        ]
+    }
+    }
+    
     var detailDict:NSDictionary {
         get {
             if !_detailDict {
@@ -47,7 +62,7 @@ class Island: NSObject {
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
         let ferries = arr.map({
             (var thisTime) -> Ferry in
-            return Ferry(dictionary: thisTime as Dictionary, island : self, direction: direction)
+            return Ferry(dictionary: thisTime as Dictionary, island : self, direction: direction, date: date)
         })
         return ferries
     }

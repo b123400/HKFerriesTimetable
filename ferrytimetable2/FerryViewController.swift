@@ -14,7 +14,6 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBOutlet var priceLabel: UILabel
     @IBOutlet var durationLabel: UILabel
     var shown = false
-    var date = NSDate()
     var ferry : Ferry? {
         didSet {
             configureView()
@@ -71,31 +70,24 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     @IBOutlet var timeLabel: UILabel
     func configureView() {
         if timeLabel != nil {
-//            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//            [formatter setDateFormat:@"yyyy"];
-//            
-//            //Optionally for time zone converstions
-//            [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
-//            
-//            NSString *stringFromDate = [formatter stringFromDate:myNSDateInstance];
             
             let formatter = NSDateFormatter()
             formatter.dateFormat = "HH:mm"
-            let leavingString = "\(formatter.stringFromDate(ferry!.leavingTime(date)))"
-            let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime(date)))"
+            let leavingString = "\(formatter.stringFromDate(ferry!.leavingTime))"
+            let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime))"
             timeLabel.text = "\(leavingString) ~ \(arrivingString)"
         }
         if clockView {
             if ferry {
                 if shown {
-                    clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.arrvingTime(date), animated: false)
+                    clockView.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.arrvingTime, animated: false)
                 } else {
-                    clockView.setTimeRange(fromDate: ferry!.leavingTime(date), toDate: ferry!.leavingTime(date), animated: false)
+                    clockView.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.leavingTime, animated: false)
                 }
             }
         }
         if priceLabel {
-            priceLabel.text = ferry?.getPriceWithDate(date)
+            priceLabel.text = ferry?.price
         }
         if durationLabel {
             let seconds = ferry?.duration
@@ -105,7 +97,9 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier? == "addNotification" {
-            let popPC = (segue.destinationViewController as UIViewController).popoverPresentationController as UIPopoverPresentationController
+            let notificationController = segue.destinationViewController as NewNotificationViewController
+            notificationController.ferry = ferry
+            let popPC = notificationController.popoverPresentationController
             popPC.delegate = self
         }
     }

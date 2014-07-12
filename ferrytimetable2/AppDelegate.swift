@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let ApplicationDiDRegisterUserNotification = "ApplicationDiDRegisterUserNotification"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splitViewController.delegate = navigationController.topViewController as MasterViewController
         splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         return true
+    }
+    
+    func application(_ application: UIApplication!,
+        didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!){
+        
+            NSNotificationCenter.defaultCenter().postNotificationName(ApplicationDiDRegisterUserNotification, object: nil, userInfo: ["setting":notificationSettings])
     }
 
     func applicationWillResignActive(application: UIApplication) {
