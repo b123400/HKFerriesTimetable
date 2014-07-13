@@ -17,6 +17,19 @@ class NotificationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let count = UIApplication.sharedApplication().scheduledLocalNotifications.count
+        let size = CGSizeMake(320.0, Double(count) * 44.0)
+        self.preferredContentSize = self.tableView.contentSize
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.preferredContentSize = CGSizeMake(320, self.tableView.contentSize.height )
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.preferredContentSize = CGSizeMake(320, self.tableView.contentSize.height )
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,47 +53,45 @@ class NotificationTableViewController: UITableViewController {
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel.text = "A"
+        let notification = UIApplication.sharedApplication().scheduledLocalNotifications[ indexPath.row ] as UILocalNotification
+        let dict = notification.userInfo as [String:AnyObject]
+        let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
+        
+        if ferry.direction == Direction.ToIsland {
+            cell.textLabel.text = "To \(ferry.island.name)"
+        } else {
+            cell.textLabel.text = "From \(ferry.island.name)"
+        }
+        
+        let dateText = NSDateFormatter.localizedStringFromDate(notification.fireDate, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        
+        cell.detailTextLabel.text = "Notify at \(dateText)"
 
         return cell
     }
     
+    override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String! {
+        if UIApplication.sharedApplication().scheduledLocalNotifications.count == 0 {
+            return "No Notification"
+        }
+        return ""
+    }
 
-    /*
-    // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+//             Delete the row from the data source
+            let notification = UIApplication.sharedApplication().scheduledLocalNotifications[indexPath.row] as UILocalNotification
+            UIApplication.sharedApplication().cancelLocalNotification(notification)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+//             Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView!, moveRowAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // #pragma mark - Navigation
 

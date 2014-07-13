@@ -45,6 +45,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         super.viewDidAppear(animated)
         shown = true
         configureView()
+        self.preferredContentSize = CGSizeMake(320, 400)
     }
 
     override func didReceiveMemoryWarning() {
