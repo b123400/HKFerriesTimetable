@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let ApplicationDiDRegisterUserNotification = "ApplicationDiDRegisterUserNotification"
+let ApplicationDidRegisterUserNotification = "ApplicationDiDRegisterUserNotification"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,13 +21,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = splitViewController.viewControllers[0] as UINavigationController
         splitViewController.delegate = navigationController.topViewController as MasterViewController
         splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+            handleLocalNotification(notification)
+        }
+        
         return true
     }
     
-    func application(_ application: UIApplication!,
+    func application(application: UIApplication!,
+        didReceiveLocalNotification notification: UILocalNotification!) {
+           
+        handleLocalNotification(notification)
+    }
+    
+    func handleLocalNotification(notification:UILocalNotification) {
+        let dict = notification.userInfo as [String:AnyObject]
+        let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
+        let navController = self.window!.rootViewController.storyboard.instantiateViewControllerWithIdentifier("ferryNavigationController") as UINavigationController
+        let controller = navController.topViewController as FerryViewController
+        controller.ferry = ferry
+        let delay = 0.5 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            self.window!.rootViewController.presentViewController(navController, animated: true, completion: nil)
+        }
+    }
+    
+    func application(application: UIApplication!,
         didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!){
         
-            NSNotificationCenter.defaultCenter().postNotificationName(ApplicationDiDRegisterUserNotification, object: nil, userInfo: ["setting":notificationSettings])
+            NSNotificationCenter.defaultCenter().postNotificationName(ApplicationDidRegisterUserNotification, object: nil, userInfo: ["setting":notificationSettings])
     }
 
     func applicationWillResignActive(application: UIApplication) {
