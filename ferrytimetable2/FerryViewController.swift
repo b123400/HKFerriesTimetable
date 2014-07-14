@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class FerryViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     @IBOutlet var priceView: UIView
@@ -102,6 +104,9 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
             notificationController.ferry = ferry
             let popPC = notificationController.popoverPresentationController
             popPC.delegate = self
+        } else if segue.identifier? == "showMap" {
+            let mapController = segue.destinationViewController as MapViewController
+            mapController.ferry = ferry
         }
     }
     

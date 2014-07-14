@@ -52,6 +52,8 @@ class NewNotificationViewController: UIViewController {
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert |
             UIUserNotificationType.Badge, categories: nil
             ))
+        UIAlertView(title: "Notification added", message: "You can manage notification by tapping the button at the lower right corner", delegate: nil, cancelButtonTitle: "OK").show()
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func notificationRegistered(notification:NSNotification) {
@@ -62,14 +64,4 @@ class NewNotificationViewController: UIViewController {
         notification.userInfo = ferry!.dictionaryRepresentation
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -124,6 +124,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
             
             let navController = UINavigationController(rootViewController: controller.presentedViewController)
+            controller.presentedViewController.title = "Calendar"
             return navController
     }
     

@@ -18,7 +18,7 @@ class NotificationTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         let count = UIApplication.sharedApplication().scheduledLocalNotifications.count
-        let size = CGSizeMake(320.0, Double(count) * 44.0)
+        let size = CGSizeMake(320.0, CGFloat(count) * 44.0)
         self.preferredContentSize = self.tableView.contentSize
     }
     
@@ -109,5 +109,8 @@ class NotificationTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func closeButtonTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

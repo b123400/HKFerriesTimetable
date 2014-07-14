@@ -101,13 +101,13 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Set Date" id="nEu-EN-GTf">
+                        <barButtonItem image="calendar" id="nEu-EN-GTf">
                             <connections>
                                 <action selector="dateButtonTapped:" destination="JEX-9P-axG" id="TiI-KX-uOm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JoJ-Ga-aPo"/>
-                        <barButtonItem title="Alarm" id="OkL-ds-0jr">
+                        <barButtonItem image="bell" id="OkL-ds-0jr">
                             <connections>
                                 <segue destination="n5N-2e-X4W" kind="popoverPresentation" popoverAnchorBarButtonItem="OkL-ds-0jr" id="TIw-5D-AYh">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -116,7 +116,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
-                        <barButtonItem key="rightBarButtonItem" title="Flip" id="aF2-c8-xXg">
+                        <barButtonItem key="rightBarButtonItem" image="exchange" id="aF2-c8-xXg">
                             <connections>
                                 <action selector="flipButtonTapped:" destination="JEX-9P-axG" id="Jly-ix-CqS"/>
                             </connections>
@@ -219,7 +219,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5XN-7W-xqV" kind="show" id="zM9-h4-7t3"/>
+                                    <segue destination="5XN-7W-xqV" kind="show" identifier="showMap" id="zM9-h4-7t3"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPN-Ou-jzY">
@@ -438,7 +438,13 @@
                             <outlet property="delegate" destination="d9H-OE-g9j" id="u7w-gc-jwX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notifications" id="NXk-UG-Dwc"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="NXk-UG-Dwc">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="PvO-ZT-Est">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="d9H-OE-g9j" id="kuN-pe-Ttz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgZ-aM-KG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,10 +466,10 @@
             </objects>
             <point key="canvasLocation" x="1238" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="xJW-Tb-eIl">
             <objects>
-                <viewController id="5XN-7W-xqV" sceneMemberID="viewController">
+                <viewController title="Map" id="5XN-7W-xqV" customClass="MapViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ibu-vi-VZ4"/>
                         <viewControllerLayoutGuide type="bottom" id="lSN-nq-yxl"/>
@@ -484,6 +490,9 @@
                             <constraint firstItem="aya-8M-40A" firstAttribute="top" secondItem="XsD-hj-n2f" secondAttribute="top" id="tuy-Zh-fXh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="aya-8M-40A" id="jfb-yp-Iwq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYI-t0-odi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -579,7 +588,10 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
+                        <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv"/>
+                        <barButtonItem key="rightBarButtonItem" image="location" id="U6s-uV-r3L"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,8 +613,15 @@
             <point key="canvasLocation" x="-38" y="30"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bell" width="24" height="28"/>
+        <image name="calendar" width="25" height="25"/>
+        <image name="exchange" width="25" height="25"/>
+        <image name="info" width="28" height="28"/>
+        <image name="location" width="28" height="28"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TDP-bv-LvY"/>
+        <segue reference="HY5-pI-bQh"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

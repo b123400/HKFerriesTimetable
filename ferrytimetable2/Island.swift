@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Island: NSObject {
     let sourceDict:NSDictionary;
@@ -47,6 +48,14 @@ class Island: NSObject {
         get {
             return sourceDict.objectForKey("name") as String
         }
+    }
+    
+    var location : CLLocationCoordinate2D {
+    get {
+        let latString = sourceDict.objectForKey("location-lat") as NSString
+        let longString = sourceDict.objectForKey("location-long") as NSString
+        return CLLocationCoordinate2DMake(latString.doubleValue, longString.doubleValue)
+    }
     }
     
     func getFerriesForDate(date:NSDate, direction:Direction) -> [Ferry] {
