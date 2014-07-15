@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MasterViewController: UITableViewController, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate {
+class MasterViewController: UITableViewController, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var currentPier : Pier = Pier.Central
@@ -97,6 +98,60 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         default:
             break
         }
+    }
+    
+    @IBAction func locationButtonTapped(sender: AnyObject) {
+        if CLLocationManager.locationServicesEnabled() {
+            let locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            switch CLLocationManager.authorizationStatus() {
+            case CLAuthorizationStatus.NotDetermined :
+                locationManager.requestWhenInUseAuthorization()
+            case CLAuthorizationStatus.Authorized, CLAuthorizationStatus.AuthorizedWhenInUse:
+                locationManager.startUpdatingLocation()
+            default:
+                break
+            }
+        }
+    }
+        
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
+            switch status {
+            case CLAuthorizationStatus.Authorized, CLAuthorizationStatus.AuthorizedWhenInUse:
+                manager.startUpdatingLocation()
+            default :
+                break
+            }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        manager.stopUpdatingLocation()
+        
+        let location = (locations as NSArray).lastObject as CLLocation
+        var closestIndex = -1 as Int
+        var closestDistance = -1 as Double
+        for var i = 0; i < islands.count; i++ {
+            let islandDict = islands[i] as NSDictionary
+            let latString = islandDict.objectForKey("location-lat") as NSString
+            let longString = islandDict.objectForKey("location-long") as NSString
+            let thisLocation = CLLocation(latitude: latString.doubleValue, longitude: longString.doubleValue)
+            let distance = location.distanceFromLocation(thisLocation) as Double
+            
+            let isInitial = closestDistance != -1
+            let isClosest = Double(closestDistance) > Double(distance)
+            if isInitial || isClosest {
+                closestDistance = distance
+                closestIndex = i
+            }
+        }
+        if closestIndex != -1 {
+            tableView.selectRowAtIndexPath(NSIndexPath(forRow: closestIndex, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        }
+    }
+        
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        NSLog(error.description)
     }
     
     func pierSelectTableViewController(vc:PierSelectTableViewController,didSelected pier:Pier){

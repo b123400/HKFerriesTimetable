@@ -590,7 +590,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
                         <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv"/>
-                        <barButtonItem key="rightBarButtonItem" image="location" id="U6s-uV-r3L"/>
+                        <barButtonItem key="rightBarButtonItem" image="location" id="U6s-uV-r3L">
+                            <connections>
+                                <action selector="locationButtonTapped:" destination="7bK-jq-Zjz" id="Aed-Bo-WGB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
