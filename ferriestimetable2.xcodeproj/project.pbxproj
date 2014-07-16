@@ -83,6 +83,8 @@
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
+		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
+		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
 		CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -181,6 +183,8 @@
 		CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 		CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryTimeTableViewCell.swift; sourceTree = "<group>"; };
+		CFF9BB061976CFE9004E087E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CFF9BB081976D1E9004E087E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
 		CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -383,6 +387,7 @@
 				CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */,
 				CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */,
 				CF7FDFA81973D27300948061 /* MapViewController.swift */,
+				CFF9BB081976D1E9004E087E /* AboutViewController.swift */,
 				CFD0C9FE1971612F006A224B /* Clock View */,
 				CFDA3C7419647B8F0079E924 /* Model */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
@@ -398,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB6E0A2195D439E00F83035 /* Info.plist */,
+				CFF9BB061976CFE9004E087E /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				CF47A629195F350F0066D9EE /* ToHungHomNormal.plist in Resources */,
 				CF47A61B195F350F0066D9EE /* KowloonCityInfo.plist in Resources */,
 				CF47A61C195F350F0066D9EE /* LammaSokKwuWanInfo.plist in Resources */,
+				CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */,
 				CF47A622195F350F0066D9EE /* Piers.plist in Resources */,
 				CF47A610195F350F0066D9EE /* FromParkHoliday.plist in Resources */,
 				CF47A61E195F350F0066D9EE /* MuiWoInfo.plist in Resources */,
@@ -662,6 +669,7 @@
 				CF6515B3196062DD005626C0 /* Island.swift in Sources */,
 				CFB6E0A4195D439E00F83035 /* AppDelegate.swift in Sources */,
 				CF7FDFA91973D27300948061 /* MapViewController.swift in Sources */,
+				CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */,
 				CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
