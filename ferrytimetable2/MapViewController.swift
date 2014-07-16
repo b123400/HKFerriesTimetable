@@ -30,6 +30,8 @@ class MapViewController: UIViewController {
             annotation.title = ferry!.island.name
             mapView.addAnnotation(annotation)
         }
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .Plain, target: self, action: "shareTapped:")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +39,12 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func shareTapped(sender:UIBarButtonItem) {
+        let placemark = MKPlacemark(coordinate: ferry!.island.location, addressDictionary: nil)
+        let item = MKMapItem(placemark: placemark)
+        item.name = ferry!.island.name
+        item.openInMapsWithLaunchOptions(nil)
+    }
     /*
     // #pragma mark - Navigation
 
