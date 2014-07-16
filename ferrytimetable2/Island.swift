@@ -82,6 +82,8 @@ class Island: NSObject {
             return (detailDict.objectForKey("TimeOfJourney-Slow") as NSNumber).doubleValue * 60
         case .Fast:
             return (detailDict.objectForKey("TimeOfJourney-Fast") as NSNumber).doubleValue * 60
+        case .Optional:
+            return (detailDict.objectForKey("TimeOfJourney-Optional") as NSNumber).doubleValue * 60
         default:
             return nil;
         }
@@ -90,10 +92,10 @@ class Island: NSObject {
     func getPriceForType(type:FerryType, date:NSDate) -> String{
         switch (type, date.isHoliday()) {
             
-        case (FerryType.Slow, false):
+        case (FerryType.Slow, false),(FerryType.Optional, false):
             return detailDict.objectForKey("PriceNormalSlow") as String
             
-        case (FerryType.Slow, true):
+        case (FerryType.Slow, true),(FerryType.Optional, true):
             return detailDict.objectForKey("PriceHolidaySlow") as String
             
         case (FerryType.Fast, false):

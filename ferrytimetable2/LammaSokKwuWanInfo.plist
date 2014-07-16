@@ -4,6 +4,8 @@
 <dict>
 	<key>TimeOfJourney-Slow</key>
 	<integer>40</integer>
+	<key>TimeOfJourney-Optional</key>
+	<integer>40</integer>
 	<key>ToIslandPlistNormal</key>
 	<string>ToSKWNormal</string>
 	<key>FromIslandPlistNormal</key>

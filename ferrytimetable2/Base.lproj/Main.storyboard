@@ -514,6 +514,56 @@
             </objects>
             <point key="canvasLocation" x="604" y="653"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="OTe-CB-S2H">
+            <objects>
+                <viewController id="z7I-yO-1LI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3fD-Tb-U9b"/>
+                        <viewControllerLayoutGuide type="bottom" id="stV-dB-xxh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpw-79-InB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9x-p1-3UH">
+                                <rect key="frame" x="113" y="325" width="95" height="30"/>
+                                <state key="normal" title="By @b123400">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hong Kong Ferries Timetable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpt-vg-xB2">
+                                <rect key="frame" x="48" y="242" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ver. 2.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-mD-x63">
+                                <rect key="frame" x="125" y="296" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Licence" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-8F-U2S">
+                                <rect key="frame" x="0.0" y="363" width="320" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="568"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brl-W2-8Op" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="-630"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
@@ -589,7 +639,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
-                        <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv"/>
+                        <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv">
+                            <connections>
+                                <segue destination="z7I-yO-1LI" kind="popoverPresentation" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="location" id="U6s-uV-r3L">
                             <connections>
                                 <action selector="locationButtonTapped:" destination="7bK-jq-Zjz" id="Aed-Bo-WGB"/>

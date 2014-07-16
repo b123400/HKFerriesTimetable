@@ -44,7 +44,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier? == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow()
             let islandDict = islands[indexPath.row] as NSDictionary
             let island = Island(dictionary: islandDict, pier:currentPier)
