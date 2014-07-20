@@ -12,7 +12,7 @@ class CustomCalendarViewController: PDTSimpleCalendarViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelButtonTapped:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Cancel",comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "cancelButtonTapped:")
     }
     
     func cancelButtonTapped(sender:UIBarButtonItem) {

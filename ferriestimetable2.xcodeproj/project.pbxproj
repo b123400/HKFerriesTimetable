@@ -79,6 +79,9 @@
 		CFB6E0AD195D439E00F83035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0AC195D439E00F83035 /* Images.xcassets */; };
 		CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */; };
 		CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
+		CFCCAF8B197B618400515CBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF8D197B618400515CBA /* InfoPlist.strings */; };
+		CFCCAF90197B618400515CBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF92197B618400515CBA /* InfoPlist.strings */; };
+		CFCCAF95197B618400515CBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
 		CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */; };
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
@@ -179,6 +182,16 @@
 		CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferrytimetable2Tests.swift; sourceTree = "<group>"; };
 		CFC0E0A8196AB8E300B4CB4A /* ferriestimetable2-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ferriestimetable2-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarViewController.swift; sourceTree = "<group>"; };
+		CFCCAF88197B0F6F00515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		CFCCAF8C197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CFCCAF91197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CFCCAF96197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CFCCAF98197B6DB500515CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CFCCAF99197B713A00515CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CFCCAF9A197B717800515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		CFCCAF9B197B717900515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CFCCAF9C197B717900515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CFCCAF9D197B762300515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNotificationViewController.swift; sourceTree = "<group>"; };
 		CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
@@ -402,6 +415,8 @@
 		CFB6E0A1195D439E00F83035 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFCCAF97197B618400515CBA /* Localizable.strings */,
+				CFCCAF8D197B618400515CBA /* InfoPlist.strings */,
 				CFB6E0A2195D439E00F83035 /* Info.plist */,
 				CFF9BB061976CFE9004E087E /* Settings.bundle */,
 			);
@@ -420,6 +435,7 @@
 		CFB6E0B6195D439E00F83035 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFCCAF92197B618400515CBA /* InfoPlist.strings */,
 				CFB6E0B7195D439E00F83035 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -530,6 +546,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = CFB6E095195D439E00F83035;
 			productRefGroup = CFB6E09F195D439E00F83035 /* Products */;
@@ -557,6 +574,7 @@
 				CF47A61D195F350F0066D9EE /* LammaYungShueWanInfo.plist in Resources */,
 				CF47A624195F350F0066D9EE /* ToCheungChauSaturday.plist in Resources */,
 				CF47A619195F350F0066D9EE /* FromYSWNormalSaturday.plist in Resources */,
+				CFCCAF8B197B618400515CBA /* InfoPlist.strings in Resources */,
 				CF47A637195F350F0066D9EE /* ToYSWNormal.plist in Resources */,
 				CF47A636195F350F0066D9EE /* ToYSWHoliday.plist in Resources */,
 				CF47A611195F350F0066D9EE /* FromParkNormal.plist in Resources */,
@@ -571,6 +589,7 @@
 				CF47A62F195F350F0066D9EE /* ToParkHoliday.plist in Resources */,
 				CF47A614195F350F0066D9EE /* FromPengChauNormal.plist in Resources */,
 				CF47A62B195F350F0066D9EE /* ToKowloonCityNormal.plist in Resources */,
+				CFCCAF95197B618400515CBA /* Localizable.strings in Resources */,
 				CF47A631195F350F0066D9EE /* ToParkSaturday.plist in Resources */,
 				CF47A62E195F350F0066D9EE /* ToMuiWoSaturday.plist in Resources */,
 				CF47A626195F350F0066D9EE /* ToDiscoveryBayNormal.plist in Resources */,
@@ -612,6 +631,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCCAF90197B618400515CBA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,8 +717,39 @@
 			isa = PBXVariantGroup;
 			children = (
 				CFB6E0AA195D439E00F83035 /* Base */,
+				CFCCAF88197B0F6F00515CBA /* ja */,
+				CFCCAF9A197B717800515CBA /* zh-Hant */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFCCAF8D197B618400515CBA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFCCAF8C197B618400515CBA /* ja */,
+				CFCCAF99197B713A00515CBA /* en */,
+				CFCCAF9C197B717900515CBA /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CFCCAF92197B618400515CBA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFCCAF91197B618400515CBA /* ja */,
+				CFCCAF9D197B762300515CBA /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CFCCAF97197B618400515CBA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFCCAF96197B618400515CBA /* ja */,
+				CFCCAF98197B6DB500515CBA /* en */,
+				CFCCAF9B197B717900515CBA /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -14,6 +14,8 @@
 	<integer>14</integer>
 	<key>PriceNormalSlow</key>
 	<string>$5.50</string>
+	<key>PriceHolidaySlow</key>
+	<string>$5.50</string>
 	<key>dataLastRefreshTime</key>
 	<string>16/11/2013</string>
 	<key>pier-lat</key>

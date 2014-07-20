@@ -26,7 +26,7 @@ class NewNotificationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeButtonTapped:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Close",comment:""), style: .Plain, target: self, action: "closeButtonTapped:")
         updateDateLabel()
     }
 
@@ -52,7 +52,7 @@ class NewNotificationViewController: UIViewController {
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert |
             UIUserNotificationType.Badge, categories: nil
             ))
-        UIAlertView(title: "Notification added", message: "You can manage notification by tapping the button at the lower right corner", delegate: nil, cancelButtonTitle: "OK").show()
+        UIAlertView(title:  NSLocalizedString("Notification added",comment:""), message:  NSLocalizedString("You can manage notification by tapping the button at the lower right corner",comment:""), delegate: nil, cancelButtonTitle:  NSLocalizedString("OK",comment:"")).show()
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -60,7 +60,7 @@ class NewNotificationViewController: UIViewController {
         let interval = datePicker.countDownDuration
         let notification = UILocalNotification()
         notification.fireDate = ferry?.leavingTime.dateByAddingTimeInterval(-interval)
-        notification.alertBody = "Time to go to \(ferry?.island.name)!"
+        notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry?.island.name))
         notification.userInfo = ferry!.dictionaryRepresentation
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }

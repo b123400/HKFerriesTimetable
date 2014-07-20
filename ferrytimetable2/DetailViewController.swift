@@ -33,9 +33,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         
         if let _island = self.island as? Island {
             if currentDirection == Direction.ToIsland {
-                self.title = "To \(_island.name)"
+                self.title = NSString(format:NSLocalizedString("To %@",comment:""), NSLocalizedString(_island.name,comment:""))
             } else {
-                self.title = "From \(_island.name)"
+                self.title = NSString(format:NSLocalizedString("From %@",comment:""), NSLocalizedString(_island.name,comment:""))
             }
         }
     }
@@ -82,18 +82,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0:
-                cell.timeLabel.text = "Green For Ordinary Ferry"
+                cell.timeLabel.text = NSLocalizedString("Green For Ordinary Ferry",comment:"")
                 cell.typeColorView.backgroundColor = UIColor(red: 53/255.0, green: 221/255.0, blue: 112/255.0, alpha: 1.0)
             case 1:
-                cell.timeLabel.text = "Red For Fast Ferry"
+                cell.timeLabel.text = NSLocalizedString("Red For Fast Ferry",comment:"")
                 cell.typeColorView.backgroundColor = UIColor(red:255/255.0, green: 1/255.0, blue:128/255.0, alpha: 1.0)
             case 2:
-                cell.timeLabel.text = "Yellow For Optional Service"
+                cell.timeLabel.text = NSLocalizedString("Yellow For Optional Service",comment:"")
                 cell.typeColorView.backgroundColor = UIColor(red:244/255.0, green: 209/255.0, blue:70/255.0, alpha: 1.0)
             default:
                 break;
             }
-            
+            cell.selectionStyle = .None
         } else {
             let ferry = currentTimetable[indexPath.row]
             cell.timeLabel.text = ferry.time
@@ -107,6 +107,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             default:
                 break;
             }
+            cell.selectionStyle = .Gray
         }
         return cell
     }
@@ -144,7 +145,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
             
             let navController = UINavigationController(rootViewController: controller.presentedViewController)
-            controller.presentedViewController.title = "Calendar"
+            controller.presentedViewController.title = NSLocalizedString("Calendar",comment:"")
             return navController
     }
     
@@ -175,6 +176,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             ferryController.ferry = ferry
             tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow(), animated: true)
         }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if identifier? == "showFerry" && tableView.indexPathForSelectedRow().section == 0 {
+            return false
+        }
+        return super.shouldPerformSegueWithIdentifier(identifier, sender: sender)
     }
 }
 

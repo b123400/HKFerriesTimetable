@@ -58,21 +58,21 @@ class NotificationTableViewController: UITableViewController {
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
         
         if ferry.direction == Direction.ToIsland {
-            cell.textLabel.text = "To \(ferry.island.name)"
+            cell.textLabel.text = NSString(format: NSLocalizedString("To %@",comment:""),ferry.island.name)
         } else {
-            cell.textLabel.text = "From \(ferry.island.name)"
+            cell.textLabel.text = NSString(format: NSLocalizedString("From %@",comment:""),ferry.island.name)
         }
         
         let dateText = NSDateFormatter.localizedStringFromDate(notification.fireDate, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
-        cell.detailTextLabel.text = "Notify at \(dateText)"
+        cell.detailTextLabel.text = NSString(format: NSLocalizedString("Notify at %@",comment:""),dateText)
 
         return cell
     }
     
     override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String! {
         if UIApplication.sharedApplication().scheduledLocalNotifications.count == 0 {
-            return "No Notification"
+            return NSLocalizedString("No Notification",comment:"")
         }
         return ""
     }

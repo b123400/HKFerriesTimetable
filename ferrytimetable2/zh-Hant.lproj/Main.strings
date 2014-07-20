@@ -1,0 +1,105 @@
+/* Class = "IBUIButton"; normalTitle = "Add notification"; ObjectID = "5Qc-Tq-VR6"; */
+"5Qc-Tq-VR6.normalTitle" = "提醒我";
+
+/* Class = "IBUIViewController"; title = "Map"; ObjectID = "5XN-7W-xqV"; */
+"5XN-7W-xqV.title" = "地圖";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Master";
+
+/* Class = "IBUILabel"; text = "35min"; ObjectID = "8EA-tK-vgc"; */
+"8EA-tK-vgc.text" = "35min";
+
+/* Class = "IBUILabel"; text = "3"; ObjectID = "9aC-GD-5k5"; */
+"9aC-GD-5k5.text" = "3";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
+"Arm-wq-HPj.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Duration"; ObjectID = "Dkp-GX-YWD"; */
+"Dkp-GX-YWD.text" = "航行時間";
+
+/* Class = "IBUILabel"; text = "Hong Kong Ferries Timetable"; ObjectID = "Hpt-vg-xB2"; */
+"Hpt-vg-xB2.text" = "香港船期表";
+
+/* Class = "IBUIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "詳細";
+
+/* Class = "IBUILabel"; text = "Notify me before ferry leaves:"; ObjectID = "Lv9-SW-TaD"; */
+"Lv9-SW-TaD.text" = "要開船得時候提醒我：";
+
+/* Class = "IBUILabel"; text = "Licence Information in Settings.app"; ObjectID = "MN3-DO-EWy"; */
+"MN3-DO-EWy.text" = "Licence Information in Settings.app";
+
+/* Class = "IBUIButton"; normalTitle = "Map"; ObjectID = "NTu-v0-eKh"; */
+"NTu-v0-eKh.normalTitle" = "地圖";
+
+/* Class = "IBUINavigationItem"; title = "Notifications"; ObjectID = "NXk-UG-Dwc"; */
+"NXk-UG-Dwc.title" = "通知";
+
+/* Class = "IBUIViewController"; title = "Notification"; ObjectID = "On0-NK-BEW"; */
+"On0-NK-BEW.title" = "通知";
+
+/* Class = "IBUILabel"; text = "Ver. 2.0.0"; ObjectID = "Pfl-mD-x63"; */
+"Pfl-mD-x63.text" = "Ver. 2.0.0";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "PvO-ZT-Est"; */
+"PvO-ZT-Est.title" = "關閉";
+
+/* Class = "IBUILabel"; text = "$20"; ObjectID = "Rz5-a3-V5y"; */
+"Rz5-a3-V5y.text" = "$20";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "RzM-qc-Tha"; */
+"RzM-qc-Tha.title" = "關閉";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "WPW-i5-Zhj"; */
+"WPW-i5-Zhj.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Price"; ObjectID = "Zc5-Lw-jQV"; */
+"Zc5-Lw-jQV.text" = "價錢";
+
+/* Class = "IBUINavigationItem"; title = "Islands"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "島嶼";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "ag7-ua-yI3"; */
+"ag7-ua-yI3.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "11:30 ~ 12:20"; ObjectID = "bA0-aG-fel"; */
+"bA0-aG-fel.text" = "11:30 ~ 12:20";
+
+/* Class = "IBUILabel"; text = "6"; ObjectID = "dKI-WM-Lfw"; */
+"dKI-WM-Lfw.text" = "6";
+
+/* Class = "IBUIButton"; normalTitle = "By @b123400"; ObjectID = "g9x-p1-3UH"; */
+"g9x-p1-3UH.normalTitle" = "By @b123400";
+
+/* Class = "IBUIButton"; normalTitle = "Notification"; ObjectID = "haH-ca-bx4"; */
+"haH-ca-bx4.normalTitle" = "通知";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "jYf-qq-UHp"; */
+"jYf-qq-UHp.title" = "關閉";
+
+/* Class = "IBUISegmentedControl"; jhD-EP-cyC.segmentTitles[0] = "Central"; ObjectID = "jhD-EP-cyC"; */
+"jhD-EP-cyC.segmentTitles[0]" = "中環";
+
+/* Class = "IBUISegmentedControl"; jhD-EP-cyC.segmentTitles[1] = "North Point"; ObjectID = "jhD-EP-cyC"; */
+"jhD-EP-cyC.segmentTitles[1]" = "北角";
+
+/* Class = "IBUILabel"; text = "12"; ObjectID = "kfL-Un-odS"; */
+"kfL-Un-odS.text" = "12";
+
+/* Class = "IBUINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
+"mOI-FS-AaM.title" = "詳細資料";
+
+/* Class = "IBUILabel"; text = "time"; ObjectID = "ohV-3o-i3R"; */
+"ohV-3o-i3R.text" = "time";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "qXG-PI-TAX"; */
+"qXG-PI-TAX.text" = "Label";
+
+/* Class = "IBUILabel"; text = "9"; ObjectID = "tM0-LK-yI3"; */
+"tM0-LK-yI3.text" = "9";
+
+/* Class = "IBUINavigationItem"; title = "About"; ObjectID = "w7l-jm-H2w"; */
+"w7l-jm-H2w.title" = "關於";
+

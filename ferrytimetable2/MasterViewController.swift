@@ -66,7 +66,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = islands[indexPath.row].objectForKey("name") as NSString
-        cell.textLabel.text = object.description
+        cell.textLabel.text = NSLocalizedString(object,comment:"")
         return cell
     }
 
