@@ -10,8 +10,8 @@ import UIKit
 
 class FerryTimeTableViewCell: UITableViewCell {
 
-    @IBOutlet var timeLabel: UILabel
-    @IBOutlet var typeColorView: UIView
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var typeColorView: UIView!
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

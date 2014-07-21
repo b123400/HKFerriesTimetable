@@ -70,8 +70,9 @@ class Ferry: NSObject {
     
     func convertTime(time:String, fromDate date:NSDate) -> NSDate {
         
-        let startHour = time.substringToIndex(2).toInt()
-        let startMinutes = time.substringFromIndex(2).toInt()
+        let thisTime = NSString(string:time)
+        let startHour = thisTime.substringToIndex(2).toInt()
+        let startMinutes = thisTime.substringFromIndex(2).toInt()
         
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth|NSCalendarUnit.CalendarUnitDay, fromDate: date)

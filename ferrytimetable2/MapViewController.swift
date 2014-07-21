@@ -12,7 +12,7 @@ import CoreLocation
 
 class MapViewController: UIViewController {
 
-    @IBOutlet var mapView: MKMapView
+    @IBOutlet var mapView: MKMapView!
     var ferry : Ferry?
     
     init(coder aDecoder: NSCoder!) {

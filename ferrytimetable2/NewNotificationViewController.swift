@@ -9,9 +9,9 @@
 import UIKit
 
 class NewNotificationViewController: UIViewController {
-    @IBOutlet var datePicker: UIDatePicker
+    @IBOutlet var datePicker: UIDatePicker!
     var ferry : Ferry?
-    @IBOutlet var dateLabel: UILabel
+    @IBOutlet var dateLabel: UILabel!
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -36,7 +36,7 @@ class NewNotificationViewController: UIViewController {
     }
     
     func updateDateLabel() {
-        let alarmDate = ferry?.leavingTime.dateByAddingTimeInterval(-datePicker.countDownDuration)
+        let alarmDate = ferry!.leavingTime.dateByAddingTimeInterval(-datePicker.countDownDuration)
         dateLabel.text = NSDateFormatter.localizedStringFromDate(alarmDate, dateStyle: .NoStyle, timeStyle: .MediumStyle)
     }
     
@@ -59,7 +59,7 @@ class NewNotificationViewController: UIViewController {
     func notificationRegistered(notification:NSNotification) {
         let interval = datePicker.countDownDuration
         let notification = UILocalNotification()
-        notification.fireDate = ferry?.leavingTime.dateByAddingTimeInterval(-interval)
+        notification.fireDate = ferry!.leavingTime.dateByAddingTimeInterval(-interval)
         notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry?.island.name))
         notification.userInfo = ferry!.dictionaryRepresentation
         UIApplication.sharedApplication().scheduleLocalNotification(notification)

@@ -11,10 +11,10 @@ import MapKit
 import CoreLocation
 
 class FerryViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-    @IBOutlet var priceView: UIView
-    @IBOutlet var clockView: BRClockView
-    @IBOutlet var priceLabel: UILabel
-    @IBOutlet var durationLabel: UILabel
+    @IBOutlet var priceView: UIView?
+    @IBOutlet var clockView: BRClockView?
+    @IBOutlet var priceLabel: UILabel?
+    @IBOutlet var durationLabel: UILabel?
     var shown = false
     var ferry : Ferry? {
         didSet {
@@ -39,7 +39,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        priceView.layer.borderColor = UIColor(red: 217.0/255.0, green: 217.0/255.0, blue: 217.0/255.0, alpha: 1.0).CGColor
+        priceView!.layer.borderColor = UIColor(red: 217.0/255.0, green: 217.0/255.0, blue: 217.0/255.0, alpha: 1.0).CGColor
         // Do any additional setup after loading the view.
     }
     
@@ -70,7 +70,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     */
     
     // MARK: - layout
-    @IBOutlet var timeLabel: UILabel
+    @IBOutlet var timeLabel: UILabel?
     func configureView() {
         if timeLabel != nil {
             
@@ -78,23 +78,23 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
             formatter.dateFormat = "HH:mm"
             let leavingString = "\(formatter.stringFromDate(ferry!.leavingTime))"
             let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime))"
-            timeLabel.text = "\(leavingString) ~ \(arrivingString)"
+            timeLabel!.text = "\(leavingString) ~ \(arrivingString)"
         }
         if clockView {
             if ferry {
                 if shown {
-                    clockView.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.arrvingTime, animated: false)
+                    clockView!.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.arrvingTime, animated: false)
                 } else {
-                    clockView.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.leavingTime, animated: false)
+                    clockView!.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.leavingTime, animated: false)
                 }
             }
         }
         if priceLabel {
-            priceLabel.text = ferry?.price
+            priceLabel!.text = ferry?.price
         }
         if durationLabel {
             let seconds = ferry?.duration
-            durationLabel.text = NSString(format: "%.fmin", seconds!/60)
+            durationLabel!.text = NSString(format: "%.fmin", seconds!/60)
         }
     }
     

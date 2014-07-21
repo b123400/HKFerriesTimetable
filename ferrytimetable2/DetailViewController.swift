@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPresentationControllerDelegate, PDTSimpleCalendarViewDelegate {
 
-    @IBOutlet var tableView: UITableView
+    @IBOutlet var tableView: UITableView!
     var currentTimetable : [Ferry] = []
     var currentDate:NSDate = NSDate()
     var currentDirection = Direction.ToIsland
@@ -44,8 +44,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
+        tableView!.rowHeight = UITableViewAutomaticDimension;
+        tableView!.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     }
 
     override func didReceiveMemoryWarning() {
@@ -172,14 +172,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         if segue.identifier? == "showFerry" {
             let navController = segue.destinationViewController as UINavigationController
             let ferryController = navController.topViewController as FerryViewController
-            let ferry = currentTimetable[ tableView.indexPathForSelectedRow().row ]
+            let ferry = currentTimetable[ tableView!.indexPathForSelectedRow().row ]
             ferryController.ferry = ferry
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow(), animated: true)
+            tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow(), animated: true)
         }
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier? == "showFerry" && tableView.indexPathForSelectedRow().section == 0 {
+        if identifier? == "showFerry" && tableView!.indexPathForSelectedRow().section == 0 {
             return false
         }
         return super.shouldPerformSegueWithIdentifier(identifier, sender: sender)
