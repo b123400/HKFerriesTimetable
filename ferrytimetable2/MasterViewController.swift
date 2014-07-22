@@ -105,6 +105,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
             let locationManager = CLLocationManager()
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            
             switch CLLocationManager.authorizationStatus() {
             case CLAuthorizationStatus.NotDetermined :
                 locationManager.requestWhenInUseAuthorization()
