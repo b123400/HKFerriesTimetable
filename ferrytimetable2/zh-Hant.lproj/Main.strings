@@ -70,6 +70,9 @@
 /* Class = "IBUILabel"; text = "6"; ObjectID = "dKI-WM-Lfw"; */
 "dKI-WM-Lfw.text" = "6";
 
+/* Class = "IBUILabel"; text = "Choose an island"; ObjectID = "dhY-QO-NAc"; */
+"dhY-QO-NAc.text" = "請選擇島嶼";
+
 /* Class = "IBUIButton"; normalTitle = "By @b123400"; ObjectID = "g9x-p1-3UH"; */
 "g9x-p1-3UH.normalTitle" = "By @b123400";
 

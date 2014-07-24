@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="27"/>
+            <point key="canvasLocation" x="656" y="127"/>
         </scene>
         <!--Ferry View Controller-->
         <scene sceneID="WEk-q6-F7m">
@@ -316,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9o-mB-M2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="653"/>
+            <point key="canvasLocation" x="1290" y="753"/>
         </scene>
         <!--Notification-->
         <scene sceneID="X3e-rn-VGH">
@@ -398,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyt-cA-BYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="1256"/>
+            <point key="canvasLocation" x="1290" y="1356"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Qwp-87-gvQ">
@@ -448,7 +448,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgZ-aM-KG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="27"/>
+            <point key="canvasLocation" x="1927" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="so6-gQ-fh1">
@@ -464,7 +464,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9K-25-nPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="27"/>
+            <point key="canvasLocation" x="1290" y="127"/>
         </scene>
         <!--Map-->
         <scene sceneID="xJW-Tb-eIl">
@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYI-t0-odi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="653"/>
+            <point key="canvasLocation" x="1927" y="753"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZmB-IL-nfd">
@@ -512,7 +512,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k36-9T-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="653"/>
+            <point key="canvasLocation" x="656" y="753"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="OTe-CB-S2H">
@@ -607,7 +607,7 @@
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
-                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                        <segue destination="bCf-kv-pHZ" kind="relationship" relationship="detailViewController" id="heG-m8-yhM"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
@@ -693,6 +693,56 @@
             </objects>
             <point key="canvasLocation" x="604" y="-630"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Z40-vY-12w">
+            <objects>
+                <viewController id="bCf-kv-pHZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rSe-6i-qSz"/>
+                        <viewControllerLayoutGuide type="bottom" id="YlJ-lD-vwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hO6-WV-4MN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JvN-IR-UeM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose" translatesAutoresizingMaskIntoConstraints="NO" id="61u-00-qmt">
+                                <rect key="frame" x="178" y="178" width="244" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="NGy-Bh-xgy"/>
+                                    <constraint firstAttribute="width" constant="244" id="Zik-PV-qe2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an island" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-QO-NAc">
+                                <rect key="frame" x="0.0" y="429" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2ft-kg-8pi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YlJ-lD-vwg" firstAttribute="top" secondItem="JvN-IR-UeM" secondAttribute="bottom" id="0X6-pc-u7g"/>
+                            <constraint firstAttribute="trailing" secondItem="dhY-QO-NAc" secondAttribute="trailing" id="2ic-Ff-dpm"/>
+                            <constraint firstAttribute="centerX" secondItem="61u-00-qmt" secondAttribute="centerX" id="MDz-e5-fs5"/>
+                            <constraint firstAttribute="centerY" secondItem="61u-00-qmt" secondAttribute="centerY" id="N3s-LK-sPz"/>
+                            <constraint firstItem="dhY-QO-NAc" firstAttribute="leading" secondItem="hO6-WV-4MN" secondAttribute="leading" id="VFG-f0-bMg"/>
+                            <constraint firstItem="JvN-IR-UeM" firstAttribute="top" secondItem="hO6-WV-4MN" secondAttribute="top" id="bp6-hc-fSS"/>
+                            <constraint firstAttribute="trailing" secondItem="JvN-IR-UeM" secondAttribute="trailing" id="lIW-ba-8nx"/>
+                            <constraint firstItem="dhY-QO-NAc" firstAttribute="top" secondItem="61u-00-qmt" secondAttribute="bottom" constant="7" id="p7M-sq-HbY"/>
+                            <constraint firstItem="JvN-IR-UeM" firstAttribute="leading" secondItem="hO6-WV-4MN" secondAttribute="leading" id="umL-99-Lvr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6y6-vf-vkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687" y="476"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
@@ -706,18 +756,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="30"/>
+            <point key="canvasLocation" x="14" y="130"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="1334" height="994"/>
         <image name="bell" width="24" height="28"/>
         <image name="calendar" width="25" height="25"/>
+        <image name="choose" width="244" height="244"/>
         <image name="exchange" width="25" height="25"/>
         <image name="info" width="28" height="28"/>
         <image name="location" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HY5-pI-bQh"/>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="TDP-bv-LvY"/>
     </inferredMetricsTieBreakers>
 </document>

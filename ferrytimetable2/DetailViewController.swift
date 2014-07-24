@@ -96,7 +96,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             cell.selectionStyle = .None
         } else {
             let ferry = currentTimetable[indexPath.row]
-            cell.timeLabel.text = ferry.time
+            cell.timeLabel.text = NSDateFormatter.localizedStringFromDate(ferry.leavingTime, dateStyle: .NoStyle, timeStyle: .ShortStyle)
             switch ferry.type {
             case .Slow:
                 cell.typeColorView.backgroundColor = UIColor(red: 53/255.0, green: 221/255.0, blue: 112/255.0, alpha: 1.0)
