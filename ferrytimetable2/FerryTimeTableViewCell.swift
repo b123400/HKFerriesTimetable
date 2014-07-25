@@ -12,6 +12,7 @@ class FerryTimeTableViewCell: UITableViewCell {
 
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var typeColorView: UIView!
+    @IBOutlet weak var timeLeftLabel: UILabel!
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

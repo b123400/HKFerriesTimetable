@@ -108,6 +108,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
                 break;
             }
             cell.selectionStyle = .Gray
+            
+            let timeLeft = ferry.leavingTime.timeIntervalSinceNow
+            cell.timeLeftLabel.text = NSString(format: NSLocalizedString("%@ left", comment:""), "\(timeLeft)")
         }
         return cell
     }

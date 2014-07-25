@@ -49,26 +49,39 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
-                                                    <rect key="frame" x="470" y="0.0" width="10" height="43"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
+                                                    <rect key="frame" x="590" y="0.0" width="10" height="43"/>
                                                     <color key="backgroundColor" red="1" green="0.0020682545409999998" blue="0.50217481019999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="10" id="fCb-qY-n7n"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-Ob-5yo">
+                                                    <rect key="frame" x="318" y="12" width="262" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="262" id="ECK-Bm-GR3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="97w-Mu-dzz" firstAttribute="leading" secondItem="757-Ob-5yo" secondAttribute="trailing" constant="10" id="Koq-SS-PUr"/>
                                                 <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="M8K-TM-1lD"/>
                                                 <constraint firstAttribute="bottom" secondItem="qXG-PI-TAX" secondAttribute="bottom" constant="11" id="Qbg-eA-HNg"/>
                                                 <constraint firstItem="97w-Mu-dzz" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" id="T1X-UN-FP7"/>
                                                 <constraint firstItem="qXG-PI-TAX" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="11" id="T3B-gO-Wbo"/>
+                                                <constraint firstAttribute="bottom" secondItem="757-Ob-5yo" secondAttribute="bottom" constant="11" id="meF-pk-Psy"/>
                                                 <constraint firstItem="qXG-PI-TAX" firstAttribute="leading" secondItem="vFd-fl-o1r" secondAttribute="leading" constant="20" id="p4s-UR-H1S"/>
                                                 <constraint firstAttribute="bottom" secondItem="97w-Mu-dzz" secondAttribute="bottom" id="u5z-he-A6d"/>
                                                 <constraint firstAttribute="trailing" secondItem="97w-Mu-dzz" secondAttribute="trailing" id="ukX-RI-mQX"/>
+                                                <constraint firstItem="757-Ob-5yo" firstAttribute="top" secondItem="vFd-fl-o1r" secondAttribute="top" constant="12" id="ywH-09-H9o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="timeLabel" destination="qXG-PI-TAX" id="o3v-x2-pla"/>
+                                            <outlet property="timeLeftLabel" destination="757-Ob-5yo" id="fiA-WT-w2D"/>
                                             <outlet property="typeColorView" destination="97w-Mu-dzz" id="8bT-fJ-jRd"/>
                                             <segue destination="QZ2-7R-V0f" kind="presentation" identifier="showFerry" id="Ejm-1i-qyR"/>
                                         </connections>
@@ -129,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="127"/>
+            <point key="canvasLocation" x="656" y="126"/>
         </scene>
         <!--Ferry View Controller-->
         <scene sceneID="WEk-q6-F7m">
