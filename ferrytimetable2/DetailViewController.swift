@@ -8,6 +8,38 @@
 
 import UIKit
 
+extension NSTimeInterval {
+    var toReadableString : String{
+        if self < 0 {
+            return ""
+        }
+        let minutes=Int(self/60)
+        var returnString = ""
+        if minutes < 60 {
+            if minutes == 0 {
+                return NSLocalizedString("Now",comment:"")
+            } else if minutes == 1 {
+                returnString = NSLocalizedString("1 minute",comment:"")
+            } else {
+                returnString = NSString(format: "%d %@", minutes, NSLocalizedString("minutes", comment:""))
+            }
+        }else if minutes < 3*60 {
+            let hour = Int(minutes/60)
+            let minutesLeft = minutes%60
+            if minutesLeft == 0 {
+                if hour == 1 {
+                    returnString = NSLocalizedString("1 hour",comment:"")
+                } else {
+                    returnString = NSString(format: "%d %@", hour, NSLocalizedString("hours",comment:""))
+                }
+            } else {
+                returnString = NSString(format: NSLocalizedString("%d hours and %@",comment:""), hour, NSTimeInterval(minutesLeft*60).toReadableString)
+            }
+        }
+        return returnString
+    }
+}
+
 class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPresentationControllerDelegate, PDTSimpleCalendarViewDelegate {
 
     @IBOutlet var tableView: UITableView!
@@ -93,6 +125,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             default:
                 break;
             }
+            cell.timeLeftLabel.text = ""
             cell.selectionStyle = .None
         } else {
             let ferry = currentTimetable[indexPath.row]
@@ -109,8 +142,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             }
             cell.selectionStyle = .Gray
             
-            let timeLeft = ferry.leavingTime.timeIntervalSinceNow
-            cell.timeLeftLabel.text = NSString(format: NSLocalizedString("%@ left", comment:""), "\(timeLeft)")
+            let timeLeft = ferry.leavingTime.timeIntervalSinceNow.toReadableString
+            if timeLeft != "Now" && timeLeft != "" {
+                cell.timeLeftLabel.text = NSString(format: NSLocalizedString("%@ left", comment:""), timeLeft)
+            } else {
+                cell.timeLeftLabel.text = timeLeft
+            }
         }
         return cell
     }
