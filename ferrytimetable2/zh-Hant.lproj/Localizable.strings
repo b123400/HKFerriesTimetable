@@ -1,4 +1,16 @@
 /* No comment provided by engineer. */
+"%@ left" = "剩下%@";
+
+/* No comment provided by engineer. */
+"%d hours and %@" = "%1$d小時%2$@";
+
+/* No comment provided by engineer. */
+"1 hour" = "1小時";
+
+/* No comment provided by engineer. */
+"1 minute" = "1分鐘";
+
+/* No comment provided by engineer. */
 "Calendar" = "月曆";
 
 /* No comment provided by engineer. */
@@ -69,4 +81,10 @@
 
 /* No comment provided by engineer. */
 "You can manage notification by tapping the button at the lower right corner" = "你可以按右下的按鈕來管理通知";
+
+/* No comment provided by engineer. */
+"hours" = "小時";
+
+/* No comment provided by engineer. */
+"minutes" = "分鐘";
 

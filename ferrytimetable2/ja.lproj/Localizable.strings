@@ -1,4 +1,16 @@
 /* No comment provided by engineer. */
+"%@ left" = "残り%@";
+
+/* No comment provided by engineer. */
+"%d hours and %@" = "%1$d時間%2$@";
+
+/* No comment provided by engineer. */
+"1 hour" = "1時間";
+
+/* No comment provided by engineer. */
+"1 minute" = "1分";
+
+/* No comment provided by engineer. */
 "Calendar" = "カレンダー";
 
 /* No comment provided by engineer. */
@@ -69,4 +81,10 @@
 
 /* No comment provided by engineer. */
 "You can manage notification by tapping the button at the lower right corner" = "右下のボタンを押せば通知を管理できます";
+
+/* No comment provided by engineer. */
+"hours" = "時間";
+
+/* No comment provided by engineer. */
+"minutes" = "分";
 
