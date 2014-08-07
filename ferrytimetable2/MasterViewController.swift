@@ -15,7 +15,9 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     var currentPier : Pier = Pier.Central
     var islands = NSMutableArray()
     
-    init(coder aDecoder: NSCoder!) {
+    class func nothing(){}
+    
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
 

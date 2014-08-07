@@ -15,14 +15,14 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     var ferry : Ferry?
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if ferry? {
+        if ferry? != nil {
             mapView.region = MKCoordinateRegionMake(ferry!.island.location, MKCoordinateSpanMake(0.1, 0.1))
 
             let annotation = MKPointAnnotation()

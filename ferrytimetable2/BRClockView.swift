@@ -16,12 +16,12 @@ class BRClockView: UIView {
     let shapeLayer = BRClockLayer()
     let frameLayer = CALayer()
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayers()
     }
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
         setupLayers()
     }

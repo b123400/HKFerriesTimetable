@@ -63,7 +63,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         // Update the user interface for the detail item.
         tableView?.reloadData()
         
-        if let _island = self.island as? Island {
+        if let _island = self.island as Island! {
             if currentDirection == Direction.ToIsland {
                 self.title = NSString(format:NSLocalizedString("To %@",comment:""), NSLocalizedString(_island.name,comment:""))
             } else {
@@ -159,8 +159,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             currentDirection = .ToIsland
         }
         UIView.transitionWithView(tableView, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
-            [strong self] in
-            self.reloadTimetable()
+            [weak self] in
+            if self != nil {
+                self!.reloadTimetable()
+            }
         }, completion: nil)
         
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -28,16 +28,18 @@
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="4qd-fJ-3fJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="44" id="flh-cW-Hty" customClass="FerryTimeTableViewCell" customModule="ferriestimetable2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flh-cW-Hty" id="vFd-fl-o1r">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXG-PI-TAX">
@@ -50,14 +52,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Mu-dzz">
-                                                    <rect key="frame" x="590" y="0.0" width="10" height="43"/>
+                                                    <rect key="frame" x="310" y="0.0" width="10" height="43"/>
                                                     <color key="backgroundColor" red="1" green="0.0020682545409999998" blue="0.50217481019999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="10" id="fCb-qY-n7n"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-Ob-5yo">
-                                                    <rect key="frame" x="318" y="12" width="262" height="20"/>
+                                                    <rect key="frame" x="38" y="12" width="262" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="ECK-Bm-GR3"/>
                                                     </constraints>
@@ -83,23 +85,11 @@
                                             <outlet property="timeLabel" destination="qXG-PI-TAX" id="o3v-x2-pla"/>
                                             <outlet property="timeLeftLabel" destination="757-Ob-5yo" id="fiA-WT-w2D"/>
                                             <outlet property="typeColorView" destination="97w-Mu-dzz" id="8bT-fJ-jRd"/>
-                                            <segue destination="QZ2-7R-V0f" kind="presentation" identifier="showFerry" id="Ejm-1i-qyR"/>
+                                            <segue destination="QZ2-7R-V0f" kind="modal" identifier="showFerry" id="Ejm-1i-qyR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="heightClass=compact" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                                </variation>
-                                <variation key="heightClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="640"/>
-                                </variation>
-                                <variation key="widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="640" height="320"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="JEX-9P-axG" id="jf2-lR-PiE"/>
                                 </connections>
@@ -122,7 +112,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JoJ-Ga-aPo"/>
                         <barButtonItem image="bell" id="OkL-ds-0jr">
                             <connections>
-                                <segue destination="n5N-2e-X4W" kind="popoverPresentation" popoverAnchorBarButtonItem="OkL-ds-0jr" id="TIw-5D-AYh">
+                                <segue destination="n5N-2e-X4W" kind="popover" popoverAnchorBarButtonItem="OkL-ds-0jr" id="TIw-5D-AYh">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -153,11 +143,11 @@
                         <viewControllerLayoutGuide type="bottom" id="qE2-dT-5yr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U1P-q0-P0W">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-8X-tp9" customClass="BRClockView" customModule="ferriestimetable2" customModuleProvider="target">
-                                <rect key="frame" x="210" y="74" width="180" height="180"/>
+                                <rect key="frame" x="70" y="74" width="180" height="180"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aC-GD-5k5">
                                         <rect key="frame" x="159" y="79" width="10" height="21"/>
@@ -189,12 +179,9 @@
                                     <constraint firstAttribute="width" constant="180" id="YT6-se-nYA"/>
                                     <constraint firstAttribute="height" constant="180" id="vGP-F7-t66"/>
                                 </constraints>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="103" width="180" height="180"/>
-                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haH-ca-bx4">
-                                <rect key="frame" x="175" y="406" width="120" height="43"/>
+                                <rect key="frame" x="35" y="406" width="120" height="43"/>
                                 <color key="backgroundColor" white="0.87328923357664234" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Yhs-K3-3B2"/>
@@ -210,13 +197,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="On0-NK-BEW" kind="popoverPresentation" identifier="addNotification" popoverAnchorView="haH-ca-bx4" id="xMv-68-nYs">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    <segue destination="On0-NK-BEW" kind="popover" identifier="addNotification" popoverAnchorView="haH-ca-bx4" id="xMv-68-nYs">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTu-v0-eKh">
-                                <rect key="frame" x="305" y="406" width="120" height="43"/>
+                                <rect key="frame" x="165" y="406" width="120" height="43"/>
                                 <color key="backgroundColor" white="0.87328923359999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Jm7-gT-vOY"/>
@@ -232,11 +219,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5XN-7W-xqV" kind="show" identifier="showMap" id="zM9-h4-7t3"/>
+                                    <segue destination="5XN-7W-xqV" kind="push" identifier="showMap" id="zM9-h4-7t3"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPN-Ou-jzY">
-                                <rect key="frame" x="175" y="291" width="250" height="87"/>
+                                <rect key="frame" x="35" y="291" width="250" height="87"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gO6-EV-R8h">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="35"/>
@@ -246,9 +233,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="27" y="7" width="41" height="21"/>
-                                                </variation>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkp-GX-YWD">
                                                 <rect key="frame" x="137" y="7" width="100" height="21"/>
@@ -287,7 +271,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 ~ 12:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA0-aG-fel">
-                                <rect key="frame" x="0.0" y="262" width="600" height="21"/>
+                                <rect key="frame" x="0.0" y="262" width="320" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9eX-yS-TxL"/>
                                 </constraints>
@@ -340,11 +324,11 @@
                         <viewControllerLayoutGuide type="bottom" id="0Ec-HF-qQC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DKf-G5-Xa1">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="20" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-SZ-bxn">
-                                <rect key="frame" x="0.0" y="125" width="480" height="216"/>
+                                <rect key="frame" x="0.0" y="125" width="320" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="Idg-Fm-Nuh"/>
                                 </constraints>
@@ -356,7 +340,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qc-Tq-VR6">
-                                <rect key="frame" x="186" y="375" width="108" height="30"/>
+                                <rect key="frame" x="106" y="375" width="108" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1QB-tU-SXP"/>
                                     <constraint firstAttribute="width" constant="108" id="Q1t-q5-yWk"/>
@@ -369,7 +353,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify me before ferry leaves:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv9-SW-TaD">
-                                <rect key="frame" x="128" y="51" width="225" height="21"/>
+                                <rect key="frame" x="48" y="51" width="225" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="57e-tr-ZDA"/>
                                     <constraint firstAttribute="width" constant="225" id="W9t-Hm-UBF"/>
@@ -379,7 +363,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohV-3o-i3R">
-                                <rect key="frame" x="0.0" y="96" width="480" height="21"/>
+                                <rect key="frame" x="-80" y="96" width="480" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="480" id="xmj-we-t6y"/>
                                     <constraint firstAttribute="height" constant="21" id="yAK-fc-Xcf"/>
@@ -402,6 +386,7 @@
                             <constraint firstItem="ohV-3o-i3R" firstAttribute="top" secondItem="Lv9-SW-TaD" secondAttribute="bottom" constant="24" id="wRU-ln-PGg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="35T-hr-bJu"/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="320"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -418,22 +403,26 @@
             <objects>
                 <tableViewController id="d9H-OE-g9j" customClass="NotificationTableViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ulA-YA-eke">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="WPW-i5-Zhj" detailTextLabel="ag7-ua-yI3" style="IBUITableViewCellStyleSubtitle" id="EJU-vx-2Df">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJU-vx-2Df" id="QXz-kW-sJT">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WPW-i5-Zhj">
+                                            <rect key="frame" x="15" y="5" width="31" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ag7-ua-yI3">
+                                            <rect key="frame" x="15" y="25" width="40" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -442,7 +431,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dcn-Td-TSL" kind="show" identifier="toFerry" id="HY5-pI-bQh"/>
+                                    <segue destination="dcn-Td-TSL" kind="push" identifier="toFerry" id="HY5-pI-bQh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -467,6 +456,7 @@
         <scene sceneID="so6-gQ-fh1">
             <objects>
                 <navigationController id="n5N-2e-X4W" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bCP-xC-GiA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VH1-i1-7NL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -488,11 +478,11 @@
                         <viewControllerLayoutGuide type="bottom" id="lSN-nq-yxl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XsD-hj-n2f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aya-8M-40A">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -503,6 +493,7 @@
                             <constraint firstItem="aya-8M-40A" firstAttribute="top" secondItem="XsD-hj-n2f" secondAttribute="top" id="tuy-Zh-fXh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RdK-G9-BW3"/>
                     <connections>
                         <outlet property="mapView" destination="aya-8M-40A" id="jfb-yp-Iwq"/>
                     </connections>
@@ -515,6 +506,7 @@
         <scene sceneID="ZmB-IL-nfd">
             <objects>
                 <navigationController storyboardIdentifier="ferryNavigationController" modalPresentationStyle="formSheet" id="QZ2-7R-V0f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fV4-QH-lJY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yjq-ec-0aW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -633,11 +625,11 @@
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="jhD-EP-cyC">
-                            <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Central"/>
@@ -649,7 +641,7 @@
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -666,23 +658,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="vC3-pB-5Vb" kind="replace" identifier="showDetail" splitViewControllerTargetIndex="1" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
-                        <variation key="heightClass=compact" ambiguous="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                        </variation>
-                        <variation key="heightClass=regular" ambiguous="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="640"/>
-                        </variation>
-                        <variation key="widthClass=regular" ambiguous="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                        </variation>
                         <connections>
                             <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
@@ -691,7 +671,7 @@
                     <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
                         <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv">
                             <connections>
-                                <segue destination="z7I-yO-1LI" kind="popoverPresentation" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
+                                <segue destination="z7I-yO-1LI" kind="popover" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -716,21 +696,21 @@
                         <viewControllerLayoutGuide type="bottom" id="YlJ-lD-vwg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hO6-WV-4MN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JvN-IR-UeM">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose" translatesAutoresizingMaskIntoConstraints="NO" id="61u-00-qmt">
-                                <rect key="frame" x="178" y="178" width="244" height="244"/>
+                                <rect key="frame" x="38" y="118" width="244" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="244" id="NGy-Bh-xgy"/>
                                     <constraint firstAttribute="width" constant="244" id="Zik-PV-qe2"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an island" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-QO-NAc">
-                                <rect key="frame" x="0.0" y="429" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="369" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2ft-kg-8pi"/>
                                 </constraints>
@@ -782,7 +762,15 @@
         <image name="info" width="28" height="28"/>
         <image name="location" width="28" height="28"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="320" height="480"/>
+            <size key="landscapeSize" width="480" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TDP-bv-LvY"/>
+        <segue reference="HY5-pI-bQh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,11 @@ class FerryTimeTableViewCell: UITableViewCell {
     @IBOutlet var typeColorView: UIView!
     @IBOutlet weak var timeLeftLabel: UILabel!
     
-    init(style: UITableViewCellStyle, reuseIdentifier: String) {
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder);
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code
     }

@@ -27,11 +27,11 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         }
     }
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -80,8 +80,8 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
             let arrivingString = "\(formatter.stringFromDate(ferry!.arrvingTime))"
             timeLabel!.text = "\(leavingString) ~ \(arrivingString)"
         }
-        if clockView {
-            if ferry {
+        if clockView != nil {
+            if ferry != nil {
                 if shown {
                     clockView!.setTimeRange(fromDate: ferry!.leavingTime, toDate: ferry!.arrvingTime, animated: false)
                 } else {
@@ -89,10 +89,10 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
                 }
             }
         }
-        if priceLabel {
+        if (priceLabel != nil) {
             priceLabel!.text = ferry?.price
         }
-        if durationLabel {
+        if (durationLabel != nil) {
             let seconds = ferry?.duration
             durationLabel!.text = NSString(format: "%.fmin", seconds!/60)
         }
@@ -103,7 +103,9 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
             let notificationController = segue.destinationViewController as NewNotificationViewController
             notificationController.ferry = ferry
             let popPC = notificationController.popoverPresentationController
-            popPC.delegate = self
+            if popPC != nil {
+                popPC.delegate = self
+            }
         } else if segue.identifier? == "showMap" {
             let mapController = segue.destinationViewController as MapViewController
             mapController.ferry = ferry

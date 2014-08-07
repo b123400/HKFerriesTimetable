@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
+        MasterViewController.nothing()
+        
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[0] as UINavigationController
         splitViewController.delegate = navigationController.topViewController as MasterViewController

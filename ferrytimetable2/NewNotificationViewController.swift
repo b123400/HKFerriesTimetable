@@ -13,7 +13,7 @@ class NewNotificationViewController: UIViewController {
     var ferry : Ferry?
     @IBOutlet var dateLabel: UILabel!
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificationRegistered:", name: ApplicationDidRegisterUserNotification, object: nil)
     }

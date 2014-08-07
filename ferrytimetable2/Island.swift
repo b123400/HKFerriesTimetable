@@ -37,7 +37,7 @@ class Island: NSObject {
     
     var detailDict:NSDictionary {
         get {
-            if !_detailDict {
+            if _detailDict == nil {
                 _detailDict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("\(name)Info", ofType: "plist"))
             }
             return _detailDict!

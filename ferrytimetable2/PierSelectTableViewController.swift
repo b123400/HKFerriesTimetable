@@ -21,12 +21,16 @@ class PierSelectTableViewController: UITableViewController {
     let piers : NSArray = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Piers", ofType: "plist"))
     var selectedPier : Pier? = nil
     var delegate : PierSelectTableViewControllerDelegate?
-
+    
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+    
     init(selectedPier:Pier){
         super.init(style: UITableViewStyle.Plain)
         self.selectedPier = selectedPier
     }
-    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
     }
 
@@ -46,7 +50,7 @@ class PierSelectTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let pierCount = CGFloat(piers.count)
-        self.popoverPresentationController.popoverContentSize = CGSizeMake(320, 44.0 * pierCount)
+//        self.popoverPresentationController.popoverContentSize = CGSizeMake(320, 44.0 * pierCount)
     }
 
     // #pragma mark - Table view data source

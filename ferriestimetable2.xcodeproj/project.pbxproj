@@ -67,13 +67,13 @@
 		CF47A637195F350F0066D9EE /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
 		CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */; };
 		CF6515B3196062DD005626C0 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6515B2196062DD005626C0 /* Island.swift */; };
+		CF71F4F2199351FF00BF6274 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A5195D439E00F83035 /* MasterViewController.swift */; };
 		CF73661D1965C60B009A6CC8 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7FDFA61973D0C000948061 /* CoreLocation.framework */; };
 		CF7FDFA91973D27300948061 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7FDFA81973D27300948061 /* MapViewController.swift */; };
 		CFAEB8F8196AEBCE007DB58B /* FerryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */; };
 		CFB016AF196B0790007D0068 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB016AE196B0790007D0068 /* MapKit.framework */; };
 		CFB6E0A4195D439E00F83035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A3195D439E00F83035 /* AppDelegate.swift */; };
-		CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A5195D439E00F83035 /* MasterViewController.swift */; };
 		CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A7195D439E00F83035 /* DetailViewController.swift */; };
 		CFB6E0AB195D439E00F83035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0A9195D439E00F83035 /* Main.storyboard */; };
 		CFB6E0AD195D439E00F83035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0AC195D439E00F83035 /* Images.xcassets */; };
@@ -675,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF71F4F2199351FF00BF6274 /* MasterViewController.swift in Sources */,
 				CF73661D1965C60B009A6CC8 /* DateHoliday.swift in Sources */,
 				CFAEB8F8196AEBCE007DB58B /* FerryViewController.swift in Sources */,
 				CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */,
@@ -682,7 +683,6 @@
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
 				CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */,
 				CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */,
-				CFB6E0A6195D439E00F83035 /* MasterViewController.swift in Sources */,
 				CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */,
 				CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */,
 				CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */,
@@ -842,6 +842,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = ferriestimetable2;
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 			};
@@ -855,6 +859,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = ferriestimetable2;
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 			};
