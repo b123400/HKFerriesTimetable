@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Because some stupid compiler bug, we need to reference MasterViewController or else it will be ignored.
         MasterViewController.nothing()
         
         let splitViewController = self.window!.rootViewController as UISplitViewController

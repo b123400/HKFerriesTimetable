@@ -99,17 +99,24 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "addNotification" {
-            let notificationController = segue.destinationViewController as NewNotificationViewController
-            notificationController.ferry = ferry
-            let popPC = notificationController.popoverPresentationController
-            if popPC != nil {
-                popPC!.delegate = self
-            }
-        } else if segue.identifier == "showMap" {
+        if segue.identifier == "showMap" {
             let mapController = segue.destinationViewController as MapViewController
             mapController.ferry = ferry
         }
+    }
+    
+    @IBAction func notificationButtonTapped(sender: AnyObject) {
+        
+        let notificationController = self.storyboard?.instantiateViewControllerWithIdentifier("addNotification") as NewNotificationViewController
+        notificationController.ferry = ferry
+        
+        notificationController.modalPresentationStyle = UIModalPresentationStyle.Popover
+        if let popover = notificationController.popoverPresentationController {
+            popover.delegate = self
+            popover.sourceView = self.view
+            popover.sourceRect = sender.frame
+        }
+        presentViewController(notificationController, animated: true, completion: nil)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
@@ -118,8 +125,9 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     
     func presentationController(controller: UIPresentationController!,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
-        
-        let navController = UINavigationController(rootViewController: controller.presentedViewController)
-        return navController
+            
+            let navController = UINavigationController(rootViewController: controller.presentedViewController)
+            controller.presentedViewController.title = NSLocalizedString("Calendar",comment:"")
+            return navController
     }
 }

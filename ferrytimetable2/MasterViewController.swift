@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MasterViewController: UITableViewController, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
+class MasterViewController: UITableViewController, UITableViewDelegate, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var currentPier : Pier = Pier.Central
@@ -43,19 +43,13 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Segues
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            if indexPath == nil {
-                return
-            }
-            let islandDict = islands[indexPath!.row] as NSDictionary
-            let island = Island(dictionary: islandDict, pier:currentPier)
-            ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).island = island
-        }
-    }
+// MARK: - Segues
+// Don't use segue because Replace/Push to detail crash splitViewController!
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showDetail" {
+//            
+//        }
+//    }
 
     // MARK: - Table View
 
@@ -73,6 +67,30 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         let object = islands[indexPath.row].objectForKey("name") as NSString
         cell.textLabel!.text = NSLocalizedString(object,comment:"")
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let indexPath = self.tableView.indexPathForSelectedRow()
+        if indexPath == nil {
+            return
+        }
+        let islandDict = islands[indexPath!.row] as NSDictionary
+        let island = Island(dictionary: islandDict, pier:currentPier)
+
+        let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        
+        detailViewController.island = island
+        
+        let splitViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController as UISplitViewController
+        if splitViewController.viewControllers.count == 1 {
+            // small screen
+            showDetailViewController(detailViewController, sender: self)
+        } else {
+            // large screen
+            let navigationController = UINavigationController(rootViewController: detailViewController)
+            showDetailViewController(navigationController, sender: self)
+        }
     }
 
     // MARK: - Data Source
@@ -179,27 +197,12 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     func presentationController(controller: UIPresentationController!,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
         
-            let navController = UINavigationController(rootViewController: controller.presentedViewController)
-            return navController
+        let navController = UINavigationController(rootViewController: controller.presentedViewController)
+        return navController
     }
     
     // MARK: - Split view
     
-    func splitViewController(
-                                splitController  : UISplitViewController,
-         willHideViewController viewController   : UIViewController,
-              withBarButtonItem barButtonItem    : UIBarButtonItem,
-           forPopoverController popoverController: UIPopoverController) {
-//        barButtonItem.title = "Master" // NSLocalizedString(@"Master", @"Master")
-//        self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
-//        self.masterPopoverController = popoverController
-    }
-    
-    func splitViewController(splitController: UISplitViewController, willShowViewController viewController: UIViewController, invalidatingBarButtonItem barButtonItem: UIBarButtonItem) {
-        // Called when the view is shown again in the split view, invalidating the button and popover controller.
-//        self.navigationItem.setLeftBarButtonItem(nil, animated: true)
-//        self.masterPopoverController = nil
-    }
     func splitViewController(splitController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
         return true
@@ -209,12 +212,12 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         return .AllVisible
     }
     
-//    func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController!) -> Int {
-//        return Int(UIInterfaceOrientationMask.AllButUpsideDown.value)
-//    }
-//    
-//    func splitViewControllerPreferredInterfaceOrientationForPresentation(_ splitViewController: UISplitViewController!) -> UIInterfaceOrientation{
-//        return UIInterfaceOrientation.LandscapeLeft
-//    }
+    func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController!) -> Int {
+        return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
+    }
+    
+    func splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController: UISplitViewController!) -> UIInterfaceOrientation{
+        return UIInterfaceOrientation.LandscapeLeft
+    }
 }
 
