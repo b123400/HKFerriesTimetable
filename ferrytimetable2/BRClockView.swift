@@ -30,6 +30,7 @@ class BRClockView: UIView {
         self.layer.cornerRadius = self.bounds.size.width/2
         
         shapeLayer.frame = CGRectInset(self.bounds, 8, 8)
+        shapeLayer.contentsScale = UIScreen.mainScreen().scale
         self.layer.insertSublayer(shapeLayer, atIndex: 0)
         
         self.layer.insertSublayer(frameLayer, above: shapeLayer)
@@ -41,6 +42,7 @@ class BRClockView: UIView {
         frameLayer.shadowRadius = 1
         frameLayer.shadowColor = UIColor.blackColor().CGColor
         frameLayer.shadowOpacity = 0.5
+        frameLayer.contentsScale = UIScreen.mainScreen().scale
     }
     
     func setTimeRange(fromDate _from:NSDate, toDate _to:NSDate, animated:Bool) {
