@@ -45,10 +45,6 @@
 		<string>slow</string>
 	</dict>
 	<dict>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
 		<key>time</key>
 		<string>1400</string>
 		<key>kind</key>

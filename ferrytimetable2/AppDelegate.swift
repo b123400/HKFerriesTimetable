@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Crashlytics
+
 let ApplicationDidRegisterUserNotification = "ApplicationDiDRegisterUserNotification"
 
 @UIApplicationMain
@@ -20,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Because some stupid compiler bug, we need to reference MasterViewController or else it will be ignored.
         MasterViewController.nothing()
+        
+        // Crashlytics
+        Crashlytics.startWithAPIKey("be3de76eb1918a93b4d68a8e87b983750d738aed")
         
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[0] as UINavigationController

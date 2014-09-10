@@ -66,6 +66,7 @@
 		CF47A636195F350F0066D9EE /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
 		CF47A637195F350F0066D9EE /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
 		CF47A644195F4CBB0066D9EE /* PierSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */; };
+		CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
 		CF6515B3196062DD005626C0 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6515B2196062DD005626C0 /* Island.swift */; };
 		CF71F4F2199351FF00BF6274 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A5195D439E00F83035 /* MasterViewController.swift */; };
 		CF73661D1965C60B009A6CC8 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
@@ -164,6 +165,7 @@
 		CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWHoliday.plist; sourceTree = "<group>"; };
 		CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWNormal.plist; sourceTree = "<group>"; };
 		CF47A643195F4CBB0066D9EE /* PierSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PierSelectTableViewController.swift; sourceTree = "<group>"; };
+		CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CF6515B2196062DD005626C0 /* Island.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		CF73661C1965C60B009A6CC8 /* DateHoliday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHoliday.swift; sourceTree = "<group>"; };
 		CF7FDFA61973D0C000948061 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -211,6 +213,7 @@
 				CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */,
 				CFB016AF196B0790007D0068 /* MapKit.framework in Frameworks */,
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
+				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +480,7 @@
 				CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */,
 				CFB016AE196B0790007D0068 /* MapKit.framework */,
 				442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */,
+				CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -493,6 +497,7 @@
 				CFB6E09B195D439E00F83035 /* Frameworks */,
 				CFB6E09C195D439E00F83035 /* Resources */,
 				FC11B82D09634D73A67A8553 /* Copy Pods Resources */,
+				CF4E27CD19C0ADAC00E18B40 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -652,6 +657,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		CF4E27CD19C0ADAC00E18B40 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run be3de76eb1918a93b4d68a8e87b983750d738aed 14ee308c3c10a8baa8cccc093c1c4c9c00d34c8c4b0b69aa8e7aa5dd0dae61c0";
 		};
 		FC11B82D09634D73A67A8553 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -840,6 +858,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -857,6 +879,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
