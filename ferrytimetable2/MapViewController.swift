@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     var ferry : Ferry?
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

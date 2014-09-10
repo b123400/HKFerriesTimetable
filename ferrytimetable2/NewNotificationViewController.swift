@@ -13,7 +13,7 @@ class NewNotificationViewController: UIViewController {
     var ferry : Ferry?
     @IBOutlet var dateLabel: UILabel!
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificationRegistered:", name: ApplicationDidRegisterUserNotification, object: nil)
     }
@@ -60,7 +60,7 @@ class NewNotificationViewController: UIViewController {
         let interval = datePicker.countDownDuration
         let notification = UILocalNotification()
         notification.fireDate = ferry!.leavingTime.dateByAddingTimeInterval(-interval)
-        notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry?.island.name))
+        notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry!.island.name))
         notification.userInfo = ferry!.dictionaryRepresentation
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }

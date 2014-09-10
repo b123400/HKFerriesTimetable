@@ -38,7 +38,7 @@ class Island: NSObject {
     var detailDict:NSDictionary {
         get {
             if _detailDict == nil {
-                _detailDict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("\(name)Info", ofType: "plist"))
+                _detailDict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("\(name)Info", ofType: "plist")!)
             }
             return _detailDict!
         }
@@ -68,11 +68,12 @@ class Island: NSObject {
         let dateString:String = date.isHoliday() ? "Holiday" : "Normal"
         NSLog( dateString )
         let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)")as String
-        let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")) as Array<NSDictionary>
-        let ferries = arr.map({
+        let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")!) as Array<NSDictionary>
+        
+        let ferries = arr.map {
             (var thisTime) -> Ferry in
             return Ferry(dictionary: thisTime as Dictionary, island : self, direction: direction, date: date)
-        })
+        }
         return ferries
     }
     

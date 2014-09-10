@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -112,7 +112,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JoJ-Ga-aPo"/>
                         <barButtonItem image="bell" id="OkL-ds-0jr">
                             <connections>
-                                <segue destination="n5N-2e-X4W" kind="popover" popoverAnchorBarButtonItem="OkL-ds-0jr" id="TIw-5D-AYh">
+                                <segue destination="n5N-2e-X4W" kind="popover" identifier="showNotification" popoverAnchorBarButtonItem="OkL-ds-0jr" id="TIw-5D-AYh">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -387,7 +387,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="35T-hr-bJu"/>
-                    <value key="contentSizeForViewInPopover" type="size" width="320" height="320"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="400"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="ohV-3o-i3R" id="wU0-NN-88R"/>
@@ -481,7 +481,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aya-8M-40A">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aya-8M-40A">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                             </mapView>
                         </subviews>
@@ -597,10 +597,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="320"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
-                        <size key="portraitSize" width="320" height="568"/>
-                        <size key="landscapeSize" width="568" height="320"/>
-                    </simulatedScreenMetrics>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brl-W2-8Op" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -671,7 +668,7 @@
                     <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
                         <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv">
                             <connections>
-                                <segue destination="z7I-yO-1LI" kind="popover" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
+                                <segue destination="z7I-yO-1LI" kind="popover" identifier="showAbout" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -765,10 +762,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination">
-            <size key="portraitSize" width="320" height="480"/>
-            <size key="landscapeSize" width="480" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="HY5-pI-bQh"/>

@@ -27,7 +27,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         }
     }
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -98,15 +98,15 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if segue.identifier? == "addNotification" {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "addNotification" {
             let notificationController = segue.destinationViewController as NewNotificationViewController
             notificationController.ferry = ferry
             let popPC = notificationController.popoverPresentationController
             if popPC != nil {
-                popPC.delegate = self
+                popPC!.delegate = self
             }
-        } else if segue.identifier? == "showMap" {
+        } else if segue.identifier == "showMap" {
             let mapController = segue.destinationViewController as MapViewController
             mapController.ferry = ferry
         }

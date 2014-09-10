@@ -84,7 +84,7 @@ class Ferry: NSObject {
         thisComponents.hour = startHour!
         thisComponents.minute = startMinutes!
         
-        return NSCalendar.currentCalendar().dateFromComponents(thisComponents)
+        return NSCalendar.currentCalendar().dateFromComponents(thisComponents)!
     }
     
     var leavingTime : NSDate {

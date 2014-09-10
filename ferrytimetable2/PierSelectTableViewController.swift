@@ -18,11 +18,11 @@ protocol PierSelectTableViewControllerDelegate {
 }
 
 class PierSelectTableViewController: UITableViewController {
-    let piers : NSArray = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Piers", ofType: "plist"))
+    let piers : NSArray = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Piers", ofType: "plist")!)
     var selectedPier : Pier? = nil
     var delegate : PierSelectTableViewControllerDelegate?
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -68,12 +68,12 @@ class PierSelectTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell? {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
         
         let thisPier = piers[indexPath.row] as NSDictionary
         let name = thisPier.objectForKey("name") as NSString
-        cell.textLabel.text = name
+        cell.textLabel!.text = name
         
         if name == self.selectedPier!.toRaw() {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
@@ -81,7 +81,7 @@ class PierSelectTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let thisPier = piers[indexPath.row] as NSDictionary
         let name = thisPier.objectForKey("name") as NSString
         let selectedPier = Pier.fromRaw(name)

@@ -87,12 +87,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        self.navigationController.setToolbarHidden(false, animated: false)
+        self.navigationController!.setToolbarHidden(false, animated: false)
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController.setToolbarHidden(true, animated: false)
+        self.navigationController!.setToolbarHidden(true, animated: false)
     }
     
     // MARK: - Table View
@@ -173,9 +173,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         calendarViewController.delegate = self
         calendarViewController.modalPresentationStyle = .Popover
         let popPC = calendarViewController.popoverPresentationController
-        popPC.barButtonItem = sender
-        popPC.permittedArrowDirections = .Any
-        popPC.delegate = self
+        if popPC == nil {
+            return
+        }
+        popPC!.barButtonItem = sender
+        popPC!.permittedArrowDirections = .Any
+        popPC!.delegate = self
         presentViewController(calendarViewController, animated: true, completion: nil)
     }
     
@@ -211,17 +214,17 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier? == "showFerry" {
+        if segue.identifier == "showFerry" {
             let navController = segue.destinationViewController as UINavigationController
             let ferryController = navController.topViewController as FerryViewController
-            let ferry = currentTimetable[ tableView!.indexPathForSelectedRow().row ]
+            let ferry = currentTimetable[ tableView!.indexPathForSelectedRow()!.row ]
             ferryController.ferry = ferry
-            tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow(), animated: true)
+            tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow()!, animated: true)
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier? == "showFerry" && tableView!.indexPathForSelectedRow().section == 0 {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if identifier == "showFerry" && tableView!.indexPathForSelectedRow()!.section == 0 {
             return false
         }
         return super.shouldPerformSegueWithIdentifier(identifier, sender: sender)

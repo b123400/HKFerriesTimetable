@@ -40,13 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func handleLocalNotification(notification:UILocalNotification) {
         let dict = notification.userInfo as [String:AnyObject]
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
-        let navController = self.window!.rootViewController.storyboard.instantiateViewControllerWithIdentifier("ferryNavigationController") as UINavigationController
+        let navController = self.window!.rootViewController!.storyboard!.instantiateViewControllerWithIdentifier("ferryNavigationController") as UINavigationController
         let controller = navController.topViewController as FerryViewController
         controller.ferry = ferry
         let delay = 0.5 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
-            self.window!.rootViewController.presentViewController(navController, animated: true, completion: nil)
+            self.window!.rootViewController!.presentViewController(navController, animated: true, completion: nil)
         }
     }
     

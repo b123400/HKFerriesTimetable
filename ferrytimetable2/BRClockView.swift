@@ -21,7 +21,7 @@ class BRClockView: UIView {
         setupLayers()
     }
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupLayers()
     }
@@ -51,7 +51,7 @@ class BRClockView: UIView {
         
         let calendar = NSCalendar.currentCalendar()
         let fromComponents = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: fromDate!)
-        let toComponents = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: toDate)
+        let toComponents = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: toDate!)
         
         shapeLayer.startAngle = CGFloat( Double(fromComponents.minute)/60.0 * Double(M_PI)*2.0 - M_PI_2 )
         shapeLayer.endAngle = CGFloat( Double(toComponents.minute)/60.0 * Double(M_PI)*2.0  - M_PI_2) // add 360 so it always go clockwise

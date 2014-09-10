@@ -17,7 +17,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     
     class func nothing(){}
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -46,9 +46,12 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier? == "showDetail" {
+        if segue.identifier == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow()
-            let islandDict = islands[indexPath.row] as NSDictionary
+            if indexPath == nil {
+                return
+            }
+            let islandDict = islands[indexPath!.row] as NSDictionary
             let island = Island(dictionary: islandDict, pier:currentPier)
             ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).island = island
         }
@@ -68,7 +71,7 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = islands[indexPath.row].objectForKey("name") as NSString
-        cell.textLabel.text = NSLocalizedString(object,comment:"")
+        cell.textLabel!.text = NSLocalizedString(object,comment:"")
         return cell
     }
 
@@ -80,15 +83,22 @@ class MasterViewController: UITableViewController, PierSelectTableViewController
         selectViewController.delegate = self
         selectViewController.modalPresentationStyle = .Popover
         let popPC = selectViewController.popoverPresentationController
-        popPC.barButtonItem = sender
-        popPC.permittedArrowDirections = .Any
-        popPC.delegate = self
+        if popPC == nil {
+            return
+        }
+        popPC!.barButtonItem = sender
+        popPC!.permittedArrowDirections = .Any
+        popPC!.delegate = self
+        
         presentViewController(selectViewController, animated: true, completion: nil)
     }
     func changePier (pier:Pier){
         currentPier = pier
         var path = NSBundle.mainBundle().pathForResource(pier.toRaw(), ofType: "plist");
-        islands = NSMutableArray(contentsOfFile: path);
+        if path == nil {
+            return
+        }
+        islands = NSMutableArray(contentsOfFile: path!);
         tableView.reloadData()
     }
     @IBAction func changePier(sender: UISegmentedControl) {
