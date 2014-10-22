@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Because some stupid compiler bug, we need to reference MasterViewController or else it will be ignored.
         MasterViewController.nothing()
+        NSUserDefaults.standardUserDefaults().registerDefaults(["autoScroll":false])
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         // Crashlytics
         Crashlytics.startWithAPIKey("be3de76eb1918a93b4d68a8e87b983750d738aed")

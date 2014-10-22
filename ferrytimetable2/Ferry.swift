@@ -36,7 +36,7 @@ class Ferry: NSObject {
     class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Ferry {
         let thisDict = dict["dict"]! as NSDictionary
         let thisIsland = Island.fromDict(dictionaryRepresentation:dict["island"]! as Dictionary)
-        let thisDirection = Direction.fromRaw(dict["direction"]! as String)!
+        let thisDirection = Direction(rawValue:dict["direction"]! as String)!
         let thisDate = dict["date"]! as NSDate
         return Ferry(dictionary: thisDict, island: thisIsland, direction: thisDirection, date: thisDate)
     }
@@ -46,7 +46,7 @@ class Ferry: NSObject {
         return [
             "date" : date,
             "island": island.dictionaryRepresentation,
-            "direction": direction.toRaw(),
+            "direction": direction.rawValue,
             "dict":dict
         ]
     }
@@ -61,7 +61,7 @@ class Ferry: NSObject {
     var type : FerryType {
         get {
             let kind = dict.objectForKey("kind") as String
-            let type = FerryType.fromRaw(kind)
+            let type = FerryType(rawValue: kind)
             return type!
         }
     }

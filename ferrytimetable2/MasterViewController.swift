@@ -89,7 +89,9 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         } else {
             // large screen
             let navigationController = UINavigationController(rootViewController: detailViewController)
-            showDetailViewController(navigationController, sender: self)
+            if navigationController != nil {
+                showDetailViewController(navigationController!, sender: self)
+            }
         }
     }
 
@@ -97,7 +99,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
     
     // for popover, disabled now
     func selectPier (sender:UIBarButtonItem){
-        let selectViewController = PierSelectTableViewController(selectedPier: currentPier)
+        let selectViewController = PierSelectTableViewController(selectedPier: currentPier)!
         selectViewController.delegate = self
         selectViewController.modalPresentationStyle = .Popover
         let popPC = selectViewController.popoverPresentationController
@@ -112,11 +114,11 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
     }
     func changePier (pier:Pier){
         currentPier = pier
-        var path = NSBundle.mainBundle().pathForResource(pier.toRaw(), ofType: "plist");
+        var path = NSBundle.mainBundle().pathForResource(pier.rawValue, ofType: "plist");
         if path == nil {
             return
         }
-        islands = NSMutableArray(contentsOfFile: path!);
+        islands = NSMutableArray(contentsOfFile: path!)!;
         tableView.reloadData()
     }
     @IBAction func changePier(sender: UISegmentedControl) {
@@ -213,7 +215,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
     }
     
     func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController!) -> Int {
-        return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
+        return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
     }
     
     func splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController: UISplitViewController!) -> UIInterfaceOrientation{

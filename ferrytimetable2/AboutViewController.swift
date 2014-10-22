@@ -26,7 +26,7 @@ class AboutViewController: UIViewController {
     }
 
     @IBAction func nameTapped(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://b123400.net"))
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://b123400.net")!)
     }
     /*
     // #pragma mark - Navigation

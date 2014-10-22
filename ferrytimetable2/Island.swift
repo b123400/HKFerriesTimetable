@@ -22,7 +22,7 @@ class Island: NSObject {
     
     class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Island{
         let thisDict = dict["dict"]! as NSDictionary
-        let pier = Pier.fromRaw(dict["pier"]! as String)!
+        let pier = Pier(rawValue: dict["pier"]! as String)!
         return Island(dictionary: thisDict, pier: pier)
     }
     
@@ -30,7 +30,7 @@ class Island: NSObject {
     get {
         return [
             "dict":sourceDict,
-            "pier":pier.toRaw()
+            "pier":pier.rawValue
         ]
     }
     }

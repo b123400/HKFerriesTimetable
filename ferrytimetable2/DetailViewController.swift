@@ -79,6 +79,29 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         tableView!.rowHeight = UITableViewAutomaticDimension;
         tableView!.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated);
+        var autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as Bool?
+        if (autoScroll == true) {
+            var nearestIndex:Int = -1
+            var minInterval:NSTimeInterval = -1
+            for var i = 0; i < currentTimetable.count; i++ {
+                let ferry = currentTimetable[i]
+                let thisInterval = ferry.leavingTime.timeIntervalSinceNow
+                if thisInterval < 0 {
+                    continue
+                }
+                if minInterval == -1 || (minInterval > thisInterval) {
+                    nearestIndex = i
+                    minInterval = thisInterval
+                }
+            }
+            if nearestIndex != -1 {
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: nearestIndex, inSection: 1), atScrollPosition: .Middle, animated: true)
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

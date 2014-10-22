@@ -20,9 +20,9 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         didSet {
             configureView()
             if ferry!.direction == Direction.ToIsland {
-                self.title = "\(ferry!.island.pier.toRaw()) → \(ferry!.island.name)"
+                self.title = "\(ferry!.island.pier.rawValue) → \(ferry!.island.name)"
             } else {
-                self.title = "\(ferry!.island.name) → \(ferry!.island.pier.toRaw())"
+                self.title = "\(ferry!.island.name) → \(ferry!.island.pier.rawValue)"
             }
         }
     }
