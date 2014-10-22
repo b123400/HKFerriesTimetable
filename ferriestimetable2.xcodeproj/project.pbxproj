@@ -538,6 +538,11 @@
 					CFB6E09D195D439E00F83035 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = CC63FD9H8S;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CFB6E0B1195D439E00F83035 = {
 						CreatedOnToolsVersion = 6.0;

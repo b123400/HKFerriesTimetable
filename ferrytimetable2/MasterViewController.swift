@@ -14,6 +14,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
     var detailViewController: DetailViewController? = nil
     var currentPier : Pier = Pier.Central
     var islands = NSMutableArray()
+    var locationManager: CLLocationManager? = nil
     
     class func nothing(){}
     
@@ -134,15 +135,16 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
     
     @IBAction func locationButtonTapped(sender: AnyObject) {
         if CLLocationManager.locationServicesEnabled() {
-            let locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            locationManager = CLLocationManager()
+            locationManager!.delegate = self
+            locationManager!.desiredAccuracy = kCLLocationAccuracyKilometer
             
-            switch CLLocationManager.authorizationStatus() {
+            let status = CLLocationManager.authorizationStatus()
+            switch status {
             case CLAuthorizationStatus.NotDetermined :
-                locationManager.requestWhenInUseAuthorization()
+                locationManager!.requestWhenInUseAuthorization()
             case CLAuthorizationStatus.Authorized, CLAuthorizationStatus.AuthorizedWhenInUse:
-                locationManager.startUpdatingLocation()
+                locationManager!.startUpdatingLocation()
             default:
                 break
             }
@@ -171,7 +173,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
             let thisLocation = CLLocation(latitude: latString.doubleValue, longitude: longString.doubleValue)
             let distance = location.distanceFromLocation(thisLocation) as Double
             
-            let isInitial = closestDistance != -1
+            let isInitial = closestDistance == -1
             let isClosest = Double(closestDistance) > Double(distance)
             if isInitial || isClosest {
                 closestDistance = distance
@@ -179,7 +181,9 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
             }
         }
         if closestIndex != -1 {
-            tableView.selectRowAtIndexPath(NSIndexPath(forRow: closestIndex, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+            let targetIndexPath = NSIndexPath(forRow: closestIndex, inSection: 0)
+            tableView.selectRowAtIndexPath(targetIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+            tableView(tableView, didSelectRowAtIndexPath: targetIndexPath)
         }
     }
         
