@@ -28,6 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Crashlytics
         Crashlytics.startWithAPIKey("be3de76eb1918a93b4d68a8e87b983750d738aed")
         
+        // Mixpanel
+        Mixpanel.sharedInstanceWithToken("5f7ac8807b7080e6ad4c04811451f32f")
+        
+        let autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as Bool?
+        let autoScrollString = autoScroll == true ? "true" : "false"
+        Mixpanel.sharedInstance().track("autoScroll", properties: ["enabled":autoScrollString])
+        
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[0] as UINavigationController
         splitViewController.delegate = navigationController.topViewController as MasterViewController

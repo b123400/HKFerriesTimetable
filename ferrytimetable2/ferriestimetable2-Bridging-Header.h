@@ -8,3 +8,4 @@
 
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 #import "BRClockLayer.h"
+#import "Mixpanel.h"

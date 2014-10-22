@@ -104,7 +104,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.xcconfig"; path = "Pods/Pods-ferriestimetable2.xcconfig"; sourceTree = "<group>"; };
+		2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.distrubtion.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.distrubtion.xcconfig"; sourceTree = "<group>"; };
+		2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.release.xcconfig"; sourceTree = "<group>"; };
 		442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1115B11975134300F8CA3C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CF153FFD196EEF40007599D3 /* BRClockLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRClockLayer.h; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 		CFF9BB081976D1E9004E087E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
 		CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7390A60C2E25A2165348CE06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */,
+				2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */,
+				2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF47A5C7195F34D40066D9EE /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,8 +388,8 @@
 				CFB6E0A0195D439E00F83035 /* ferrytimetable2 */,
 				CFB6E0B5195D439E00F83035 /* ferrytimetable2Tests */,
 				CFB6E09F195D439E00F83035 /* Products */,
-				3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */,
 				EDDFDE51F070466C97896290 /* Frameworks */,
+				7390A60C2E25A2165348CE06 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -689,7 +701,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-ferriestimetable2-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -783,6 +795,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -817,7 +830,7 @@
 		};
 		CFA658DB19C0BD8600583C54 /* Distrubtion */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */;
+			baseConfigurationReference = 2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -831,10 +844,12 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Distrubtion;
 		};
@@ -858,6 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -901,6 +917,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -936,7 +953,7 @@
 		};
 		CFB6E0BD195D439E00F83035 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */;
+			baseConfigurationReference = FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -950,16 +967,18 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		CFB6E0BE195D439E00F83035 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CDE9E2D44744E2AB40DAFA7 /* Pods-ferriestimetable2.xcconfig */;
+			baseConfigurationReference = 2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -973,10 +992,12 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

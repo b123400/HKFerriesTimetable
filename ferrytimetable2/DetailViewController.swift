@@ -78,6 +78,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         self.configureView()
         tableView!.rowHeight = UITableViewAutomaticDimension;
         tableView!.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
+        Mixpanel.sharedInstance().track("Island", properties: ["island":self.island!.name])
     }
     
     override func viewDidAppear(animated: Bool) {
