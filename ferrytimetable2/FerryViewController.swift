@@ -19,10 +19,12 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     var ferry : Ferry? {
         didSet {
             configureView()
+            let pierName = NSLocalizedString(ferry!.island.pier.rawValue,comment:"")
+            let islandName = NSLocalizedString(ferry!.island.name, comment:"")
             if ferry!.direction == Direction.ToIsland {
-                self.title = "\(ferry!.island.pier.rawValue) → \(ferry!.island.name)"
+                self.title = "\(pierName) → \(islandName)"
             } else {
-                self.title = "\(ferry!.island.name) → \(ferry!.island.pier.rawValue)"
+                self.title = "\(islandName) → \(pierName)"
             }
         }
     }
