@@ -248,7 +248,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if identifier == "showFerry" && tableView!.indexPathForSelectedRow()!.section == 0 {
             return false
         }

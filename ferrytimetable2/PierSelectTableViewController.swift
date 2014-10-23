@@ -69,11 +69,11 @@ class PierSelectTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")!
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
         
         let thisPier = piers[indexPath.row] as NSDictionary
         let name = thisPier.objectForKey("name") as NSString
-        cell.textLabel!.text = name
+        cell.textLabel.text = name
         
         if name == self.selectedPier!.rawValue {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark

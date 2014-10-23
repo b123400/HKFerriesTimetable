@@ -66,7 +66,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = islands[indexPath.row].objectForKey("name") as NSString
-        cell.textLabel!.text = NSLocalizedString(object,comment:"")
+        cell.textLabel.text = NSLocalizedString(object,comment:"")
         return cell
     }
     
@@ -90,9 +90,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         } else {
             // large screen
             let navigationController = UINavigationController(rootViewController: detailViewController)
-            if navigationController != nil {
-                showDetailViewController(navigationController!, sender: self)
-            }
+            showDetailViewController(navigationController, sender: self)
         }
     }
 
