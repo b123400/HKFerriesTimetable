@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2174EB4C478AE725ACD053B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51CB659071444085A69B5C0 /* libPods.a */; };
 		5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */; };
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
@@ -284,7 +283,6 @@
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
 				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
-				2174EB4C478AE725ACD053B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,6 +1093,7 @@
 		};
 		CFB6E0BD195D439E00F83035 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1209,7 +1208,7 @@
 				CFA658DA19C0BD8600583C54 /* Distrubtion */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2" */ = {
 			isa = XCConfigurationList;
@@ -1219,7 +1218,7 @@
 				CFA658DB19C0BD8600583C54 /* Distrubtion */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */ = {
 			isa = XCConfigurationList;
@@ -1229,7 +1228,7 @@
 				CFA658DC19C0BD8600583C54 /* Distrubtion */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

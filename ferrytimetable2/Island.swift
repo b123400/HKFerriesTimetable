@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+private let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+
 class Island: NSObject {
     let sourceDict:NSDictionary;
     var _detailDict:NSDictionary?
@@ -65,7 +67,22 @@ class Island: NSObject {
         } else {
             directionString = "From"
         }
-        let dateString:String = date.isHoliday() ? "Holiday" : "Normal"
+        var dateString = date.isHoliday() ? "Holiday" : "Normal"
+        
+        if !date.isHoliday() {
+            // saturday
+            let component = calendar?.components(.WeekdayCalendarUnit, fromDate: date)
+            let weekday = component?.weekday
+            if weekday != nil {
+                if weekday! == 7 {
+                    let saturdayPlistKey = "\(directionString)IslandPlistSaturday"
+                    if detailDict.objectForKey(saturdayPlistKey) != nil {
+                        dateString = "Saturday"
+                    }
+                }
+            }
+        }
+        
         NSLog( dateString )
         let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)")as String
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")!) as Array<NSDictionary>
