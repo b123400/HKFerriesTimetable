@@ -8,6 +8,11 @@
 
 import XCTest
 
+enum Pier : String{
+    case Central = "Central"
+    case NorthPoint = "NorthPoint"
+}
+
 class ferrytimetable2Tests: XCTestCase {
     
     override func setUp() {
@@ -32,4 +37,20 @@ class ferrytimetable2Tests: XCTestCase {
         }
     }
     
+    func testAllFerriesData() {
+        let piers = [Pier.NorthPoint,Pier.Central]
+        for pier in piers {
+            var pierPath = NSBundle.mainBundle().pathForResource(pier.rawValue, ofType: "plist");
+            if pierPath == nil {
+                return
+            }
+            let islands = NSMutableArray(contentsOfFile: pierPath!)!
+            
+            for islandDict in islands {
+                let island = Island(dictionary: islandDict as NSDictionary, pier:pier)
+                NSLog("%@", island.name)
+//                island.get
+            }
+        }
+    }
 }

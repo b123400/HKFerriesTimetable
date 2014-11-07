@@ -7,9 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2174EB4C478AE725ACD053B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51CB659071444085A69B5C0 /* libPods.a */; };
 		5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */; };
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
+		CF41A5F01A0B26690094789B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0A9195D439E00F83035 /* Main.storyboard */; };
+		CF41A5FD1A0B282C0094789B /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
+		CF41A5FE1A0B282F0094789B /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
+		CF41A6321A0B28B50094789B /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
+		CF41A6331A0B28B50094789B /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
+		CF41A6341A0B28B50094789B /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
+		CF41A6351A0B28B50094789B /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
+		CF41A6361A0B28B50094789B /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
+		CF41A6371A0B28B50094789B /* CheungChauToHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CB195F350E0066D9EE /* CheungChauToHoliday.plist */; };
+		CF41A6381A0B28B50094789B /* FromCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CE195F350E0066D9EE /* FromCheungChauNormal.plist */; };
+		CF41A6391A0B28B50094789B /* ToCheungChauSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EC195F350E0066D9EE /* ToCheungChauSaturday.plist */; };
+		CF41A63A1A0B28B50094789B /* ToCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EB195F350E0066D9EE /* ToCheungChauNormal.plist */; };
+		CF41A63B1A0B28B50094789B /* DiscoveryBayInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CC195F350E0066D9EE /* DiscoveryBayInfo.plist */; };
+		CF41A63C1A0B28B50094789B /* FromDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CF195F350E0066D9EE /* FromDiscoveryBayHoliday.plist */; };
+		CF41A63D1A0B28B50094789B /* FromDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D0195F350E0066D9EE /* FromDiscoveryBayNormal.plist */; };
+		CF41A63E1A0B28B50094789B /* FromDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D1195F350E0066D9EE /* FromDiscoveryBaySaturday.plist */; };
+		CF41A63F1A0B28B50094789B /* ToDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5ED195F350E0066D9EE /* ToDiscoveryBayHoliday.plist */; };
+		CF41A6401A0B28B50094789B /* ToDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EE195F350E0066D9EE /* ToDiscoveryBayNormal.plist */; };
+		CF41A6411A0B28B50094789B /* ToDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EF195F350E0066D9EE /* ToDiscoveryBaySaturday.plist */; };
+		CF41A6421A0B28B50094789B /* HungHomInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E2195F350E0066D9EE /* HungHomInfo.plist */; };
+		CF41A6431A0B28B50094789B /* FromHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D2195F350E0066D9EE /* FromHungHomHoliday.plist */; };
+		CF41A6441A0B28B50094789B /* FromHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D3195F350E0066D9EE /* FromHungHomNormal.plist */; };
+		CF41A6451A0B28B50094789B /* ToHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F0195F350E0066D9EE /* ToHungHomHoliday.plist */; };
+		CF41A6461A0B28B50094789B /* ToHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F1195F350E0066D9EE /* ToHungHomNormal.plist */; };
+		CF41A6471A0B28B50094789B /* KowloonCityInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */; };
+		CF41A6481A0B28B50094789B /* FromKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D4195F350E0066D9EE /* FromKowloonCityHoliday.plist */; };
+		CF41A6491A0B28B50094789B /* FromKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D5195F350E0066D9EE /* FromKowloonCityNormal.plist */; };
+		CF41A64A1A0B28B50094789B /* ToKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F2195F350E0066D9EE /* ToKowloonCityHoliday.plist */; };
+		CF41A64B1A0B28B50094789B /* ToKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F3195F350E0066D9EE /* ToKowloonCityNormal.plist */; };
+		CF41A64C1A0B28B50094789B /* MuiWoInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E6195F350E0066D9EE /* MuiWoInfo.plist */; };
+		CF41A64D1A0B28B50094789B /* FromMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D6195F350E0066D9EE /* FromMuiWoHoliday.plist */; };
+		CF41A64E1A0B28B50094789B /* FromMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D7195F350E0066D9EE /* FromMuiWoNormal.plist */; };
+		CF41A64F1A0B28B50094789B /* ToMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F4195F350E0066D9EE /* ToMuiWoHoliday.plist */; };
+		CF41A6501A0B28B50094789B /* ToMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F5195F350E0066D9EE /* ToMuiWoNormal.plist */; };
+		CF41A6511A0B28B50094789B /* ToMuiWoSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F6195F350E0066D9EE /* ToMuiWoSaturday.plist */; };
+		CF41A6521A0B28B50094789B /* LammaSokKwuWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E4195F350E0066D9EE /* LammaSokKwuWanInfo.plist */; };
+		CF41A6531A0B28B50094789B /* FromSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DD195F350E0066D9EE /* FromSKWHoliday.plist */; };
+		CF41A6541A0B28B50094789B /* FromSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DE195F350E0066D9EE /* FromSKWNormal.plist */; };
+		CF41A6551A0B28B50094789B /* ToSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FC195F350E0066D9EE /* ToSKWHoliday.plist */; };
+		CF41A6561A0B28B50094789B /* ToSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */; };
+		CF41A6571A0B28B50094789B /* LammaYungShueWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */; };
+		CF41A6581A0B28B50094789B /* FromYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DF195F350E0066D9EE /* FromYSWHoliday.plist */; };
+		CF41A6591A0B28B50094789B /* FromYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E0195F350E0066D9EE /* FromYSWNormal.plist */; };
+		CF41A65A1A0B28B50094789B /* FromYSWNormalSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E1195F350E0066D9EE /* FromYSWNormalSaturday.plist */; };
+		CF41A65B1A0B28B50094789B /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
+		CF41A65C1A0B28B50094789B /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
+		CF41A65D1A0B28B50094789B /* ParkIslandInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E8195F350E0066D9EE /* ParkIslandInfo.plist */; };
+		CF41A65E1A0B28B50094789B /* FromParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D8195F350E0066D9EE /* FromParkHoliday.plist */; };
+		CF41A65F1A0B28B50094789B /* FromParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D9195F350E0066D9EE /* FromParkNormal.plist */; };
+		CF41A6601A0B28B50094789B /* FromParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DA195F350E0066D9EE /* FromParkSaturday.plist */; };
+		CF41A6611A0B28B50094789B /* ToParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F7195F350E0066D9EE /* ToParkHoliday.plist */; };
+		CF41A6621A0B28B50094789B /* ToParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F8195F350E0066D9EE /* ToParkNormal.plist */; };
+		CF41A6631A0B28B50094789B /* ToParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F9195F350E0066D9EE /* ToParkSaturday.plist */; };
+		CF41A6641A0B28B50094789B /* PengChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */; };
+		CF41A6651A0B28BC0094789B /* FromPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DB195F350E0066D9EE /* FromPengChauHoliday.plist */; };
+		CF41A6661A0B28BC0094789B /* FromPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DC195F350E0066D9EE /* FromPengChauNormal.plist */; };
+		CF41A6671A0B28BC0094789B /* ToPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */; };
+		CF41A6681A0B28BC0094789B /* ToPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */; };
+		CF41A6691A0B28C20094789B /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
+		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
+		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
+		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
 		CF47A600195F350F0066D9EE /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CF47A601195F350F0066D9EE /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
 		CF47A602195F350F0066D9EE /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
@@ -87,6 +150,9 @@
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
+		CFE7563C1A0B22320064B199 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6515B2196062DD005626C0 /* Island.swift */; };
+		CFE7563D1A0B22750064B199 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
+		CFE7563E1A0B22950064B199 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
 		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
@@ -104,12 +170,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.distrubtion.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.distrubtion.xcconfig"; sourceTree = "<group>"; };
-		2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.release.xcconfig"; sourceTree = "<group>"; };
 		442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51CB659071444085A69B5C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1115B11975134300F8CA3C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CF153FFD196EEF40007599D3 /* BRClockLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRClockLayer.h; sourceTree = "<group>"; };
 		CF153FFE196EEF40007599D3 /* BRClockLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRClockLayer.m; sourceTree = "<group>"; };
+		CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.debug.xcconfig"; sourceTree = "<group>"; };
+		CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.distrubtion.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.distrubtion.xcconfig"; sourceTree = "<group>"; };
+		CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.release.xcconfig"; sourceTree = "<group>"; };
 		CF47A5C8195F350E0066D9EE /* Central.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Central.plist; sourceTree = "<group>"; };
 		CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauFromHoliday.plist; sourceTree = "<group>"; };
 		CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauInfo.plist; sourceTree = "<group>"; };
@@ -203,7 +271,6 @@
 		CFF9BB081976D1E9004E087E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
 		CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +284,7 @@
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
 				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
+				2174EB4C478AE725ACD053B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +301,9 @@
 		7390A60C2E25A2165348CE06 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */,
-				2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */,
-				2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */,
+				CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */,
+				CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */,
+				CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -493,6 +561,7 @@
 				CFB016AE196B0790007D0068 /* MapKit.framework */,
 				442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */,
 				CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */,
+				A51CB659071444085A69B5C0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -603,6 +672,7 @@
 				CF47A611195F350F0066D9EE /* FromParkNormal.plist in Resources */,
 				CF47A630195F350F0066D9EE /* ToParkNormal.plist in Resources */,
 				CF47A635195F350F0066D9EE /* ToSKWNormal.plist in Resources */,
+				CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */,
 				CF47A617195F350F0066D9EE /* FromYSWHoliday.plist in Resources */,
 				CF47A608195F350F0066D9EE /* FromDiscoveryBayNormal.plist in Resources */,
 				CF47A615195F350F0066D9EE /* FromSKWHoliday.plist in Resources */,
@@ -620,6 +690,7 @@
 				CF47A603195F350F0066D9EE /* CheungChauToHoliday.plist in Resources */,
 				CF47A621195F350F0066D9EE /* PengChauInfo.plist in Resources */,
 				CF47A618195F350F0066D9EE /* FromYSWNormal.plist in Resources */,
+				CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */,
 				CF47A60E195F350F0066D9EE /* FromMuiWoHoliday.plist in Resources */,
 				CFB6E0AB195D439E00F83035 /* Main.storyboard in Resources */,
 				CF47A634195F350F0066D9EE /* ToSKWHoliday.plist in Resources */,
@@ -637,6 +708,7 @@
 				CF47A633195F350F0066D9EE /* ToPengChauNormal.plist in Resources */,
 				CF47A620195F350F0066D9EE /* ParkIslandInfo.plist in Resources */,
 				CF47A609195F350F0066D9EE /* FromDiscoveryBaySaturday.plist in Resources */,
+				CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */,
 				CF47A613195F350F0066D9EE /* FromPengChauHoliday.plist in Resources */,
 				CF47A62C195F350F0066D9EE /* ToMuiWoHoliday.plist in Resources */,
 				CF47A61A195F350F0066D9EE /* HungHomInfo.plist in Resources */,
@@ -654,7 +726,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF41A64A1A0B28B50094789B /* ToKowloonCityHoliday.plist in Resources */,
+				CF41A6671A0B28BC0094789B /* ToPengChauHoliday.plist in Resources */,
+				CF41A6531A0B28B50094789B /* FromSKWHoliday.plist in Resources */,
+				CF41A6441A0B28B50094789B /* FromHungHomNormal.plist in Resources */,
+				CF41A6381A0B28B50094789B /* FromCheungChauNormal.plist in Resources */,
+				CF41A6331A0B28B50094789B /* Central.plist in Resources */,
+				CF41A6321A0B28B50094789B /* Piers.plist in Resources */,
+				CF41A63E1A0B28B50094789B /* FromDiscoveryBaySaturday.plist in Resources */,
 				CFCCAF90197B618400515CBA /* InfoPlist.strings in Resources */,
+				CF41A6371A0B28B50094789B /* CheungChauToHoliday.plist in Resources */,
+				CF41A6431A0B28B50094789B /* FromHungHomHoliday.plist in Resources */,
+				CF41A6481A0B28B50094789B /* FromKowloonCityHoliday.plist in Resources */,
+				CF41A6621A0B28B50094789B /* ToParkNormal.plist in Resources */,
+				CF41A6411A0B28B50094789B /* ToDiscoveryBaySaturday.plist in Resources */,
+				CF41A6581A0B28B50094789B /* FromYSWHoliday.plist in Resources */,
+				CF41A64E1A0B28B50094789B /* FromMuiWoNormal.plist in Resources */,
+				CF41A64F1A0B28B50094789B /* ToMuiWoHoliday.plist in Resources */,
+				CF41A6401A0B28B50094789B /* ToDiscoveryBayNormal.plist in Resources */,
+				CF41A6611A0B28B50094789B /* ToParkHoliday.plist in Resources */,
+				CF41A63F1A0B28B50094789B /* ToDiscoveryBayHoliday.plist in Resources */,
+				CF41A6391A0B28B50094789B /* ToCheungChauSaturday.plist in Resources */,
+				CF41A6631A0B28B50094789B /* ToParkSaturday.plist in Resources */,
+				CF41A63C1A0B28B50094789B /* FromDiscoveryBayHoliday.plist in Resources */,
+				CF41A6501A0B28B50094789B /* ToMuiWoNormal.plist in Resources */,
+				CF41A65B1A0B28B50094789B /* ToYSWHoliday.plist in Resources */,
+				CF41A6471A0B28B50094789B /* KowloonCityInfo.plist in Resources */,
+				CF41A6421A0B28B50094789B /* HungHomInfo.plist in Resources */,
+				CF41A65D1A0B28B50094789B /* ParkIslandInfo.plist in Resources */,
+				CF41A6491A0B28B50094789B /* FromKowloonCityNormal.plist in Resources */,
+				CF41A65F1A0B28B50094789B /* FromParkNormal.plist in Resources */,
+				CF41A65A1A0B28B50094789B /* FromYSWNormalSaturday.plist in Resources */,
+				CF41A65E1A0B28B50094789B /* FromParkHoliday.plist in Resources */,
+				CF41A6361A0B28B50094789B /* CheungChauFromHoliday.plist in Resources */,
+				CF41A64D1A0B28B50094789B /* FromMuiWoHoliday.plist in Resources */,
+				CF41A6561A0B28B50094789B /* ToSKWNormal.plist in Resources */,
+				CF41A6341A0B28B50094789B /* NorthPoint.plist in Resources */,
+				CF41A63B1A0B28B50094789B /* DiscoveryBayInfo.plist in Resources */,
+				CF41A6521A0B28B50094789B /* LammaSokKwuWanInfo.plist in Resources */,
+				CF41A6641A0B28B50094789B /* PengChauInfo.plist in Resources */,
+				CF41A64B1A0B28B50094789B /* ToKowloonCityNormal.plist in Resources */,
+				CF41A6511A0B28B50094789B /* ToMuiWoSaturday.plist in Resources */,
+				CF41A6681A0B28BC0094789B /* ToPengChauNormal.plist in Resources */,
+				CF41A6591A0B28B50094789B /* FromYSWNormal.plist in Resources */,
+				CF41A6451A0B28B50094789B /* ToHungHomHoliday.plist in Resources */,
+				CF41A6651A0B28BC0094789B /* FromPengChauHoliday.plist in Resources */,
+				CF41A6601A0B28B50094789B /* FromParkSaturday.plist in Resources */,
+				CF41A6661A0B28BC0094789B /* FromPengChauNormal.plist in Resources */,
+				CF41A5F01A0B26690094789B /* Main.storyboard in Resources */,
+				CF41A6461A0B28B50094789B /* ToHungHomNormal.plist in Resources */,
+				CF41A65C1A0B28B50094789B /* ToYSWNormal.plist in Resources */,
+				CF41A64C1A0B28B50094789B /* MuiWoInfo.plist in Resources */,
+				CF41A63A1A0B28B50094789B /* ToCheungChauNormal.plist in Resources */,
+				CF41A6541A0B28B50094789B /* FromSKWNormal.plist in Resources */,
+				CF41A6351A0B28B50094789B /* CheungChauInfo.plist in Resources */,
+				CF41A6551A0B28B50094789B /* ToSKWHoliday.plist in Resources */,
+				CF41A6571A0B28B50094789B /* LammaYungShueWanInfo.plist in Resources */,
+				CF41A63D1A0B28B50094789B /* FromDiscoveryBayNormal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,7 +862,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE7563E1A0B22950064B199 /* DateHoliday.swift in Sources */,
 				CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */,
+				CF41A5FE1A0B282F0094789B /* BRClockLayer.m in Sources */,
+				CF41A5FD1A0B282C0094789B /* BRClockView.swift in Sources */,
+				CFE7563D1A0B22750064B199 /* Ferry.swift in Sources */,
+				CFE7563C1A0B22320064B199 /* Island.swift in Sources */,
+				CF41A6691A0B28C20094789B /* CustomCalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,7 +963,7 @@
 		};
 		CFA658DB19C0BD8600583C54 /* Distrubtion */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B90F5E60C879108B69C89D9 /* Pods-ferriestimetable2.distrubtion.xcconfig */;
+			baseConfigurationReference = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -855,21 +989,32 @@
 		CFA658DC19C0BD8600583C54 /* Distrubtion */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
+					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
 				);
 				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ferriestimetable2Tests;
+				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Distrubtion;
 		};
 		CFB6E0BA195D439E00F83035 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -950,7 +1095,6 @@
 		};
 		CFB6E0BD195D439E00F83035 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA21E84A720B6A1977C08D48 /* Pods-ferriestimetable2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -975,7 +1119,7 @@
 		};
 		CFB6E0BE195D439E00F83035 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F86FECE0376B627604D0194 /* Pods-ferriestimetable2.release.xcconfig */;
+			baseConfigurationReference = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1001,19 +1145,29 @@
 		CFB6E0C0195D439E00F83035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
+					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
+				);
 				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ferriestimetable2Tests;
+				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -1021,15 +1175,25 @@
 		CFB6E0C1195D439E00F83035 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
+					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
 				);
 				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ferriestimetable2Tests;
+				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

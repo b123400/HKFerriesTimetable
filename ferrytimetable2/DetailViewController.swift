@@ -191,6 +191,22 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         
     }
     
+    @IBAction func notificationButtonTapped(sender: UIBarButtonItem) {
+        let notificationController = self.storyboard?.instantiateViewControllerWithIdentifier("NotificationNavigationController") as? UINavigationController
+        if notificationController == nil {
+            return
+        }
+        notificationController!.modalPresentationStyle = .Popover
+        let popVC = notificationController!.popoverPresentationController
+        if popVC == nil {
+            return
+        }
+        popVC!.permittedArrowDirections = .Any
+        popVC!.barButtonItem = sender
+        popVC!.delegate = self
+        presentViewController(notificationController! as UIViewController, animated: true, completion: nil)
+    }
+    
     // MARK: - Date picker
     @IBAction func dateButtonTapped(sender: UIBarButtonItem) {
         let calendarViewController = CustomCalendarViewController()
@@ -212,6 +228,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     func presentationController(controller: UIPresentationController!,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+            
+            if controller.presentedViewController.isKindOfClass(UINavigationController) {
+                return controller.presentedViewController
+            }
             
             let navController = UINavigationController(rootViewController: controller.presentedViewController)
             controller.presentedViewController.title = NSLocalizedString("Calendar",comment:"")
@@ -245,6 +265,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             let ferry = currentTimetable[ tableView!.indexPathForSelectedRow()!.row ]
             ferryController.ferry = ferry
             tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow()!, animated: true)
+        }
+        
+        if segue.identifier == "showNotification" {
+            let notificationViewController =  segue.destinationViewController as UIViewController
+            let popoverPresentationController = notificationViewController.popoverPresentationController
+            if popoverPresentationController != nil {
+                popoverPresentationController!.delegate = self
+            }
         }
     }
     

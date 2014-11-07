@@ -117,7 +117,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         if path == nil {
             return
         }
-        islands = NSMutableArray(contentsOfFile: path!)!;
+        islands = NSMutableArray(contentsOfFile: path!)!
         tableView.reloadData()
     }
     @IBAction func changePier(sender: UISegmentedControl) {

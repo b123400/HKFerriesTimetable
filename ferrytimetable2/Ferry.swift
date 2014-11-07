@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 enum FerryType : String{
     case Slow = "slow"
@@ -54,6 +55,9 @@ class Ferry: NSObject {
     
     var time : String {
         get {
+            Crashlytics.setObjectValue(island.name, forKey: "island")
+            Crashlytics.setObjectValue(direction.rawValue, forKey: "direction")
+            Crashlytics.setObjectValue(date, forKey: "date")
             return dict.objectForKey("time") as String
         }
     }
