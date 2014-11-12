@@ -114,11 +114,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         self.navigationController!.setToolbarHidden(false, animated: false)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController!.setToolbarHidden(true, animated: false)
-    }
-    
     // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
