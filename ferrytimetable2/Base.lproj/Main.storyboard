@@ -515,10 +515,10 @@
             </objects>
             <point key="canvasLocation" x="656" y="753"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="OTe-CB-S2H">
             <objects>
-                <viewController id="z7I-yO-1LI" customClass="AboutViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" title="About" id="z7I-yO-1LI" customClass="AboutViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3fD-Tb-U9b"/>
                         <viewControllerLayoutGuide type="bottom" id="stV-dB-xxh"/>
@@ -549,7 +549,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ver. 2.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-mD-x63">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ver. 2.1.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-mD-x63">
                                         <rect key="frame" x="125" y="72" width="71" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -570,18 +570,6 @@
                                     <constraint firstItem="Hpt-vg-xB2" firstAttribute="top" secondItem="b4N-aE-Wtz" secondAttribute="top" constant="23" id="zm3-uL-4xx"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-ob-PK2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="About" id="w7l-jm-H2w">
-                                        <barButtonItem key="rightBarButtonItem" title="Close" id="jYf-qq-UHp">
-                                            <connections>
-                                                <action selector="closeButtonTapped:" destination="z7I-yO-1LI" id="Iql-6H-FIh"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -661,9 +649,7 @@
                     <navigationItem key="navigationItem" title="Islands" id="Zdf-7t-Un8">
                         <barButtonItem key="leftBarButtonItem" image="info" id="skD-lD-0Kv">
                             <connections>
-                                <segue destination="z7I-yO-1LI" kind="popover" identifier="showAbout" popoverAnchorBarButtonItem="skD-lD-0Kv" id="C5t-BM-pl5">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="aboutButtonPressed:" destination="7bK-jq-Zjz" id="LZK-tu-qM0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="location" id="U6s-uV-r3L">

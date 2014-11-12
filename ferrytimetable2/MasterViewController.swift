@@ -193,7 +193,21 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         changePier(pier)
         dismissViewControllerAnimated(true, completion: nil)
     }
+   
+    @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {
+        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
+        viewController.modalPresentationStyle = .Popover
+        if let popVC = viewController.popoverPresentationController {
+            popVC.delegate = self
+            popVC.barButtonItem = sender
+        }
+        presentViewController(viewController, animated: true, completion: nil)
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    }
+
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
         return .FullScreen
     }
@@ -203,6 +217,10 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         
         let navController = UINavigationController(rootViewController: controller.presentedViewController)
         return navController
+    }
+    
+    func close() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - Split view

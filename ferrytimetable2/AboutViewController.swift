@@ -14,6 +14,7 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         self.preferredContentSize = CGSizeMake(320, 320)
         // Do any additional setup after loading the view.
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Close", comment: ""), style: UIBarButtonItemStyle.Done, target: self, action: "closeButtonTapped:")
     }
 
     override func didReceiveMemoryWarning() {
