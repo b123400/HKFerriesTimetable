@@ -111,7 +111,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        self.navigationController!.setToolbarHidden(false, animated: false)
+        if let navigationController = self.navigationController {
+            navigationController.setToolbarHidden(false, animated: false)
+        }
     }
     
     // MARK: - Table View
