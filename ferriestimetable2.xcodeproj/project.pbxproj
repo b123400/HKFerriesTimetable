@@ -10,65 +10,6 @@
 		5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */; };
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
-		CF41A5F01A0B26690094789B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0A9195D439E00F83035 /* Main.storyboard */; };
-		CF41A5FD1A0B282C0094789B /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
-		CF41A5FE1A0B282F0094789B /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
-		CF41A6321A0B28B50094789B /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
-		CF41A6331A0B28B50094789B /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
-		CF41A6341A0B28B50094789B /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
-		CF41A6351A0B28B50094789B /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
-		CF41A6361A0B28B50094789B /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
-		CF41A6371A0B28B50094789B /* CheungChauToHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CB195F350E0066D9EE /* CheungChauToHoliday.plist */; };
-		CF41A6381A0B28B50094789B /* FromCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CE195F350E0066D9EE /* FromCheungChauNormal.plist */; };
-		CF41A6391A0B28B50094789B /* ToCheungChauSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EC195F350E0066D9EE /* ToCheungChauSaturday.plist */; };
-		CF41A63A1A0B28B50094789B /* ToCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EB195F350E0066D9EE /* ToCheungChauNormal.plist */; };
-		CF41A63B1A0B28B50094789B /* DiscoveryBayInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CC195F350E0066D9EE /* DiscoveryBayInfo.plist */; };
-		CF41A63C1A0B28B50094789B /* FromDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CF195F350E0066D9EE /* FromDiscoveryBayHoliday.plist */; };
-		CF41A63D1A0B28B50094789B /* FromDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D0195F350E0066D9EE /* FromDiscoveryBayNormal.plist */; };
-		CF41A63E1A0B28B50094789B /* FromDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D1195F350E0066D9EE /* FromDiscoveryBaySaturday.plist */; };
-		CF41A63F1A0B28B50094789B /* ToDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5ED195F350E0066D9EE /* ToDiscoveryBayHoliday.plist */; };
-		CF41A6401A0B28B50094789B /* ToDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EE195F350E0066D9EE /* ToDiscoveryBayNormal.plist */; };
-		CF41A6411A0B28B50094789B /* ToDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EF195F350E0066D9EE /* ToDiscoveryBaySaturday.plist */; };
-		CF41A6421A0B28B50094789B /* HungHomInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E2195F350E0066D9EE /* HungHomInfo.plist */; };
-		CF41A6431A0B28B50094789B /* FromHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D2195F350E0066D9EE /* FromHungHomHoliday.plist */; };
-		CF41A6441A0B28B50094789B /* FromHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D3195F350E0066D9EE /* FromHungHomNormal.plist */; };
-		CF41A6451A0B28B50094789B /* ToHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F0195F350E0066D9EE /* ToHungHomHoliday.plist */; };
-		CF41A6461A0B28B50094789B /* ToHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F1195F350E0066D9EE /* ToHungHomNormal.plist */; };
-		CF41A6471A0B28B50094789B /* KowloonCityInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */; };
-		CF41A6481A0B28B50094789B /* FromKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D4195F350E0066D9EE /* FromKowloonCityHoliday.plist */; };
-		CF41A6491A0B28B50094789B /* FromKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D5195F350E0066D9EE /* FromKowloonCityNormal.plist */; };
-		CF41A64A1A0B28B50094789B /* ToKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F2195F350E0066D9EE /* ToKowloonCityHoliday.plist */; };
-		CF41A64B1A0B28B50094789B /* ToKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F3195F350E0066D9EE /* ToKowloonCityNormal.plist */; };
-		CF41A64C1A0B28B50094789B /* MuiWoInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E6195F350E0066D9EE /* MuiWoInfo.plist */; };
-		CF41A64D1A0B28B50094789B /* FromMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D6195F350E0066D9EE /* FromMuiWoHoliday.plist */; };
-		CF41A64E1A0B28B50094789B /* FromMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D7195F350E0066D9EE /* FromMuiWoNormal.plist */; };
-		CF41A64F1A0B28B50094789B /* ToMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F4195F350E0066D9EE /* ToMuiWoHoliday.plist */; };
-		CF41A6501A0B28B50094789B /* ToMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F5195F350E0066D9EE /* ToMuiWoNormal.plist */; };
-		CF41A6511A0B28B50094789B /* ToMuiWoSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F6195F350E0066D9EE /* ToMuiWoSaturday.plist */; };
-		CF41A6521A0B28B50094789B /* LammaSokKwuWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E4195F350E0066D9EE /* LammaSokKwuWanInfo.plist */; };
-		CF41A6531A0B28B50094789B /* FromSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DD195F350E0066D9EE /* FromSKWHoliday.plist */; };
-		CF41A6541A0B28B50094789B /* FromSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DE195F350E0066D9EE /* FromSKWNormal.plist */; };
-		CF41A6551A0B28B50094789B /* ToSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FC195F350E0066D9EE /* ToSKWHoliday.plist */; };
-		CF41A6561A0B28B50094789B /* ToSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */; };
-		CF41A6571A0B28B50094789B /* LammaYungShueWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */; };
-		CF41A6581A0B28B50094789B /* FromYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DF195F350E0066D9EE /* FromYSWHoliday.plist */; };
-		CF41A6591A0B28B50094789B /* FromYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E0195F350E0066D9EE /* FromYSWNormal.plist */; };
-		CF41A65A1A0B28B50094789B /* FromYSWNormalSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E1195F350E0066D9EE /* FromYSWNormalSaturday.plist */; };
-		CF41A65B1A0B28B50094789B /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
-		CF41A65C1A0B28B50094789B /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
-		CF41A65D1A0B28B50094789B /* ParkIslandInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E8195F350E0066D9EE /* ParkIslandInfo.plist */; };
-		CF41A65E1A0B28B50094789B /* FromParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D8195F350E0066D9EE /* FromParkHoliday.plist */; };
-		CF41A65F1A0B28B50094789B /* FromParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D9195F350E0066D9EE /* FromParkNormal.plist */; };
-		CF41A6601A0B28B50094789B /* FromParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DA195F350E0066D9EE /* FromParkSaturday.plist */; };
-		CF41A6611A0B28B50094789B /* ToParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F7195F350E0066D9EE /* ToParkHoliday.plist */; };
-		CF41A6621A0B28B50094789B /* ToParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F8195F350E0066D9EE /* ToParkNormal.plist */; };
-		CF41A6631A0B28B50094789B /* ToParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F9195F350E0066D9EE /* ToParkSaturday.plist */; };
-		CF41A6641A0B28B50094789B /* PengChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */; };
-		CF41A6651A0B28BC0094789B /* FromPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DB195F350E0066D9EE /* FromPengChauHoliday.plist */; };
-		CF41A6661A0B28BC0094789B /* FromPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DC195F350E0066D9EE /* FromPengChauNormal.plist */; };
-		CF41A6671A0B28BC0094789B /* ToPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */; };
-		CF41A6681A0B28BC0094789B /* ToPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */; };
-		CF41A6691A0B28C20094789B /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
 		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
@@ -136,22 +77,21 @@
 		CF7FDFA91973D27300948061 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7FDFA81973D27300948061 /* MapViewController.swift */; };
 		CFAEB8F8196AEBCE007DB58B /* FerryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */; };
 		CFB016AF196B0790007D0068 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB016AE196B0790007D0068 /* MapKit.framework */; };
+		CFB25C6B1A1E0C8A004E5430 /* ferriestimetable2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB25C6A1A1E0C8A004E5430 /* ferriestimetable2Tests.swift */; };
+		CFB25C721A1E0CF8004E5430 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6515B2196062DD005626C0 /* Island.swift */; };
+		CFB25C731A1E0D25004E5430 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
+		CFB25C741A1E0DF9004E5430 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFB6E0A4195D439E00F83035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A3195D439E00F83035 /* AppDelegate.swift */; };
 		CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A7195D439E00F83035 /* DetailViewController.swift */; };
 		CFB6E0AB195D439E00F83035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0A9195D439E00F83035 /* Main.storyboard */; };
 		CFB6E0AD195D439E00F83035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB6E0AC195D439E00F83035 /* Images.xcassets */; };
-		CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */; };
 		CFC0E0AB196ABE4500B4CB4A /* CustomCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */; };
 		CFCCAF8B197B618400515CBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF8D197B618400515CBA /* InfoPlist.strings */; };
-		CFCCAF90197B618400515CBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF92197B618400515CBA /* InfoPlist.strings */; };
 		CFCCAF95197B618400515CBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
 		CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */; };
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
-		CFE7563C1A0B22320064B199 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6515B2196062DD005626C0 /* Island.swift */; };
-		CFE7563D1A0B22750064B199 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
-		CFE7563E1A0B22950064B199 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
 		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
@@ -159,12 +99,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CFB6E0B3195D439E00F83035 /* PBXContainerItemProxy */ = {
+		CFB25C6C1A1E0C8A004E5430 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CFB6E096195D439E00F83035 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CFB6E09D195D439E00F83035;
-			remoteInfo = ferrytimetable2;
+			remoteInfo = ferriestimetable2;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -240,6 +180,9 @@
 		CF7FDFA81973D27300948061 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CFAEB8F7196AEBCE007DB58B /* FerryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryViewController.swift; sourceTree = "<group>"; };
 		CFB016AE196B0790007D0068 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CFB25C661A1E0C8A004E5430 /* ferriestimetable2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ferriestimetable2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB25C691A1E0C8A004E5430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB25C6A1A1E0C8A004E5430 /* ferriestimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferriestimetable2Tests.swift; sourceTree = "<group>"; };
 		CFB6E09E195D439E00F83035 /* ferriestimetable2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ferriestimetable2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB6E0A2195D439E00F83035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB6E0A3195D439E00F83035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,21 +190,16 @@
 		CFB6E0A7195D439E00F83035 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CFB6E0AA195D439E00F83035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFB6E0AC195D439E00F83035 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ferriestimetable2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFB6E0B7195D439E00F83035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ferrytimetable2Tests.swift; sourceTree = "<group>"; };
 		CFC0E0A8196AB8E300B4CB4A /* ferriestimetable2-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ferriestimetable2-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFC0E0AA196ABE4500B4CB4A /* CustomCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarViewController.swift; sourceTree = "<group>"; };
 		CFCCAF88197B0F6F00515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		CFCCAF8C197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CFCCAF91197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFCCAF96197B618400515CBA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFCCAF98197B6DB500515CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFCCAF99197B713A00515CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFCCAF9A197B717800515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		CFCCAF9B197B717900515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CFCCAF9C197B717900515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		CFCCAF9D197B762300515CBA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNotificationViewController.swift; sourceTree = "<group>"; };
 		CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
@@ -273,6 +211,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CFB25C631A1E0C8A004E5430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFB6E09B195D439E00F83035 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,13 +228,6 @@
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
 				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFB6E0AF195D439E00F83035 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +386,28 @@
 			name = "Peng Chau";
 			sourceTree = "<group>";
 		};
+		CFB25C671A1E0C8A004E5430 /* ferriestimetable2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB25C6A1A1E0C8A004E5430 /* ferriestimetable2Tests.swift */,
+				CFB25C681A1E0C8A004E5430 /* Supporting Files */,
+			);
+			path = ferriestimetable2Tests;
+			sourceTree = "<group>";
+		};
+		CFB25C681A1E0C8A004E5430 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFB25C691A1E0C8A004E5430 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CFB6E095195D439E00F83035 = {
 			isa = PBXGroup;
 			children = (
 				CFB6E0A0195D439E00F83035 /* ferrytimetable2 */,
-				CFB6E0B5195D439E00F83035 /* ferrytimetable2Tests */,
+				CFB25C671A1E0C8A004E5430 /* ferriestimetable2Tests */,
 				CFB6E09F195D439E00F83035 /* Products */,
 				EDDFDE51F070466C97896290 /* Frameworks */,
 				7390A60C2E25A2165348CE06 /* Pods */,
@@ -463,7 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB6E09E195D439E00F83035 /* ferriestimetable2.app */,
-				CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */,
+				CFB25C661A1E0C8A004E5430 /* ferriestimetable2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,24 +455,6 @@
 				CFCCAF8D197B618400515CBA /* InfoPlist.strings */,
 				CFB6E0A2195D439E00F83035 /* Info.plist */,
 				CFF9BB061976CFE9004E087E /* Settings.bundle */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CFB6E0B5195D439E00F83035 /* ferrytimetable2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				CFB6E0B8195D439E00F83035 /* ferrytimetable2Tests.swift */,
-				CFB6E0B6195D439E00F83035 /* Supporting Files */,
-			);
-			path = ferrytimetable2Tests;
-			sourceTree = "<group>";
-		};
-		CFB6E0B6195D439E00F83035 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CFCCAF92197B618400515CBA /* InfoPlist.strings */,
-				CFB6E0B7195D439E00F83035 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -567,6 +504,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CFB25C651A1E0C8A004E5430 /* ferriestimetable2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB25C6E1A1E0C8A004E5430 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */;
+			buildPhases = (
+				CFB25C621A1E0C8A004E5430 /* Sources */,
+				CFB25C631A1E0C8A004E5430 /* Frameworks */,
+				CFB25C641A1E0C8A004E5430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB25C6D1A1E0C8A004E5430 /* PBXTargetDependency */,
+			);
+			name = ferriestimetable2Tests;
+			productName = ferriestimetable2Tests;
+			productReference = CFB25C661A1E0C8A004E5430 /* ferriestimetable2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CFB6E09D195D439E00F83035 /* ferriestimetable2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFB6E0BC195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2" */;
@@ -587,24 +542,6 @@
 			productReference = CFB6E09E195D439E00F83035 /* ferriestimetable2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFB6E0B1195D439E00F83035 /* ferriestimetable2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */;
-			buildPhases = (
-				CFB6E0AE195D439E00F83035 /* Sources */,
-				CFB6E0AF195D439E00F83035 /* Frameworks */,
-				CFB6E0B0195D439E00F83035 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CFB6E0B4195D439E00F83035 /* PBXTargetDependency */,
-			);
-			name = ferriestimetable2Tests;
-			productName = ferrytimetable2Tests;
-			productReference = CFB6E0B2195D439E00F83035 /* ferriestimetable2Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -614,6 +551,10 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = b123400;
 				TargetAttributes = {
+					CFB25C651A1E0C8A004E5430 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = CFB6E09D195D439E00F83035;
+					};
 					CFB6E09D195D439E00F83035 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = CC63FD9H8S;
@@ -622,10 +563,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					CFB6E0B1195D439E00F83035 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = CFB6E09D195D439E00F83035;
 					};
 				};
 			};
@@ -644,12 +581,19 @@
 			projectRoot = "";
 			targets = (
 				CFB6E09D195D439E00F83035 /* ferriestimetable2 */,
-				CFB6E0B1195D439E00F83035 /* ferriestimetable2Tests */,
+				CFB25C651A1E0C8A004E5430 /* ferriestimetable2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CFB25C641A1E0C8A004E5430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFB6E09C195D439E00F83035 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -720,70 +664,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFB6E0B0195D439E00F83035 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF41A64A1A0B28B50094789B /* ToKowloonCityHoliday.plist in Resources */,
-				CF41A6671A0B28BC0094789B /* ToPengChauHoliday.plist in Resources */,
-				CF41A6531A0B28B50094789B /* FromSKWHoliday.plist in Resources */,
-				CF41A6441A0B28B50094789B /* FromHungHomNormal.plist in Resources */,
-				CF41A6381A0B28B50094789B /* FromCheungChauNormal.plist in Resources */,
-				CF41A6331A0B28B50094789B /* Central.plist in Resources */,
-				CF41A6321A0B28B50094789B /* Piers.plist in Resources */,
-				CF41A63E1A0B28B50094789B /* FromDiscoveryBaySaturday.plist in Resources */,
-				CFCCAF90197B618400515CBA /* InfoPlist.strings in Resources */,
-				CF41A6371A0B28B50094789B /* CheungChauToHoliday.plist in Resources */,
-				CF41A6431A0B28B50094789B /* FromHungHomHoliday.plist in Resources */,
-				CF41A6481A0B28B50094789B /* FromKowloonCityHoliday.plist in Resources */,
-				CF41A6621A0B28B50094789B /* ToParkNormal.plist in Resources */,
-				CF41A6411A0B28B50094789B /* ToDiscoveryBaySaturday.plist in Resources */,
-				CF41A6581A0B28B50094789B /* FromYSWHoliday.plist in Resources */,
-				CF41A64E1A0B28B50094789B /* FromMuiWoNormal.plist in Resources */,
-				CF41A64F1A0B28B50094789B /* ToMuiWoHoliday.plist in Resources */,
-				CF41A6401A0B28B50094789B /* ToDiscoveryBayNormal.plist in Resources */,
-				CF41A6611A0B28B50094789B /* ToParkHoliday.plist in Resources */,
-				CF41A63F1A0B28B50094789B /* ToDiscoveryBayHoliday.plist in Resources */,
-				CF41A6391A0B28B50094789B /* ToCheungChauSaturday.plist in Resources */,
-				CF41A6631A0B28B50094789B /* ToParkSaturday.plist in Resources */,
-				CF41A63C1A0B28B50094789B /* FromDiscoveryBayHoliday.plist in Resources */,
-				CF41A6501A0B28B50094789B /* ToMuiWoNormal.plist in Resources */,
-				CF41A65B1A0B28B50094789B /* ToYSWHoliday.plist in Resources */,
-				CF41A6471A0B28B50094789B /* KowloonCityInfo.plist in Resources */,
-				CF41A6421A0B28B50094789B /* HungHomInfo.plist in Resources */,
-				CF41A65D1A0B28B50094789B /* ParkIslandInfo.plist in Resources */,
-				CF41A6491A0B28B50094789B /* FromKowloonCityNormal.plist in Resources */,
-				CF41A65F1A0B28B50094789B /* FromParkNormal.plist in Resources */,
-				CF41A65A1A0B28B50094789B /* FromYSWNormalSaturday.plist in Resources */,
-				CF41A65E1A0B28B50094789B /* FromParkHoliday.plist in Resources */,
-				CF41A6361A0B28B50094789B /* CheungChauFromHoliday.plist in Resources */,
-				CF41A64D1A0B28B50094789B /* FromMuiWoHoliday.plist in Resources */,
-				CF41A6561A0B28B50094789B /* ToSKWNormal.plist in Resources */,
-				CF41A6341A0B28B50094789B /* NorthPoint.plist in Resources */,
-				CF41A63B1A0B28B50094789B /* DiscoveryBayInfo.plist in Resources */,
-				CF41A6521A0B28B50094789B /* LammaSokKwuWanInfo.plist in Resources */,
-				CF41A6641A0B28B50094789B /* PengChauInfo.plist in Resources */,
-				CF41A64B1A0B28B50094789B /* ToKowloonCityNormal.plist in Resources */,
-				CF41A6511A0B28B50094789B /* ToMuiWoSaturday.plist in Resources */,
-				CF41A6681A0B28BC0094789B /* ToPengChauNormal.plist in Resources */,
-				CF41A6591A0B28B50094789B /* FromYSWNormal.plist in Resources */,
-				CF41A6451A0B28B50094789B /* ToHungHomHoliday.plist in Resources */,
-				CF41A6651A0B28BC0094789B /* FromPengChauHoliday.plist in Resources */,
-				CF41A6601A0B28B50094789B /* FromParkSaturday.plist in Resources */,
-				CF41A6661A0B28BC0094789B /* FromPengChauNormal.plist in Resources */,
-				CF41A5F01A0B26690094789B /* Main.storyboard in Resources */,
-				CF41A6461A0B28B50094789B /* ToHungHomNormal.plist in Resources */,
-				CF41A65C1A0B28B50094789B /* ToYSWNormal.plist in Resources */,
-				CF41A64C1A0B28B50094789B /* MuiWoInfo.plist in Resources */,
-				CF41A63A1A0B28B50094789B /* ToCheungChauNormal.plist in Resources */,
-				CF41A6541A0B28B50094789B /* FromSKWNormal.plist in Resources */,
-				CF41A6351A0B28B50094789B /* CheungChauInfo.plist in Resources */,
-				CF41A6551A0B28B50094789B /* ToSKWHoliday.plist in Resources */,
-				CF41A6571A0B28B50094789B /* LammaYungShueWanInfo.plist in Resources */,
-				CF41A63D1A0B28B50094789B /* FromDiscoveryBayNormal.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -833,6 +713,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CFB25C621A1E0C8A004E5430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB25C741A1E0DF9004E5430 /* DateHoliday.swift in Sources */,
+				CFB25C731A1E0D25004E5430 /* Ferry.swift in Sources */,
+				CFB25C721A1E0CF8004E5430 /* Island.swift in Sources */,
+				CFB25C6B1A1E0C8A004E5430 /* ferriestimetable2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFB6E09A195D439E00F83035 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -856,27 +747,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFB6E0AE195D439E00F83035 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFE7563E1A0B22950064B199 /* DateHoliday.swift in Sources */,
-				CFB6E0B9195D439E00F83035 /* ferrytimetable2Tests.swift in Sources */,
-				CF41A5FE1A0B282F0094789B /* BRClockLayer.m in Sources */,
-				CF41A5FD1A0B282C0094789B /* BRClockView.swift in Sources */,
-				CFE7563D1A0B22750064B199 /* Ferry.swift in Sources */,
-				CFE7563C1A0B22320064B199 /* Island.swift in Sources */,
-				CF41A6691A0B28C20094789B /* CustomCalendarViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CFB6E0B4195D439E00F83035 /* PBXTargetDependency */ = {
+		CFB25C6D1A1E0C8A004E5430 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CFB6E09D195D439E00F83035 /* ferriestimetable2 */;
-			targetProxy = CFB6E0B3195D439E00F83035 /* PBXContainerItemProxy */;
+			targetProxy = CFB25C6C1A1E0C8A004E5430 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -897,15 +774,6 @@
 				CFCCAF8C197B618400515CBA /* ja */,
 				CFCCAF99197B713A00515CBA /* en */,
 				CFCCAF9C197B717900515CBA /* zh-Hant */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CFCCAF92197B618400515CBA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFCCAF91197B618400515CBA /* ja */,
-				CFCCAF9D197B762300515CBA /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -973,7 +841,6 @@
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);
@@ -984,29 +851,64 @@
 			};
 			name = Distrubtion;
 		};
-		CFA658DC19C0BD8600583C54 /* Distrubtion */ = {
+		CFB25C6F1A1E0C8A004E5430 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = (
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
-					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
 				);
-				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
+				INFOPLIST_FILE = ferriestimetable2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ferriestimetable2Tests;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ferriestimetable2.app/ferriestimetable2";
+			};
+			name = Debug;
+		};
+		CFB25C701A1E0C8A004E5430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ferriestimetable2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ferriestimetable2.app/ferriestimetable2";
+			};
+			name = Release;
+		};
+		CFB25C711A1E0C8A004E5430 /* Distrubtion */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ferriestimetable2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ferriestimetable2.app/ferriestimetable2";
 			};
 			name = Distrubtion;
 		};
@@ -1105,7 +1007,6 @@
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);
@@ -1130,7 +1031,6 @@
 				INFOPLIST_FILE = ferrytimetable2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);
@@ -1141,65 +1041,18 @@
 			};
 			name = Release;
 		};
-		CFB6E0C0195D439E00F83035 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
-					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
-				);
-				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ferriestimetable2Tests;
-				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		CFB6E0C1195D439E00F83035 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ferrytimetable2.app/ferrytimetable2";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
-					"\"${PODS_ROOT}/Headers/Public/PDTSimpleCalendar\"",
-				);
-				INFOPLIST_FILE = ferrytimetable2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ferriestimetable2Tests;
-				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CFB25C6E1A1E0C8A004E5430 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB25C6F1A1E0C8A004E5430 /* Debug */,
+				CFB25C701A1E0C8A004E5430 /* Release */,
+				CFB25C711A1E0C8A004E5430 /* Distrubtion */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferriestimetable2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1216,16 +1069,6 @@
 				CFB6E0BD195D439E00F83035 /* Debug */,
 				CFB6E0BE195D439E00F83035 /* Release */,
 				CFA658DB19C0BD8600583C54 /* Distrubtion */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		CFB6E0BF195D439E00F83035 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFB6E0C0195D439E00F83035 /* Debug */,
-				CFB6E0C1195D439E00F83035 /* Release */,
-				CFA658DC19C0BD8600583C54 /* Distrubtion */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

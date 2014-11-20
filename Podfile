@@ -15,6 +15,8 @@ target "ferriestimetable2Tests" do
 
 end
 
+link_with "ferriestimetable2Tests"
+
 class ::Pod::Generator::Acknowledgements
   def header_text
     "Location and Calendar icon: http://icons8.com/"
