@@ -1,3 +1,4 @@
 language: objective-c
 xcode_workspace: ferriestimetable2.xcworkspace
-xcode_scheme: ferriestimetable2
+script:
+    - xcodebuild -workspace 'ferriestimetable2.xcworkspace'  -scheme ferriestimetable2 -destination "platform=iOS Simulator,name=iPhone 5,OS=8.0" test
