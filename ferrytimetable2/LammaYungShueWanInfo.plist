@@ -17,11 +17,11 @@
 	<key>FromIslandPlistSaturday</key>
 	<string>FromYSWNormalSaturday</string>
 	<key>PriceNormalSlow</key>
-	<string>$16.50</string>
+	<string>$17.10</string>
 	<key>PriceHolidaySlow</key>
-	<string>$22.30</string>
+	<string>$23.70</string>
 	<key>dataLastRefreshTime</key>
-	<string>16/11/2013</string>
+	<string>20/11/2014</string>
 	<key>pier-lat</key>
 	<string>22.226223277639107</string>
 	<key>pier-long</key>

@@ -17,15 +17,15 @@
 	<key>FromIslandPlistHoliday</key>
 	<string>FromDiscoveryBayHoliday</string>
 	<key>PriceNormalSlow</key>
-	<string>$37.00</string>
+	<string>$40.00</string>
 	<key>PriceNormalFast</key>
-	<string>$53.00</string>
+	<string>$57.00</string>
 	<key>PriceHolidaySlow</key>
-	<string>$37.00</string>
+	<string>$40.00</string>
 	<key>PriceHolidayFast</key>
-	<string>$53.00</string>
+	<string>$57.00</string>
 	<key>dataLastRefreshTime</key>
-	<string>18/7/2011</string>
+	<string>20/11/2014</string>
 	<key>pier-lat</key>
 	<string>22.296789785387535</string>
 	<key>pier-long</key>

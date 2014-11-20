@@ -15,15 +15,15 @@
 	<key>FromIslandPlistHoliday</key>
 	<string>FromPengChauHoliday</string>
 	<key>PriceNormalSlow</key>
-	<string>$14.40</string>
+	<string>$15.30</string>
 	<key>PriceNormalFast</key>
-	<string>$26.80</string>
+	<string>$28.50</string>
 	<key>PriceHolidaySlow</key>
-	<string>$20.70</string>
+	<string>$21.90</string>
 	<key>PriceHolidayFast</key>
-	<string>$39.40</string>
+	<string>$41.80</string>
 	<key>dataLastRefreshTime</key>
-	<string>16/11/2013</string>
+	<string>20/11/2014</string>
 	<key>pier-lat</key>
 	<string>22.284596843831785</string>
 	<key>pier-long</key>

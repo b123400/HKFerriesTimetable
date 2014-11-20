@@ -17,15 +17,15 @@
 	<key>TimeOfJourney-Fast</key>
 	<integer>35</integer>
 	<key>PriceNormalSlow</key>
-	<string>$14.50</string>
+	<string>$15.20</string>
 	<key>PriceNormalFast</key>
-	<string>$28.40</string>
+	<string>$29.90</string>
 	<key>PriceHolidaySlow</key>
-	<string>$21.40</string>
+	<string>$22.50</string>
 	<key>PriceHolidayFast</key>
-	<string>$40.80</string>
+	<string>$42.90</string>
 	<key>dataLastRefreshTime</key>
-	<string>16/11/2013</string>
+	<string>20/11/2014</string>
 	<key>pier-lat</key>
 	<string>22.265028337892318</string>
 	<key>pier-long</key>

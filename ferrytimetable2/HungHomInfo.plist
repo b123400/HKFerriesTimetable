@@ -13,11 +13,11 @@
 	<key>TimeOfJourney-Slow</key>
 	<integer>8</integer>
 	<key>PriceNormalSlow</key>
-	<string>$5.50</string>
+	<string>$6.50</string>
 	<key>PriceHolidaySlow</key>
-	<string>$5.50</string>
+	<string>$6.50</string>
 	<key>dataLastRefreshTime</key>
-	<string>16/7/2013</string>
+	<string>20/11/2014</string>
 	<key>pier-lat</key>
 	<string>22.301693</string>
 	<key>pier-long</key>
