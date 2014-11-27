@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HK Ferries Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>ferriestimetable2.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>ferriestimetable2Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ferrykit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CFB25C551A1E0C5D004E5430</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFB25C651A1E0C8A004E5430</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFB6E09D195D439E00F83035</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFB6E0B1195D439E00F83035</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFC20F391A1C7E2700783B90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFC20F4D1A1C7E2700783B90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEABB861A27544900E8C4F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEABBA41A275A9100E8C4F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEABBAE1A275A9100E8C4F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

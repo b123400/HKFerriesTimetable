@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
-   version = "1.3">
+   LastUpgradeVersion = "0620"
+   version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,38 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FAEA9D653CA0678657731AA"
-               BuildableName = "libPods-ferriestimetable2.a"
-               BlueprintName = "Pods-ferriestimetable2"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADC54D25BD05BFF16EAD9FA4"
-               BuildableName = "libPods-ferriestimetable2-Mixpanel.a"
-               BlueprintName = "Pods-ferriestimetable2-Mixpanel"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BEE295C9F6AACEB82E19BC3"
-               BuildableName = "libPods-ferriestimetable2-PDTSimpleCalendar.a"
-               BlueprintName = "Pods-ferriestimetable2-PDTSimpleCalendar"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
+               BuildableName = "HK Ferries Watch App.app"
+               BlueprintName = "HK Ferries Watch App"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -64,15 +36,43 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFEABB771A27544800E8C4F1"
+               BuildableName = "HK Ferries WatchKit Extension.appex"
+               BlueprintName = "HK Ferries WatchKit Extension"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CFB25C651A1E0C8A004E5430"
                BuildableName = "ferriestimetable2Tests.xctest"
                BlueprintName = "ferriestimetable2Tests"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFB25C551A1E0C5D004E5430"
+               BuildableName = "ferriestimetable2 Tests.xctest"
+               BlueprintName = "ferriestimetable2 Tests"
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -102,9 +102,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFB25C651A1E0C8A004E5430"
-               BuildableName = "ferriestimetable2Tests.xctest"
-               BlueprintName = "ferriestimetable2Tests"
+               BlueprintIdentifier = "CFB25C551A1E0C5D004E5430"
+               BuildableName = "ferriestimetable2 Tests.xctest"
+               BlueprintName = "ferriestimetable2 Tests"
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -138,17 +138,29 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      language = "ja">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      launchAutomaticallySubstyle = "4">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         launchOptions = "4"
+         RemotePath = "/HK Ferries">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFB6E09D195D439E00F83035"
-            BuildableName = "ferriestimetable2.app"
-            BlueprintName = "ferriestimetable2"
+            BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
+            BuildableName = "HK Ferries Watch App.app"
+            BlueprintName = "HK Ferries Watch App"
             ReferencedContainer = "container:ferriestimetable2.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
+            BuildableName = "HK Ferries Watch App.app"
+            BlueprintName = "HK Ferries Watch App"
+            ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -158,22 +170,33 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFB6E09D195D439E00F83035"
-            BuildableName = "ferriestimetable2.app"
-            BlueprintName = "ferriestimetable2"
+            BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
+            BuildableName = "HK Ferries Watch App.app"
+            BlueprintName = "HK Ferries Watch App"
             ReferencedContainer = "container:ferriestimetable2.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/HK Ferries">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CFC20F4D1A1C7E2700783B90"
+            BuildableName = "HK Ferries Watch App.app"
+            BlueprintName = "HK Ferries Watch App"
+            ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Distrubtion"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -94,6 +94,15 @@
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
 		CFEA7E981A7CEA2500FF21BB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
+		CFEABB7A1A27544800E8C4F1 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEABB791A27544800E8C4F1 /* WatchKit.framework */; };
+		CFEABB801A27544800E8C4F1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEABB7F1A27544800E8C4F1 /* InterfaceController.swift */; };
+		CFEABB821A27544900E8C4F1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEABB811A27544900E8C4F1 /* NotificationController.swift */; };
+		CFEABB841A27544900E8C4F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB831A27544900E8C4F1 /* Images.xcassets */; };
+		CFEABB881A27544900E8C4F1 /* HK Ferries Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB871A27544900E8C4F1 /* HK Ferries Watch App.app */; };
+		CFEABB8F1A27544900E8C4F1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB8E1A27544900E8C4F1 /* Interface.storyboard */; };
+		CFEABB911A27544900E8C4F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB901A27544900E8C4F1 /* Images.xcassets */; };
+		CFEABB951A27544900E8C4F1 /* HK Ferries WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFEABB781A27544800E8C4F1 /* HK Ferries WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFEABB9F1A2755F200E8C4F1 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEABB9E1A2755F200E8C4F1 /* GlanceController.swift */; };
 		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
 		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
@@ -108,7 +117,45 @@
 			remoteGlobalIDString = CFB6E09D195D439E00F83035;
 			remoteInfo = ferriestimetable2;
 		};
+		CFEABB891A27544900E8C4F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB6E096195D439E00F83035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFEABB861A27544900E8C4F1;
+			remoteInfo = "HK Ferries Watch App";
+		};
+		CFEABB921A27544900E8C4F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB6E096195D439E00F83035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFEABB771A27544800E8C4F1;
+			remoteInfo = "HK Ferries WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFEABB941A27544900E8C4F1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CFEABB951A27544900E8C4F1 /* HK Ferries WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFEABBC21A275A9200E8C4F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +257,18 @@
 		CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		CFDA3C72196434710079E924 /* Ferry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ferry.swift; sourceTree = "<group>"; };
 		CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryTimeTableViewCell.swift; sourceTree = "<group>"; };
+		CFEABB781A27544800E8C4F1 /* HK Ferries WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HK Ferries WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEABB791A27544800E8C4F1 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		CFEABB7D1A27544800E8C4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFEABB7E1A27544800E8C4F1 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		CFEABB7F1A27544800E8C4F1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CFEABB811A27544900E8C4F1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CFEABB831A27544900E8C4F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CFEABB871A27544900E8C4F1 /* HK Ferries Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HK Ferries Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEABB8D1A27544900E8C4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFEABB8E1A27544900E8C4F1 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		CFEABB901A27544900E8C4F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CFEABB9E1A2755F200E8C4F1 /* GlanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		CFF9BB061976CFE9004E087E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CFF9BB081976D1E9004E087E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
@@ -236,6 +295,14 @@
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
 				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFEABB751A27544800E8C4F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEABB7A1A27544800E8C4F1 /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +486,8 @@
 			children = (
 				CFB6E0A0195D439E00F83035 /* ferrytimetable2 */,
 				CFB25C671A1E0C8A004E5430 /* ferriestimetable2Tests */,
+				CFEABB7B1A27544800E8C4F1 /* HK Ferries WatchKit Extension */,
+				CFEABB8B1A27544900E8C4F1 /* HK Ferries Watch App */,
 				CFB6E09F195D439E00F83035 /* Products */,
 				EDDFDE51F070466C97896290 /* Frameworks */,
 				7390A60C2E25A2165348CE06 /* Pods */,
@@ -430,6 +499,8 @@
 			children = (
 				CFB6E09E195D439E00F83035 /* ferriestimetable2.app */,
 				CFB25C661A1E0C8A004E5430 /* ferriestimetable2Tests.xctest */,
+				CFEABB781A27544800E8C4F1 /* HK Ferries WatchKit Extension.appex */,
+				CFEABB871A27544900E8C4F1 /* HK Ferries Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -498,6 +569,45 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CFEABB7B1A27544800E8C4F1 /* HK Ferries WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CFEABB7F1A27544800E8C4F1 /* InterfaceController.swift */,
+				CFEABB9E1A2755F200E8C4F1 /* GlanceController.swift */,
+				CFEABB811A27544900E8C4F1 /* NotificationController.swift */,
+				CFEABB831A27544900E8C4F1 /* Images.xcassets */,
+				CFEABB7C1A27544800E8C4F1 /* Supporting Files */,
+			);
+			path = "HK Ferries WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		CFEABB7C1A27544800E8C4F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFEABB7D1A27544800E8C4F1 /* Info.plist */,
+				CFEABB7E1A27544800E8C4F1 /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFEABB8B1A27544900E8C4F1 /* HK Ferries Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CFEABB8E1A27544900E8C4F1 /* Interface.storyboard */,
+				CFEABB901A27544900E8C4F1 /* Images.xcassets */,
+				CFEABB8C1A27544900E8C4F1 /* Supporting Files */,
+			);
+			path = "HK Ferries Watch App";
+			sourceTree = "<group>";
+		};
+		CFEABB8C1A27544900E8C4F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFEABB8D1A27544900E8C4F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EDDFDE51F070466C97896290 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +619,7 @@
 				CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */,
 				A51CB659071444085A69B5C0 /* libPods.a */,
 				0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */,
+				CFEABB791A27544800E8C4F1 /* WatchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -546,15 +657,51 @@
 				CFB6E09C195D439E00F83035 /* Resources */,
 				FC11B82D09634D73A67A8553 /* Copy Pods Resources */,
 				CF4E27CD19C0ADAC00E18B40 /* ShellScript */,
+				CFEABB941A27544900E8C4F1 /* Embed App Extensions */,
+				CFEABBC21A275A9200E8C4F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CFEABB931A27544900E8C4F1 /* PBXTargetDependency */,
 			);
 			name = ferriestimetable2;
 			productName = ferrytimetable2;
 			productReference = CFB6E09E195D439E00F83035 /* ferriestimetable2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CFEABB771A27544800E8C4F1 /* HK Ferries WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFEABB9D1A27544900E8C4F1 /* Build configuration list for PBXNativeTarget "HK Ferries WatchKit Extension" */;
+			buildPhases = (
+				CFEABB741A27544800E8C4F1 /* Sources */,
+				CFEABB751A27544800E8C4F1 /* Frameworks */,
+				CFEABB761A27544800E8C4F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFEABB8A1A27544900E8C4F1 /* PBXTargetDependency */,
+			);
+			name = "HK Ferries WatchKit Extension";
+			productName = "HK Ferries WatchKit Extension";
+			productReference = CFEABB781A27544800E8C4F1 /* HK Ferries WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		CFEABB861A27544900E8C4F1 /* HK Ferries Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFEABB9C1A27544900E8C4F1 /* Build configuration list for PBXNativeTarget "HK Ferries Watch App" */;
+			buildPhases = (
+				CFEABB851A27544900E8C4F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HK Ferries Watch App";
+			productName = "HK Ferries Watch App";
+			productReference = CFEABB871A27544900E8C4F1 /* HK Ferries Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -578,6 +725,13 @@
 							};
 						};
 					};
+					CFEABB771A27544800E8C4F1 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = CC63FD9H8S;
+					};
+					CFEABB861A27544900E8C4F1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 				};
 			};
 			buildConfigurationList = CFB6E099195D439E00F83035 /* Build configuration list for PBXProject "ferriestimetable2" */;
@@ -596,6 +750,8 @@
 			targets = (
 				CFB6E09D195D439E00F83035 /* ferriestimetable2 */,
 				CFB25C651A1E0C8A004E5430 /* ferriestimetable2Tests */,
+				CFEABB771A27544800E8C4F1 /* HK Ferries WatchKit Extension */,
+				CFEABB861A27544900E8C4F1 /* HK Ferries Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -675,6 +831,24 @@
 				CF47A625195F350F0066D9EE /* ToDiscoveryBayHoliday.plist in Resources */,
 				CF47A600195F350F0066D9EE /* Central.plist in Resources */,
 				CF47A628195F350F0066D9EE /* ToHungHomHoliday.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFEABB761A27544800E8C4F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEABB881A27544900E8C4F1 /* HK Ferries Watch App.app in Resources */,
+				CFEABB841A27544900E8C4F1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFEABB851A27544900E8C4F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEABB8F1A27544900E8C4F1 /* Interface.storyboard in Resources */,
+				CFEABB911A27544900E8C4F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +965,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFEABB741A27544800E8C4F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEABB821A27544900E8C4F1 /* NotificationController.swift in Sources */,
+				CFEABB801A27544800E8C4F1 /* InterfaceController.swift in Sources */,
+				CFEABB9F1A2755F200E8C4F1 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -798,6 +982,16 @@
 			isa = PBXTargetDependency;
 			target = CFB6E09D195D439E00F83035 /* ferriestimetable2 */;
 			targetProxy = CFB25C6C1A1E0C8A004E5430 /* PBXContainerItemProxy */;
+		};
+		CFEABB8A1A27544900E8C4F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFEABB861A27544900E8C4F1 /* HK Ferries Watch App */;
+			targetProxy = CFEABB891A27544900E8C4F1 /* PBXContainerItemProxy */;
+		};
+		CFEABB931A27544900E8C4F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFEABB771A27544800E8C4F1 /* HK Ferries WatchKit Extension */;
+			targetProxy = CFEABB921A27544900E8C4F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -890,7 +1084,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3abb3aa2-5caa-467e-bd8f-0b0f2ad9a51c";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -1060,7 +1254,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3abb3aa2-5caa-467e-bd8f-0b0f2ad9a51c";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -1085,11 +1279,109 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = ferriestimetable2;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3abb3aa2-5caa-467e-bd8f-0b0f2ad9a51c";
 				SWIFT_OBJC_BRIDGING_HEADER = "ferrytimetable2/ferriestimetable2-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
+		};
+		CFEABB961A27544900E8C4F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HK Ferries WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFEABB971A27544900E8C4F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "HK Ferries WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CFEABB981A27544900E8C4F1 /* Distrubtion */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "HK Ferries WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Distrubtion;
+		};
+		CFEABB991A27544900E8C4F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = HK_Ferries_WatchKit_Extension;
+				INFOPLIST_FILE = "HK Ferries Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		CFEABB9A1A27544900E8C4F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = HK_Ferries_WatchKit_Extension;
+				INFOPLIST_FILE = "HK Ferries Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		CFEABB9B1A27544900E8C4F1 /* Distrubtion */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = HK_Ferries_WatchKit_Extension;
+				INFOPLIST_FILE = "HK Ferries Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Distrubtion;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1123,6 +1415,24 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		CFEABB9C1A27544900E8C4F1 /* Build configuration list for PBXNativeTarget "HK Ferries Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFEABB991A27544900E8C4F1 /* Debug */,
+				CFEABB9A1A27544900E8C4F1 /* Release */,
+				CFEABB9B1A27544900E8C4F1 /* Distrubtion */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CFEABB9D1A27544900E8C4F1 /* Build configuration list for PBXNativeTarget "HK Ferries WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFEABB961A27544900E8C4F1 /* Debug */,
+				CFEABB971A27544900E8C4F1 /* Release */,
+				CFEABB981A27544900E8C4F1 /* Distrubtion */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

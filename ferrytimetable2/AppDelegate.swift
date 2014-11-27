@@ -44,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             handleLocalNotification(notification)
         }
         
+        var foo = FerryFinder()
+        
         return true
     }
     
