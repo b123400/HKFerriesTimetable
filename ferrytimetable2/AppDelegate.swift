@@ -8,6 +8,7 @@
 
 import UIKit
 import Crashlytics
+import FerryKit
 
 let ApplicationDidRegisterUserNotification = "ApplicationDiDRegisterUserNotification"
 
@@ -43,8 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
             handleLocalNotification(notification)
         }
-        
-        var foo = FerryFinder()
         
         return true
     }

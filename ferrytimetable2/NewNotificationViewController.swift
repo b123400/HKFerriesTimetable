@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FerryKit
 
 class NewNotificationViewController: UIViewController {
     @IBOutlet var datePicker: UIDatePicker!

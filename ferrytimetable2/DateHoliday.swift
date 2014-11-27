@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDate {
+internal extension NSDate {
     func isHoliday()-> Bool {
         let calendar = NSCalendar.currentCalendar()
         let flags: NSCalendarUnit = .WeekdayCalendarUnit | .YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit

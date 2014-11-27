@@ -6,17 +6,16 @@
 //  Copyright (c) 2014 b123400. All rights reserved.
 //
 
-import UIKit
 import CoreLocation
 
 private let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
 
-class Island: NSObject {
+public class Island: NSObject {
     let sourceDict:NSDictionary;
     var _detailDict:NSDictionary?
-    let pier:Pier
+    public let pier:Pier
     
-    init(dictionary dict:NSDictionary, pier _pier:Pier){
+    public init(dictionary dict:NSDictionary, pier _pier:Pier){
         sourceDict = dict
         pier = _pier
         super.init()
@@ -46,13 +45,13 @@ class Island: NSObject {
         }
     }
     
-    var name : String {
+    public var name : String {
         get {
             return sourceDict.objectForKey("name") as String
         }
     }
     
-    var location : CLLocationCoordinate2D {
+    public var location : CLLocationCoordinate2D {
     get {
         let latString = sourceDict.objectForKey("location-lat") as NSString
         let longString = sourceDict.objectForKey("location-long") as NSString
@@ -60,7 +59,7 @@ class Island: NSObject {
     }
     }
     
-    func getFerriesForDate(date:NSDate, direction:Direction) -> [Ferry] {
+    public func getFerriesForDate(date:NSDate, direction:Direction) -> [Ferry] {
         var directionString:String;
         if direction == Direction.ToIsland {
             directionString = "To"
@@ -83,7 +82,6 @@ class Island: NSObject {
             }
         }
         
-        NSLog( dateString )
         let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)")as String
         let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")!) as Array<NSDictionary>
         
@@ -94,7 +92,17 @@ class Island: NSObject {
         return ferries
     }
     
-    func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
+    public func getNextFerryForDate(date:NSDate, direction:Direction) -> Ferry? {
+        let todayFerries = getFerriesForDate(date, direction: direction)
+        for ferry in todayFerries {
+            if ferry.leavingTime.timeIntervalSinceNow > 0 {
+                return ferry
+            }
+        }
+        return nil
+    }
+    
+    public func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
         switch type {
         case .Slow:
             return (detailDict.objectForKey("TimeOfJourney-Slow") as NSNumber).doubleValue * 60
@@ -107,7 +115,7 @@ class Island: NSObject {
         }
     }
     
-    func getPriceForType(type:FerryType, date:NSDate) -> String{
+    public func getPriceForType(type:FerryType, date:NSDate) -> String{
         switch (type, date.isHoliday()) {
             
         case (FerryType.Slow, false),(FerryType.Optional, false):

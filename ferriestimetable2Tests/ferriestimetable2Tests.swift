@@ -8,11 +8,7 @@
 
 import UIKit
 import XCTest
-
-enum Pier : String{
-    case Central = "Central"
-    case NorthPoint = "NorthPoint"
-}
+import FerryKit
 
 class ferriestimetable2Tests: XCTestCase {
     

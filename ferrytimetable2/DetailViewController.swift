@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FerryKit
 
 extension NSTimeInterval {
     var toReadableString : String{

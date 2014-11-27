@@ -34,6 +34,20 @@
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFEABBDA1A27662100E8C4F1"
+               BuildableName = "FerryKitTests.xctest"
+               BlueprintName = "FerryKitTests"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -59,6 +73,16 @@
                BlueprintIdentifier = "CFEABBAE1A275A9100E8C4F1"
                BuildableName = "ferrykitTests.xctest"
                BlueprintName = "ferrykitTests"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFEABBDA1A27662100E8C4F1"
+               BuildableName = "FerryKitTests.xctest"
+               BlueprintName = "FerryKitTests"
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -100,15 +124,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFB25C651A1E0C8A004E5430"
-            BuildableName = "ferriestimetable2Tests.xctest"
-            BlueprintName = "ferriestimetable2Tests"
-            ReferencedContainer = "container:ferriestimetable2.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

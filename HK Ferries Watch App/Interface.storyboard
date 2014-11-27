@@ -20,7 +20,11 @@
                         <group alignment="left" id="IFg-i2-jjK"/>
                         <group alignment="left" id="N4K-me-c4A">
                             <items>
-                                <label width="118" height="54" alignment="left" text="Label" id="2yH-Hu-jNq"/>
+                                <label width="118" height="72" alignment="left" numberOfLines="0" id="2yH-Hu-jNq">
+                                    <string key="text">Label
+Some more
+text</string>
+                                </label>
                             </items>
                         </group>
                     </items>

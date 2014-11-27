@@ -16,6 +16,7 @@ target "ferriestimetable2Tests" do
 end
 
 link_with "ferriestimetable2Tests"
+link_with "FerryKit"
 
 class ::Pod::Generator::Acknowledgements
   def header_text

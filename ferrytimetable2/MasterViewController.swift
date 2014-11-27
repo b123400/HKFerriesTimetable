@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import FerryKit
 
-class MasterViewController: UITableViewController, UITableViewDelegate, PierSelectTableViewControllerDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
+class MasterViewController: UITableViewController, UITableViewDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var currentPier : Pier = Pier.Central
@@ -96,21 +97,6 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
 
     // MARK: - Data Source
     
-    // for popover, disabled now
-    func selectPier (sender:UIBarButtonItem){
-        let selectViewController = PierSelectTableViewController(selectedPier: currentPier)!
-        selectViewController.delegate = self
-        selectViewController.modalPresentationStyle = .Popover
-        let popPC = selectViewController.popoverPresentationController
-        if popPC == nil {
-            return
-        }
-        popPC!.barButtonItem = sender
-        popPC!.permittedArrowDirections = .Any
-        popPC!.delegate = self
-        
-        presentViewController(selectViewController, animated: true, completion: nil)
-    }
     func changePier (pier:Pier){
         currentPier = pier
         var path = NSBundle.mainBundle().pathForResource(pier.rawValue, ofType: "plist");
@@ -187,11 +173,6 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         NSLog(error.description)
-    }
-    
-    func pierSelectTableViewController(vc:PierSelectTableViewController,didSelected pier:Pier){
-        changePier(pier)
-        dismissViewControllerAnimated(true, completion: nil)
     }
    
     @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {

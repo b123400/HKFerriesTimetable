@@ -7,26 +7,25 @@
 //
 
 import UIKit
-import Crashlytics
 
-enum FerryType : String{
+public enum FerryType : String{
     case Slow = "slow"
     case Fast = "fast"
     case Optional = "optional"
 }
 
-enum Direction : String {
+public enum Direction : String {
     case ToIsland = "ToIsland"
     case FromIsland = "FromIsland"
     case Unknown = "Unknown"
 }
 
-class Ferry: NSObject {
+public class Ferry: NSObject {
     let dict : NSDictionary
-    let island : Island
-    var date: NSDate = NSDate()
+    public let island : Island
+    public var date: NSDate = NSDate()
     
-    init(dictionary:NSDictionary, island _island : Island, direction _direction: Direction, date _date:NSDate) {
+    public init(dictionary:NSDictionary, island _island : Island, direction _direction: Direction, date _date:NSDate) {
         dict = dictionary
         island = _island
         direction = _direction
@@ -34,7 +33,7 @@ class Ferry: NSObject {
         super.init()
     }
     
-    class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Ferry {
+    public class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Ferry {
         let thisDict = dict["dict"]! as NSDictionary
         let thisIsland = Island.fromDict(dictionaryRepresentation:dict["island"]! as Dictionary)
         let thisDirection = Direction(rawValue:dict["direction"]! as String)!
@@ -42,7 +41,7 @@ class Ferry: NSObject {
         return Ferry(dictionary: thisDict, island: thisIsland, direction: thisDirection, date: thisDate)
     }
     
-    var dictionaryRepresentation : NSDictionary {
+    public var dictionaryRepresentation : NSDictionary {
     get {
         return [
             "date" : date,
@@ -53,16 +52,13 @@ class Ferry: NSObject {
     }
     }
     
-    var time : String {
+    public var time : String {
         get {
-            Crashlytics.setObjectValue(island.name, forKey: "island")
-            Crashlytics.setObjectValue(direction.rawValue, forKey: "direction")
-            Crashlytics.setObjectValue(date, forKey: "date")
             return dict.objectForKey("time") as String
         }
     }
     
-    var type : FerryType {
+    public var type : FerryType {
         get {
             let kind = dict.objectForKey("kind") as String
             let type = FerryType(rawValue: kind)
@@ -70,9 +66,9 @@ class Ferry: NSObject {
         }
     }
     
-    var direction : Direction = .Unknown;
+    public var direction : Direction = .Unknown;
     
-    func convertTime(time:String, fromDate date:NSDate) -> NSDate {
+    public func convertTime(time:String, fromDate date:NSDate) -> NSDate {
         
         let thisTime = NSString(string:time)
         let startHour = thisTime.substringToIndex(2).toInt()
@@ -91,26 +87,26 @@ class Ferry: NSObject {
         return NSCalendar.currentCalendar().dateFromComponents(thisComponents)!
     }
     
-    var leavingTime : NSDate {
+    public var leavingTime : NSDate {
     get{
         return convertTime(time, fromDate: date)
     }
     }
     
-    var arrvingTime : NSDate {
+    public var arrvingTime : NSDate {
     get{
         let arrvingTime = NSDate(timeInterval: duration!, sinceDate: leavingTime)
         return arrvingTime
     }
     }
     
-    var duration : NSTimeInterval? {
+    public var duration : NSTimeInterval? {
     get {
         return island.getDurationMinutesForType(self.type)
     }
     }
     
-    var price :String {
+    public var price :String {
     get{
         return island.getPriceForType(type, date: date)
     }

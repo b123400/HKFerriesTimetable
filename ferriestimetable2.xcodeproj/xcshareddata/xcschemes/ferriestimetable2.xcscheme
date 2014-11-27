@@ -90,6 +90,20 @@
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFEABBDA1A27662100E8C4F1"
+               BuildableName = "FerryKitTests.xctest"
+               BlueprintName = "FerryKitTests"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -118,13 +132,23 @@
                ReferencedContainer = "container:ferriestimetable2.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFEABBDA1A27662100E8C4F1"
+               BuildableName = "FerryKitTests.xctest"
+               BlueprintName = "FerryKitTests"
+               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
-            BuildableName = "HK Ferries Watch App.app"
-            BlueprintName = "HK Ferries Watch App"
+            BlueprintIdentifier = "CFB6E09D195D439E00F83035"
+            BuildableName = "ferriestimetable2.app"
+            BlueprintName = "ferriestimetable2"
             ReferencedContainer = "container:ferriestimetable2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

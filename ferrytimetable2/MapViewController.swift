@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FerryKit
 
 class MapViewController: UIViewController {
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FerryKit
 
 class NotificationTableViewController: UITableViewController {
     override func viewDidLoad() {
