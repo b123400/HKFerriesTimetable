@@ -66,7 +66,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, PierSele
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = islands[indexPath.row].objectForKey("name") as NSString
-        cell.textLabel.text = NSLocalizedString(object,comment:"")
+        cell.textLabel!.text = NSLocalizedString(object,comment:"")
         return cell
     }
     

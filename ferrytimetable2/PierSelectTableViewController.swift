@@ -73,7 +73,7 @@ class PierSelectTableViewController: UITableViewController {
         
         let thisPier = piers[indexPath.row] as NSDictionary
         let name = thisPier.objectForKey("name") as NSString
-        cell.textLabel.text = name
+        cell.textLabel!.text = name
         
         if name == self.selectedPier!.rawValue {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark

@@ -124,12 +124,6 @@
 	</dict>
 	<dict>
 		<key>time</key>
-		<string>1740</string>
-		<key>kind</key>
-		<string>slow</string>
-	</dict>
-	<dict>
-		<key>time</key>
 		<string>1800</string>
 		<key>kind</key>
 		<string>fast</string>

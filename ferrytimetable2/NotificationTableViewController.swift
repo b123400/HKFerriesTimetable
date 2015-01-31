@@ -58,9 +58,9 @@ class NotificationTableViewController: UITableViewController {
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
         
         if ferry.direction == Direction.ToIsland {
-            cell.textLabel.text = NSString(format: NSLocalizedString("To %@",comment:""),ferry.island.name)
+            cell.textLabel!.text = NSString(format: NSLocalizedString("To %@",comment:""),ferry.island.name)
         } else {
-            cell.textLabel.text = NSString(format: NSLocalizedString("From %@",comment:""),ferry.island.name)
+            cell.textLabel!.text = NSString(format: NSLocalizedString("From %@",comment:""),ferry.island.name)
         }
         
         let dateText = NSDateFormatter.localizedStringFromDate(notification.fireDate!, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
