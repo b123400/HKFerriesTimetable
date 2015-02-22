@@ -1,4 +1,9 @@
 language: objective-c
 xcode_workspace: ferriestimetable2.xcworkspace
+osx_image: xcode611
 script:
     - xcodebuild -workspace 'ferriestimetable2.xcworkspace'  -scheme ferriestimetable2 -destination "platform=iOS Simulator,name=iPhone 5,OS=8.1" test
+
+branches:
+    except:
+        - apple-watch
