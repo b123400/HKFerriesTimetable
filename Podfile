@@ -12,7 +12,7 @@ post_install do | installer |
 end
 
 target "ferriestimetable2Tests" do
-
+  pod 'PDTSimpleCalendar', '~> 0.7.0'
 end
 
 link_with "ferriestimetable2Tests"

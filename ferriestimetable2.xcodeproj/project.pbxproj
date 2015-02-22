@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A22FDD4620F856FCC6AF4A /* libPods-ferriestimetable2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */; };
 		5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */; };
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
@@ -92,6 +93,7 @@
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C73196434710079E924 /* Ferry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C72196434710079E924 /* Ferry.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
+		CFEA7E981A7CEA2500FF21BB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
 		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
 		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
@@ -109,8 +111,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		033B96D304307943D9D4215C /* Pods-ferriestimetable2Tests.distrubtion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2Tests.distrubtion.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests.distrubtion.xcconfig"; sourceTree = "<group>"; };
+		167C3E8D12124077F108F6A9 /* Pods-ferriestimetable2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ferriestimetable2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51CB659071444085A69B5C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C179258BA6776B90481DCEAE /* Pods-ferriestimetable2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1115B11975134300F8CA3C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CF153FFD196EEF40007599D3 /* BRClockLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRClockLayer.h; sourceTree = "<group>"; };
 		CF153FFE196EEF40007599D3 /* BRClockLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRClockLayer.m; sourceTree = "<group>"; };
@@ -215,6 +221,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEA7E981A7CEA2500FF21BB /* Crashlytics.framework in Frameworks */,
+				10A22FDD4620F856FCC6AF4A /* libPods-ferriestimetable2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +248,9 @@
 				CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */,
 				CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */,
 				CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */,
+				C179258BA6776B90481DCEAE /* Pods-ferriestimetable2Tests.debug.xcconfig */,
+				167C3E8D12124077F108F6A9 /* Pods-ferriestimetable2Tests.release.xcconfig */,
+				033B96D304307943D9D4215C /* Pods-ferriestimetable2Tests.distrubtion.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -497,6 +508,7 @@
 				442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */,
 				CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */,
 				A51CB659071444085A69B5C0 /* libPods.a */,
+				0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -508,9 +520,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFB25C6E1A1E0C8A004E5430 /* Build configuration list for PBXNativeTarget "ferriestimetable2Tests" */;
 			buildPhases = (
+				D8227326116D8B35B8323B42 /* Check Pods Manifest.lock */,
 				CFB25C621A1E0C8A004E5430 /* Sources */,
 				CFB25C631A1E0C8A004E5430 /* Frameworks */,
 				CFB25C641A1E0C8A004E5430 /* Resources */,
+				9B3EC1F6FC8B236F41FD9192 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -682,6 +696,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9B3EC1F6FC8B236F41FD9192 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CF4E27CD19C0ADAC00E18B40 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -694,6 +723,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run be3de76eb1918a93b4d68a8e87b983750d738aed 14ee308c3c10a8baa8cccc093c1c4c9c00d34c8c4b0b69aa8e7aa5dd0dae61c0";
+		};
+		D8227326116D8B35B8323B42 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		FC11B82D09634D73A67A8553 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -834,6 +878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -853,6 +898,7 @@
 		};
 		CFB25C6F1A1E0C8A004E5430 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C179258BA6776B90481DCEAE /* Pods-ferriestimetable2Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -876,6 +922,7 @@
 		};
 		CFB25C701A1E0C8A004E5430 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 167C3E8D12124077F108F6A9 /* Pods-ferriestimetable2Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -895,6 +942,7 @@
 		};
 		CFB25C711A1E0C8A004E5430 /* Distrubtion */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 033B96D304307943D9D4215C /* Pods-ferriestimetable2Tests.distrubtion.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1000,6 +1048,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1024,6 +1073,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
