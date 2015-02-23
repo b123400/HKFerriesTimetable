@@ -4,6 +4,7 @@ platform :ios, "7.0"
 target "ferriestimetable2" do
   pod 'PDTSimpleCalendar', '~> 0.7.0'
   pod 'Mixpanel'
+  pod 'MMWormhole', '~> 1.1.1'
 end
 
 post_install do | installer |

@@ -19,7 +19,7 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>ferriestimetable2Tests.xcscheme</key>
+		<key>ferriestimetable2Tests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
@@ -53,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>CFC20F4D1A1C7E2700783B90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEABB771A27544800E8C4F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

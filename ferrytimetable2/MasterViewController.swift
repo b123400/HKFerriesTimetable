@@ -127,17 +127,17 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
             switch status {
             case CLAuthorizationStatus.NotDetermined :
                 locationManager!.requestWhenInUseAuthorization()
-            case CLAuthorizationStatus.Authorized, CLAuthorizationStatus.AuthorizedWhenInUse:
+            case CLAuthorizationStatus.AuthorizedWhenInUse, CLAuthorizationStatus.AuthorizedWhenInUse:
                 locationManager!.startUpdatingLocation()
             default:
                 break
             }
         }
     }
-        
+    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
             switch status {
-            case CLAuthorizationStatus.Authorized, CLAuthorizationStatus.AuthorizedWhenInUse:
+            case CLAuthorizationStatus.AuthorizedWhenInUse, CLAuthorizationStatus.AuthorizedWhenInUse:
                 manager.startUpdatingLocation()
             default :
                 break
@@ -176,7 +176,8 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     }
    
     @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
+        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("WatchSettingViewController") as WatchSettingViewController
+        //self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
         viewController.modalPresentationStyle = .Popover
         if let popVC = viewController.popoverPresentationController {
             popVC.delegate = self

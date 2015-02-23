@@ -162,7 +162,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "4">
+      launchAutomaticallySubstyle = "4"
+      notificationPayloadFile = "HK Ferries WatchKit Extension/PushNotificationPayload.json">
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.springboard"
@@ -194,6 +195,18 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/HK Ferries">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CFEABB861A27544900E8C4F1"
+            BuildableName = "HK Ferries Watch App.app"
+            BlueprintName = "HK Ferries Watch App"
+            ReferencedContainer = "container:ferriestimetable2.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -203,18 +216,6 @@
             ReferencedContainer = "container:ferriestimetable2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         RemotePath = "/HK Ferries">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFC20F4D1A1C7E2700783B90"
-            BuildableName = "HK Ferries Watch App.app"
-            BlueprintName = "HK Ferries Watch App"
-            ReferencedContainer = "container:ferriestimetable2.xcodeproj">
-         </BuildableReference>
-      </RemoteRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
