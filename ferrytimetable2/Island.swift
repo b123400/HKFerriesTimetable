@@ -52,11 +52,31 @@ public class Island: NSObject {
     }
     
     public var location : CLLocationCoordinate2D {
-    get {
-        let latString = sourceDict.objectForKey("location-lat") as NSString
-        let longString = sourceDict.objectForKey("location-long") as NSString
-        return CLLocationCoordinate2DMake(latString.doubleValue, longString.doubleValue)
+        get {
+            let latString = sourceDict.objectForKey("location-lat") as NSString
+            let longString = sourceDict.objectForKey("location-long") as NSString
+            return CLLocationCoordinate2DMake(latString.doubleValue, longString.doubleValue)
+        }
     }
+    
+    public var radius : CLLocationDistance {
+        get {
+            if let value = sourceDict.objectForKey("radius")?.doubleValue {
+                return value
+            } else {
+                return 0
+            }
+        }
+    }
+    
+    public func distanceFromLocation (thatLocation:CLLocation) -> CLLocationDistance {
+        let this2dLocation = self.location
+        let thisLocation = CLLocation(latitude: this2dLocation.latitude, longitude: this2dLocation.longitude)
+        return thisLocation.distanceFromLocation(thatLocation)
+    }
+    
+    public func inLocation (thatLocation:CLLocation) -> Bool {
+        return self.distanceFromLocation(thatLocation) < self.radius
     }
     
     public func getFerriesForDate(date:NSDate, direction:Direction) -> [Ferry] {

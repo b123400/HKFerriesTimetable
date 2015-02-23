@@ -12,6 +12,7 @@ import FerryKit
 
 class MasterViewController: UITableViewController, UITableViewDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
 
+    @IBOutlet weak var pierSegmentedControl: UISegmentedControl!
     var detailViewController: DetailViewController? = nil
     var currentPier : Pier = Pier.Central
     var islands = NSMutableArray()
@@ -148,26 +149,29 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
         manager.stopUpdatingLocation()
         
         let location = (locations as NSArray).lastObject as CLLocation
-        var closestIndex = -1 as Int
-        var closestDistance = -1 as Double
-        for var i = 0; i < islands.count; i++ {
-            let islandDict = islands[i] as NSDictionary
-            let latString = islandDict.objectForKey("location-lat") as NSString
-            let longString = islandDict.objectForKey("location-long") as NSString
-            let thisLocation = CLLocation(latitude: latString.doubleValue, longitude: longString.doubleValue)
-            let distance = location.distanceFromLocation(thisLocation) as Double
-            
-            let isInitial = closestDistance == -1
-            let isClosest = Double(closestDistance) > Double(distance)
-            if isInitial || isClosest {
-                closestDistance = distance
-                closestIndex = i
+        let island = FerryFinder.shared.islandAtLocation(location)
+        
+        if let inIsland = island {
+            for var i = 0; i < islands.count; i++ {
+                let existingName = islands[i].objectForKey("name") as NSString
+                if existingName == inIsland.name {
+                    let targetIndexPath = NSIndexPath(forRow: i, inSection: 0)
+                    tableView.selectRowAtIndexPath(targetIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+                    tableView(tableView, didSelectRowAtIndexPath: targetIndexPath)
+                    return
+                }
             }
         }
-        if closestIndex != -1 {
-            let targetIndexPath = NSIndexPath(forRow: closestIndex, inSection: 0)
-            tableView.selectRowAtIndexPath(targetIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
-            tableView(tableView, didSelectRowAtIndexPath: targetIndexPath)
+        
+        let nearestPier = FerryFinder.shared.nearestPier(location)
+        if let thisPier = nearestPier {
+            switch thisPier {
+            case .Central:
+                pierSegmentedControl.selectedSegmentIndex = 0
+            case .NorthPoint:
+                pierSegmentedControl.selectedSegmentIndex = 1
+            }
+            self.changePier(pierSegmentedControl)
         }
     }
         

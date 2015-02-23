@@ -12,6 +12,7 @@
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
 		CF3B78D31A9AF9FD00DC7EEA /* WatchSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B78D21A9AF9FD00DC7EEA /* WatchSettingViewController.swift */; };
+		CF3B78D41A9BCBBE00DC7EEA /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
 		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
@@ -114,7 +115,6 @@
 		CFEABBFC1A2767DF00E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFEABBFD1A27699900E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFEABBFE1A27699A00E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
-		CFEABBFF1A276A7700E8C4F1 /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
 		CFEABC001A276A7700E8C4F1 /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CFEABC011A276A7700E8C4F1 /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
 		CFEABC021A276A7700E8C4F1 /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
@@ -1278,6 +1278,7 @@
 				CFEABC0C1A276A7700E8C4F1 /* ToDiscoveryBayHoliday.plist in Resources */,
 				CFEABC301A276A7700E8C4F1 /* ToParkSaturday.plist in Resources */,
 				CFEABC211A276A7700E8C4F1 /* FromSKWNormal.plist in Resources */,
+				CF3B78D41A9BCBBE00DC7EEA /* Piers.plist in Resources */,
 				CFEABC331A276A7700E8C4F1 /* FromPengChauNormal.plist in Resources */,
 				CFEABC1C1A276A7700E8C4F1 /* ToMuiWoHoliday.plist in Resources */,
 				CFEABC011A276A7700E8C4F1 /* NorthPoint.plist in Resources */,
@@ -1297,7 +1298,6 @@
 				CFEABC151A276A7700E8C4F1 /* FromKowloonCityHoliday.plist in Resources */,
 				CFEABC0E1A276A7700E8C4F1 /* ToDiscoveryBaySaturday.plist in Resources */,
 				CFEABC291A276A7700E8C4F1 /* ToYSWNormal.plist in Resources */,
-				CFEABBFF1A276A7700E8C4F1 /* Piers.plist in Resources */,
 				CFEABC031A276A7700E8C4F1 /* CheungChauFromHoliday.plist in Resources */,
 				CFEABC341A276A7700E8C4F1 /* ToPengChauHoliday.plist in Resources */,
 				CFEABC181A276A7700E8C4F1 /* ToKowloonCityNormal.plist in Resources */,
