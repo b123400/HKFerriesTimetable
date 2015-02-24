@@ -10,3 +10,4 @@
 #import "BRClockLayer.h"
 #import "Mixpanel.h"
 #import <MMWormhole/MMWormhole.h>
+#import <InAppSettingsKit/IASKAppSettingsViewController.h>

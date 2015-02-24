@@ -180,7 +180,9 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     }
    
     @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("WatchSettingViewController") as WatchSettingViewController
+        let viewController = IASKAppSettingsViewController()
+        
+//        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("WatchSettingViewController") as WatchSettingViewController
         //self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
         viewController.modalPresentationStyle = .Popover
         if let popVC = viewController.popoverPresentationController {

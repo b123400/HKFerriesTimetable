@@ -1,4 +1,5 @@
 PODS:
+  - InAppSettingsKit (2.4.3)
   - Mixpanel (2.5.4)
   - MMWormhole (1.1.1):
     - MMWormhole/Core
@@ -6,11 +7,13 @@ PODS:
   - PDTSimpleCalendar (0.7.0)
 
 DEPENDENCIES:
+  - InAppSettingsKit
   - Mixpanel
   - MMWormhole (~> 1.1.1)
   - PDTSimpleCalendar (~> 0.7.0)
 
 SPEC CHECKSUMS:
+  InAppSettingsKit: 315e2a196a06921f8f83de01a855ed98dc69851e
   Mixpanel: 87167a0b0a74f11f0ee3787f291357494730617c
   MMWormhole: 48452a7149eba409e9dffad661451fa25b9e97c4
   PDTSimpleCalendar: b51e26a38a315ff8f4a038ab4cae00ad42bc1e92

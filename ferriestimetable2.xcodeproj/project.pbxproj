@@ -16,6 +16,7 @@
 		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
+		CF45D8721A9BEFA500F94B66 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */; };
 		CF47A600195F350F0066D9EE /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CF47A601195F350F0066D9EE /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
 		CF47A602195F350F0066D9EE /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
@@ -372,6 +373,7 @@
 		CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.debug.xcconfig"; sourceTree = "<group>"; };
 		CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.distrubtion.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.distrubtion.xcconfig"; sourceTree = "<group>"; };
 		CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ferriestimetable2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2.release.xcconfig"; sourceTree = "<group>"; };
+		CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CF47A5C8195F350E0066D9EE /* Central.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Central.plist; sourceTree = "<group>"; };
 		CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauFromHoliday.plist; sourceTree = "<group>"; };
 		CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheungChauInfo.plist; sourceTree = "<group>"; };
@@ -760,6 +762,7 @@
 				CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */,
 				CF7FDFA81973D27300948061 /* MapViewController.swift */,
 				CFF9BB081976D1E9004E087E /* AboutViewController.swift */,
+				CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */,
 				CF3B78D21A9AF9FD00DC7EEA /* WatchSettingViewController.swift */,
 				CFD0C9FE1971612F006A224B /* Clock View */,
 				CF47A5C7195F34D40066D9EE /* Timetable */,
@@ -1481,6 +1484,7 @@
 				CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */,
 				CFB6E0A8195D439E00F83035 /* DetailViewController.swift in Sources */,
 				CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */,
+				CF45D8721A9BEFA500F94B66 /* SettingViewController.swift in Sources */,
 				CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */,
 				CF3B78D31A9AF9FD00DC7EEA /* WatchSettingViewController.swift in Sources */,
 				CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */,
