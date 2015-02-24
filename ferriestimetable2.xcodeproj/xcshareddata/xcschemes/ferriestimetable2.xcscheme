@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "000BD669F8F6C199618367DA"
+               BlueprintIdentifier = "6C52AD5E97E6223D6FD5F191"
                BuildableName = "libPods-ferriestimetable2.a"
                BlueprintName = "Pods-ferriestimetable2"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71142534029007B6CF4F51EF"
+               BlueprintIdentifier = "0EDBF690673AC4411E7AC12D"
                BuildableName = "libPods-ferriestimetable2-Mixpanel.a"
                BlueprintName = "Pods-ferriestimetable2-Mixpanel"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37039B8B704C256A8CB8A0FB"
+               BlueprintIdentifier = "00EDEF85814FE9CE61420390"
                BuildableName = "libPods-ferriestimetable2-PDTSimpleCalendar.a"
                BlueprintName = "Pods-ferriestimetable2-PDTSimpleCalendar"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

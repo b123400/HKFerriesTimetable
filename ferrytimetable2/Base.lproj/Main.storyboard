@@ -588,34 +588,58 @@
             <point key="canvasLocation" x="1196" y="-630"/>
         </scene>
         <!--Watch Setting View Controller-->
-        <scene sceneID="qdl-as-APu">
+        <scene sceneID="uhk-NK-w1J">
             <objects>
-                <viewController storyboardIdentifier="WatchSettingViewController" id="j7O-Mf-dAb" customClass="WatchSettingViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PXW-Kl-b41"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Rt-IC-I5J"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NvM-Yd-9Ee">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController storyboardIdentifier="WatchSettingViewController" id="w0s-Xg-6Vs" customClass="WatchSettingViewController" customModule="ferriestimetable2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qlp-sF-4ZY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLI-Su-2ad">
-                                <rect key="frame" x="137" y="164" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="switchCell" id="C3b-Dk-hBb">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C3b-Dk-hBb" id="LBN-5L-xQw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detect Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-U3-VgK">
+                                            <rect key="frame" x="13" y="11" width="122" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MHt-Jp-2QK">
+                                            <rect key="frame" x="263" y="6" width="51" height="31"/>
+                                        </switch>
+                                    </subviews>
+                                </tableViewCellContentView>
                                 <connections>
-                                    <action selector="locationButtonPressed:" destination="j7O-Mf-dAb" eventType="touchUpInside" id="1xF-P2-EaL"/>
+                                    <outlet property="accessoryView" destination="MHt-Jp-2QK" id="jJC-3L-6rt"/>
                                 </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PnN-R5-nWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="islandCell" textLabel="E2y-xU-D2V" style="IBUITableViewCellStyleDefault" id="INN-vg-kYt">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INN-vg-kYt" id="486-qg-Ol5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Island name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E2y-xU-D2V">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w0s-Xg-6Vs" id="aiD-Lb-llf"/>
+                            <outlet property="delegate" destination="w0s-Xg-6Vs" id="JCv-YN-jJr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrx-lg-X2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584" y="-630"/>
+            <point key="canvasLocation" x="1612" y="-674"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

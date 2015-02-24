@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -17,18 +17,26 @@
             <objects>
                 <glanceController id="L8I-I6-pod" customClass="GlanceController" customModule="HK_Ferries_WatchKit_Extension">
                     <items>
-                        <group alignment="left" id="IFg-i2-jjK"/>
+                        <group alignment="left" id="IFg-i2-jjK">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Cheung Chau" id="3fP-PR-HXy"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="N4K-me-c4A">
                             <items>
-                                <label width="118" height="72" alignment="left" numberOfLines="0" id="2yH-Hu-jNq">
+                                <label width="1" height="1" alignment="left" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.50000000000000011" id="2yH-Hu-jNq">
                                     <string key="text">Label
 Some more
-text</string>
+text
+Some
+more
+thing</string>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="islandNameLabel" destination="3fP-PR-HXy" id="D5b-mO-uw5"/>
                         <outlet property="timeLabel" destination="2yH-Hu-jNq" id="vtO-8J-GFU"/>
                     </connections>
                 </glanceController>

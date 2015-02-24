@@ -20,6 +20,16 @@
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
+			<string>Apple Watch</string>
+			<key>File</key>
+			<string>Watch</string>
+			<key>IASKViewControllerStoryBoardId</key>
+			<string>WatchSettingViewController</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
 			<string>Acknowledgements</string>
 			<key>File</key>
 			<string>Acknowledgements</string>

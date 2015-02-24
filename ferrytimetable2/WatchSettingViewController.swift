@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import FerryKit
 
-class WatchSettingViewController: UIViewController {
-    let wormhole : MMWormhole
+class WatchSettingViewController: UITableViewController {
+    var selectedIsland : String?
     
     required init(coder aDecoder: NSCoder) {
-        wormhole = MMWormhole(applicationGroupIdentifier: "group.net.b123400.ferriestimetable", optionalDirectory: "wormhole")
         super.init(coder: aDecoder)
+        self.title = "Apple Watch"
+        selectedIsland = sharedDefaults.stringForKey(SettingWatchIslandNameKey)
     }
+    
+    lazy var wormhole : MMWormhole = {
+        MMWormhole(applicationGroupIdentifier: "group.net.b123400.ferriestimetable", optionalDirectory: "wormhole")
+    }()
+    
+    lazy var islands : [Island] = {
+        Pier.Central.islands() + Pier.NorthPoint.islands()
+    }()
+    
+    lazy var sharedDefaults = {
+        NSUserDefaults(suiteName: "group.net.b123400.ferriestimetable")!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +41,65 @@ class WatchSettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-    @IBAction func locationButtonPressed(sender: UIButton) {
-        wormhole.passMessageObject(["test":"wow"], identifier: "hello")
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2;
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        if section == 1 {
+            return islands.count
+        }
+        return 0
     }
-    */
-
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("switchCell", forIndexPath: indexPath) as UITableViewCell
+            let switchControl = cell.accessoryView as UISwitch
+            switchControl.on = sharedDefaults.boolForKey(SettingWatchGlanceDetectLocationKey)
+            switchControl.removeTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
+            switchControl.addTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
+            return cell
+            
+        } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("islandCell", forIndexPath: indexPath) as UITableViewCell
+            let thisIsland = islands[indexPath.row]
+            cell.textLabel?.text = NSLocalizedString(thisIsland.name, comment:"")
+            if let selectedIslandName = selectedIsland {
+                cell.accessoryType = (selectedIslandName == thisIsland.name ? .Checkmark : .None)
+            } else {
+                cell.accessoryType = (indexPath.row == 0 ? .Checkmark : .None)
+            }
+            return cell
+            
+        }
+        return UITableViewCell()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 {
+            setGlanceIsland(islands[indexPath.row])
+            tableView.reloadData()
+        }
+    }
+    
+    func switchValueChanged (sender:UISwitch) {
+        setGlanceUseLocation(sender.on)
+    }
+    
+    func setGlanceUseLocation (useLocation:Bool) {
+        sharedDefaults.setObject(useLocation, forKey: SettingWatchGlanceDetectLocationKey)
+        sharedDefaults.synchronize()
+        wormhole.passMessageObject([], identifier: "locationSettingChanged")
+    }
+    
+    func setGlanceIsland (island:Island) {
+        selectedIsland = island.name
+        sharedDefaults.setObject(island.name, forKey: SettingWatchIslandNameKey)
+        sharedDefaults.synchronize()
+        wormhole.passMessageObject([], identifier: "islandSettingChanged")
+    }
 }

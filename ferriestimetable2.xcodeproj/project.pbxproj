@@ -17,6 +17,8 @@
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
 		CF45D8721A9BEFA500F94B66 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */; };
+		CF45D8751A9C3A0200F94B66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
+		CF45D8761A9C3A0300F94B66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
 		CF47A600195F350F0066D9EE /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CF47A601195F350F0066D9EE /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
 		CF47A602195F350F0066D9EE /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
@@ -1245,6 +1247,7 @@
 				CFEABC9D1A276BCC00E8C4F1 /* ToParkNormal.plist in Resources */,
 				CFEABC9E1A276BCC00E8C4F1 /* ToParkSaturday.plist in Resources */,
 				CFEABC9F1A276BCC00E8C4F1 /* PengChauInfo.plist in Resources */,
+				CF45D8761A9C3A0300F94B66 /* Localizable.strings in Resources */,
 				CFEABCA01A276BCC00E8C4F1 /* FromPengChauHoliday.plist in Resources */,
 				CFEABCA11A276BCC00E8C4F1 /* FromPengChauNormal.plist in Resources */,
 				CFEABCA21A276BCC00E8C4F1 /* ToPengChauHoliday.plist in Resources */,
@@ -1259,6 +1262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEABB8F1A27544900E8C4F1 /* Interface.storyboard in Resources */,
+				CF45D8751A9C3A0200F94B66 /* Localizable.strings in Resources */,
 				CFEABB911A27544900E8C4F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
