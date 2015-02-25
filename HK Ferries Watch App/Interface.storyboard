@@ -8,9 +8,74 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HK_Ferries_Watch_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HK_Ferries_Watch_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="Ddw-Rt-H5N">
+                            <items>
+                                <tableRow identifier="row" id="aQG-Oy-Eln" customClass="RowController" customModule="HK_Ferries_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Fpq-lB-2cd">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="EK7-lN-3gN"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="EK7-lN-3gN" id="Htf-ox-fA8"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="pierTable" destination="Ddw-Rt-H5N" id="0X8-vV-D9a"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--TimeTable-->
+        <scene sceneID="Yig-1C-rPX">
+            <objects>
+                <controller identifier="TimeTable" id="Jcc-wr-Gi8" customClass="TimeTableInterfaceController" customModule="HK_Ferries_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="6f7-UA-FyD">
+                            <items>
+                                <tableRow identifier="row" selectable="NO" id="Pb1-1x-XCU" customClass="RowController" customModule="HK_Ferries_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="23.5" alignment="left" layout="vertical" id="u8W-B2-dGa">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" verticalAlignment="center" text="To Cheung Chau" textAlignment="center" id="38W-jC-axA"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="38W-jC-axA" id="Q7U-AB-Ld7"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="time" id="hD7-5C-235" customClass="TimeRowController" customModule="HK_Ferries_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="27.5" alignment="left" id="LiL-Da-z17">
+                                        <items>
+                                            <label height="1" alignment="left" verticalAlignment="center" text="11:59 AM" id="cvs-8l-dNq"/>
+                                            <group alignment="right" verticalAlignment="center" id="YTQ-sj-cuW">
+                                                <items>
+                                                    <label alignment="right" text="Fast" id="Kao-jy-Dm4"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.25490196078431371" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="timeLabel" destination="cvs-8l-dNq" id="Xqs-jb-f8Z"/>
+                                        <outlet property="typeGroup" destination="YTQ-sj-cuW" id="cbO-F8-KC9"/>
+                                        <outlet property="typeLabel" destination="Kao-jy-Dm4" id="URg-Kv-xPf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="timeTable" destination="6f7-UA-FyD" id="mmx-ZM-R88"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="gI3-v5-IuC">
@@ -19,29 +84,66 @@
                     <items>
                         <group alignment="left" id="IFg-i2-jjK">
                             <items>
-                                <label width="1" height="1" alignment="left" text="Cheung Chau" id="3fP-PR-HXy"/>
+                                <label width="1" height="1" alignment="left" text="Next Ferry" id="3fP-PR-HXy"/>
                             </items>
                         </group>
-                        <group alignment="left" id="N4K-me-c4A">
+                        <group alignment="left" layout="vertical" id="N4K-me-c4A">
                             <items>
-                                <label width="1" height="1" alignment="left" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.50000000000000011" id="2yH-Hu-jNq">
-                                    <string key="text">Label
-Some more
-text
-Some
-more
-thing</string>
-                                </label>
+                                <group width="1" alignment="left" layout="vertical" id="dti-1d-n5L">
+                                    <items>
+                                        <group width="1" alignment="left" id="weR-XI-G57">
+                                            <items>
+                                                <label width="136" height="24" alignment="left" text="To Cheung Chau" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.50000000000000011" id="2yH-Hu-jNq">
+                                                    <color key="textColor" red="0.50342314163978008" green="1" blue="0.79422106115296143" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="b8d-IF-xj4">
+                                            <items>
+                                                <label alignment="left" text="11:59AM" minimumScaleFactor="0.70000000000000007" id="6CZ-Bh-6B7"/>
+                                                <timer alignment="right" minimumScaleFactor="0.70000000000000007" format="short" id="zsn-nt-pDo">
+                                                    <calendarUnit key="units" hour="YES" minute="YES"/>
+                                                </timer>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="hGX-J3-lSt">
+                                    <items>
+                                        <group width="1" alignment="left" id="RCZ-Vc-Mge">
+                                            <items>
+                                                <label width="136" height="24" alignment="left" text="To Central" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.50000000000000011" id="NQf-Q0-grB">
+                                                    <color key="textColor" red="1" green="0.32290884692792166" blue="0.23415024279986307" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="9C6-Kz-wIH">
+                                            <items>
+                                                <label alignment="left" text="11:59AM" minimumScaleFactor="0.70000000000000007" id="0c9-q0-h0C"/>
+                                                <timer alignment="right" minimumScaleFactor="0.70000000000000007" format="short" id="OFW-97-h1w">
+                                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                                    <calendarUnit key="units" hour="YES" minute="YES"/>
+                                                </timer>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="islandNameLabel" destination="3fP-PR-HXy" id="D5b-mO-uw5"/>
-                        <outlet property="timeLabel" destination="2yH-Hu-jNq" id="vtO-8J-GFU"/>
+                        <outlet property="islandLabel1" destination="2yH-Hu-jNq" id="Jzc-b3-Lyx"/>
+                        <outlet property="islandLabel2" destination="NQf-Q0-grB" id="kxZ-T0-0mb"/>
+                        <outlet property="timeLabel1" destination="6CZ-Bh-6B7" id="X4N-qf-0NF"/>
+                        <outlet property="timeLabel2" destination="0c9-q0-h0C" id="7sA-u2-sF5"/>
+                        <outlet property="timeLeftLabel1" destination="zsn-nt-pDo" id="eKr-ru-2TZ"/>
+                        <outlet property="timeLeftLabel2" destination="OFW-97-h1w" id="J3H-mp-aQk"/>
                     </connections>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="220" y="117"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

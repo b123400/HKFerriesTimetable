@@ -17,6 +17,17 @@ class SettingViewController: IASKAppSettingsViewController, IASKSettingsDelegate
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
+        self.delegate = self
+    }
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+        self.delegate = self
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.delegate = self
     }
 
     override func viewDidLoad() {

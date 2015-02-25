@@ -75,6 +75,9 @@
 		CF47A636195F350F0066D9EE /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
 		CF47A637195F350F0066D9EE /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
 		CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
+		CF542BF01A9CBC5B0064E5CE /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BEF1A9CBC5B0064E5CE /* RowController.swift */; };
+		CF542BF41A9CC3D00064E5CE /* TimeTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BF31A9CC3D00064E5CE /* TimeTableInterfaceController.swift */; };
+		CF542BF61A9CC49E0064E5CE /* TimeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BF51A9CC49E0064E5CE /* TimeRowController.swift */; };
 		CF71F4F2199351FF00BF6274 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6E0A5195D439E00F83035 /* MasterViewController.swift */; };
 		CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7FDFA61973D0C000948061 /* CoreLocation.framework */; };
 		CF7FDFA91973D27300948061 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7FDFA81973D27300948061 /* MapViewController.swift */; };
@@ -432,6 +435,9 @@
 		CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWHoliday.plist; sourceTree = "<group>"; };
 		CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWNormal.plist; sourceTree = "<group>"; };
 		CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		CF542BEF1A9CBC5B0064E5CE /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		CF542BF31A9CC3D00064E5CE /* TimeTableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableInterfaceController.swift; sourceTree = "<group>"; };
+		CF542BF51A9CC49E0064E5CE /* TimeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRowController.swift; sourceTree = "<group>"; };
 		CF6023491A2770EE00B0251B /* libPods-ferriestimetable2-Mixpanel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ferriestimetable2-Mixpanel.a"; path = "Pods/build/Debug-iphoneos/libPods-ferriestimetable2-Mixpanel.a"; sourceTree = "<group>"; };
 		CF60234A1A2770EE00B0251B /* libPods-ferriestimetable2-PDTSimpleCalendar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ferriestimetable2-PDTSimpleCalendar.a"; path = "Pods/build/Debug-iphoneos/libPods-ferriestimetable2-PDTSimpleCalendar.a"; sourceTree = "<group>"; };
 		CF60234B1A2770EE00B0251B /* libPods-ferriestimetable2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ferriestimetable2.a"; path = "Pods/build/Debug-iphoneos/libPods-ferriestimetable2.a"; sourceTree = "<group>"; };
@@ -821,6 +827,9 @@
 			children = (
 				CF918A661A9A9501004BD63A /* HK Ferries WatchKit Extension.entitlements */,
 				CFEABB7F1A27544800E8C4F1 /* InterfaceController.swift */,
+				CF542BF31A9CC3D00064E5CE /* TimeTableInterfaceController.swift */,
+				CF542BEF1A9CBC5B0064E5CE /* RowController.swift */,
+				CF542BF51A9CC49E0064E5CE /* TimeRowController.swift */,
 				CFEABB9E1A2755F200E8C4F1 /* GlanceController.swift */,
 				CFEABB811A27544900E8C4F1 /* NotificationController.swift */,
 				CF918A6B1A9A97D8004BD63A /* ferriestimetable2-watchkit-extension-Bridging-Header.h */,
@@ -1507,7 +1516,10 @@
 			files = (
 				CFEABB821A27544900E8C4F1 /* NotificationController.swift in Sources */,
 				CFEABB801A27544800E8C4F1 /* InterfaceController.swift in Sources */,
+				CF542BF01A9CBC5B0064E5CE /* RowController.swift in Sources */,
+				CF542BF41A9CC3D00064E5CE /* TimeTableInterfaceController.swift in Sources */,
 				CFEABB9F1A2755F200E8C4F1 /* GlanceController.swift in Sources */,
+				CF542BF61A9CC49E0064E5CE /* TimeRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

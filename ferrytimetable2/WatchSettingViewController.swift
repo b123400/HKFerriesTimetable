@@ -79,6 +79,13 @@ class WatchSettingViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 0 {
+            return NSLocalizedString("More information will be shown if location is allowed", comment:"")
+        }
+        return nil
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 {
             setGlanceIsland(islands[indexPath.row])

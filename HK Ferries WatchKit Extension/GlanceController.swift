@@ -11,8 +11,13 @@ import FerryKit
 import CoreLocation
 
 class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
-    @IBOutlet weak var timeLabel: WKInterfaceLabel!
-    @IBOutlet weak var islandNameLabel: WKInterfaceLabel!
+    @IBOutlet weak var islandLabel1: WKInterfaceLabel!
+    @IBOutlet weak var islandLabel2: WKInterfaceLabel!
+    @IBOutlet weak var timeLabel1: WKInterfaceLabel!
+    @IBOutlet weak var timeLabel2: WKInterfaceLabel!
+    @IBOutlet weak var timeLeftLabel1: WKInterfaceTimer!
+    @IBOutlet weak var timeLeftLabel2: WKInterfaceTimer!
+    
     let locationManager: CLLocationManager
     var currentLocation: CLLocation?
     let wormhole: MMWormhole
@@ -75,54 +80,135 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
     
     func updateDisplay () {
         
-        var textToDisplay = ""
-        
         if currentLocation != nil && sharedDefaults.boolForKey(SettingWatchGlanceDetectLocationKey) {
-            // location found, only show one thing
-            islandNameLabel.setText(NSLocalizedString("Ferry time table", comment:""))
+            // location found, only show one direction, two ferries
+            
+            islandLabel1.setHidden(false)
+            timeLabel1.setHidden(false)
+            timeLeftLabel1.setHidden(false)
+            islandLabel2.setHidden(false)
+            timeLabel2.setHidden(false)
+            timeLeftLabel2.setHidden(false)
             
             let location = currentLocation!
             let atIsland = currentIsland.inLocation(location)
-            if atIsland {
-                let leaveFerry = currentIsland.getNextFerryForDate(NSDate(), direction: .FromIsland)
-                textToDisplay = textForFerry(leaveFerry, shortVersion: false)
+            let direction : Direction = atIsland ? .FromIsland : .ToIsland
+            let firstFerry = currentIsland.getNextFerryForTime(NSDate(), direction: direction)
+            
+            if let ferry = firstFerry {
+                
+                islandLabel1.setTextColor(colorForFerry(ferry))
+                
+                islandLabel1.setText(
+                    NSString(format:
+                        NSLocalizedString(atIsland ? "From %@" : "To %@", comment:""),
+                        NSLocalizedString(currentIsland.name, comment:"")))
+                timeLabel1.setText(
+                    NSDateFormatter.localizedStringFromDate(
+                        ferry.leavingTime,
+                        dateStyle: .NoStyle,
+                        timeStyle: .ShortStyle))
+                timeLeftLabel1.setDate(ferry.leavingTime)
+                
+                islandLabel2.setHidden(true)
+                let nextFerry = currentIsland.getNextFerryForTime(
+                    ferry.leavingTime.dateByAddingTimeInterval(1),
+                    direction: direction)
+                
+                if let secondFerry = nextFerry {
+                    
+                    islandLabel2.setTextColor(colorForFerry(secondFerry))
+                    
+                    timeLabel2.setText(
+                        NSDateFormatter.localizedStringFromDate(
+                            secondFerry.leavingTime,
+                            dateStyle: .NoStyle,
+                            timeStyle: .ShortStyle))
+                    timeLeftLabel2.setDate(secondFerry.leavingTime)
+                } else {
+                    timeLabel2.setHidden(true)
+                    timeLeftLabel2.setHidden(true)
+                }
             } else {
-                let goFerry = currentIsland.getNextFerryForDate(NSDate(), direction: .ToIsland)
-                textToDisplay = textForFerry(goFerry, shortVersion: false)
+                islandLabel1.setTextColor(UIColor.whiteColor())
+                islandLabel1.setText(NSLocalizedString("No ferry for today", comment:""))
+                timeLabel1.setHidden(true)
+                timeLeftLabel1.setHidden(true)
+                islandLabel2.setHidden(true)
+                timeLabel2.setHidden(true)
+                timeLeftLabel2.setHidden(true)
             }
+            
         } else {
             // location not found, show both
-            islandNameLabel.setText(NSLocalizedString(currentIsland.name, comment:""))
+            let toFerry = currentIsland.getNextFerryForTime(NSDate(), direction: .ToIsland)
+            if let ferry = toFerry {
+                islandLabel1.setHidden(false)
+                timeLabel1.setHidden(false)
+                timeLeftLabel1.setHidden(false)
+                
+                islandLabel1.setTextColor(colorForFerry(ferry))
+                
+                islandLabel1.setText(
+                    NSString(format:
+                        NSLocalizedString("To %@", comment:""),
+                        NSLocalizedString(currentIsland.name, comment:"")))
+                
+                timeLabel1.setText(
+                    NSDateFormatter.localizedStringFromDate(
+                        ferry.leavingTime,
+                        dateStyle: .NoStyle,
+                        timeStyle: .ShortStyle))
+                timeLeftLabel1.setDate(ferry.leavingTime)
+                
+            } else {
+                islandLabel1.setHidden(true)
+                timeLabel1.setHidden(true)
+                timeLeftLabel1.setHidden(true)
+            }
             
-            textToDisplay += textForFerry(currentIsland.getNextFerryForDate(NSDate(), direction: .ToIsland), shortVersion: true)
-            textToDisplay += "\n"
-            textToDisplay += textForFerry(currentIsland.getNextFerryForDate(NSDate(), direction: .FromIsland), shortVersion: true)
+            let fromFerry = currentIsland.getNextFerryForTime(NSDate(), direction: .FromIsland)
+            if let ferry = fromFerry {
+                islandLabel2.setHidden(false)
+                timeLabel2.setHidden(false)
+                timeLeftLabel2.setHidden(false)
+                
+                islandLabel2.setTextColor(colorForFerry(ferry))
+                
+                islandLabel2.setText(
+                    NSString(format:
+                        NSLocalizedString("From %@", comment:""),
+                        NSLocalizedString(currentIsland.name, comment:"")))
+                
+                timeLabel2.setText(
+                    NSDateFormatter.localizedStringFromDate(
+                        ferry.leavingTime,
+                        dateStyle: .NoStyle,
+                        timeStyle: .ShortStyle))
+                timeLeftLabel2.setDate(ferry.leavingTime)
+                
+            } else {
+                islandLabel2.setHidden(true)
+                timeLabel2.setHidden(true)
+                timeLeftLabel2.setHidden(true)
+            }
+            
+            if fromFerry == nil && toFerry == nil {
+                islandLabel1.setHidden(false)
+                islandLabel1.setTextColor(UIColor.whiteColor())
+                islandLabel1.setText(NSLocalizedString("No ferry for today", comment:""))
+            }
         }
-        timeLabel.setText(textToDisplay)
     }
     
-    func textForFerry (ferry:Ferry?, shortVersion:Bool) -> String {
-        if let thisFerry = ferry {
-            let leavingTime = thisFerry.leavingTime
-            let timeLeft = thisFerry.leavingTime.timeIntervalSinceNow
-            var timeLeftString = NSString(format:NSLocalizedString("%.fmin left", comment:""), timeLeft/60.0)
-            if timeLeft <= 60 {
-                timeLeftString = NSLocalizedString("now", comment:"")
-            }
-            let timeText = NSDateFormatter.localizedStringFromDate(leavingTime, dateStyle: .NoStyle, timeStyle: .MediumStyle)
-            let src = (thisFerry.direction == .ToIsland ? thisFerry.island.pier.rawValue : thisFerry.island.name)
-            let dest = (thisFerry.direction == .FromIsland ? thisFerry.island.pier.rawValue : thisFerry.island.name)
-            if !shortVersion {
-                return NSString(format: "%@ → %@\n%@\n%@",
-                    NSLocalizedString(src, comment:""),
-                    NSLocalizedString(dest, comment:""),
-                    timeText,
-                    timeLeftString)
-            } else {
-                return NSString(format:NSLocalizedString("To %@\n   %@", comment:""), dest, timeLeftString)
-            }
-        } else {
-            return "No ferry"
+    func colorForFerry (ferry:Ferry) -> UIColor {
+        switch ferry.type {
+        case .Fast:
+            return UIColor(red: 1, green: 0.255, blue: 0.533, alpha: 1)
+        case .Slow:
+            return UIColor(red: 0.255, green: 0.714, blue: 0.376, alpha: 1)
+        default:
+            return UIColor.whiteColor()
         }
     }
     

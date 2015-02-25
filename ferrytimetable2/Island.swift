@@ -122,6 +122,16 @@ public class Island: NSObject {
         return nil
     }
     
+    public func getNextFerryForTime(time:NSDate, direction:Direction) -> Ferry? {
+        let todayFerries = getFerriesForDate(time, direction: direction)
+        for ferry in todayFerries {
+            if ferry.leavingTime.timeIntervalSinceDate(time) > 0 {
+                return ferry
+            }
+        }
+        return nil
+    }
+    
     public func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
         switch type {
         case .Slow:

@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>FooterText</key>
-			<string>Please open setting in the app.</string>
+			<string>Please open watch setting in the app.</string>
 			<key>Title</key>
 			<string>This settings can only be changed in the app.</string>
 			<key>Type</key>

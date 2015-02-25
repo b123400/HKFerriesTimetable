@@ -180,7 +180,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     }
    
     @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {
-        let viewController = IASKAppSettingsViewController()
+        let viewController = SettingViewController()
         
 //        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("WatchSettingViewController") as WatchSettingViewController
         //self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
