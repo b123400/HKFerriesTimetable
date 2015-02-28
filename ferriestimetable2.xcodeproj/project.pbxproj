@@ -16,6 +16,8 @@
 		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
+		CF4503BE1AA1EA2B0003BF06 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB7D1A27544800E8C4F1 /* Info.plist */; };
+		CF4503BF1AA1EA2B0003BF06 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEABB7D1A27544800E8C4F1 /* Info.plist */; };
 		CF45D8721A9BEFA500F94B66 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */; };
 		CF45D8751A9C3A0200F94B66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
 		CF45D8761A9C3A0300F94B66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFCCAF97197B618400515CBA /* Localizable.strings */; };
@@ -1213,6 +1215,7 @@
 				CFEABC721A276BCB00E8C4F1 /* CheungChauToHoliday.plist in Resources */,
 				CFEABC731A276BCB00E8C4F1 /* FromCheungChauNormal.plist in Resources */,
 				CFEABC741A276BCB00E8C4F1 /* ToCheungChauSaturday.plist in Resources */,
+				CF4503BE1AA1EA2B0003BF06 /* Info.plist in Resources */,
 				CFEABC751A276BCB00E8C4F1 /* ToCheungChauNormal.plist in Resources */,
 				CFEABC761A276BCB00E8C4F1 /* DiscoveryBayInfo.plist in Resources */,
 				CFEABC771A276BCB00E8C4F1 /* FromDiscoveryBayHoliday.plist in Resources */,
@@ -1272,6 +1275,7 @@
 			files = (
 				CFEABB8F1A27544900E8C4F1 /* Interface.storyboard in Resources */,
 				CF45D8751A9C3A0200F94B66 /* Localizable.strings in Resources */,
+				CF4503BF1AA1EA2B0003BF06 /* Info.plist in Resources */,
 				CFEABB911A27544900E8C4F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

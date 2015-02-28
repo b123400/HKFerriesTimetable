@@ -106,7 +106,8 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
         switch status {
         case CLAuthorizationStatus.AuthorizedAlways:
-            manager.startUpdatingLocation()
+            break
+//            manager.startUpdatingLocation()
         default :
             break
         }

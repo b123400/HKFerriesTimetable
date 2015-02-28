@@ -21,9 +21,25 @@ class InterfaceController: WKInterfaceController {
         NSLog("%@ init", self)
     }
     
+    override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        NSLog(context?.description ?? "")
+    }
+    
     lazy var islands = {
         Pier.Central.islands() + Pier.NorthPoint.islands()
     }()
+    
+//    override func handleActionWithIdentifier(identifier: String?,
+//        forLocalNotification notification: UILocalNotification) {
+//            if let thisIdentifier = identifier {
+//                if countElements(thisIdentifier) > 0 {
+//                    let dict = notification.userInfo as [String:AnyObject]
+//                    let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
+//                    pushControllerWithName("TimeTable", context: ["island":ferry.island])
+//                }
+//            }
+//    }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

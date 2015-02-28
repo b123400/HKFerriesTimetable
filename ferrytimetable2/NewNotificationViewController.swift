@@ -62,7 +62,10 @@ class NewNotificationViewController: UIViewController {
         let notification = UILocalNotification()
         notification.fireDate = ferry!.leavingTime.dateByAddingTimeInterval(-interval)
         notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry!.island.name))
+        notification.alertAction = "Open"
         notification.userInfo = ferry!.dictionaryRepresentation
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+        NSLog(ferry!.dictionaryRepresentation.description)
     }
 }

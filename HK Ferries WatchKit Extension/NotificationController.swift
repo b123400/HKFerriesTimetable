@@ -8,16 +8,50 @@
 
 import WatchKit
 import Foundation
-
+import FerryKit
 
 class NotificationController: WKUserNotificationInterfaceController {
-
+    @IBOutlet weak var islandNameLabel: WKInterfaceLabel!
+    @IBOutlet weak var timeLabel: WKInterfaceLabel!
+    @IBOutlet weak var ferryTypeLabel: WKInterfaceLabel!
+    @IBOutlet weak var timeLeftLabel: WKInterfaceTimer!
+    
     override init() {
         // Initialize variables here.
         super.init()
         
         // Configure interface objects here.
         NSLog("%@ init", self)
+    }
+    
+    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: (WKUserNotificationInterfaceType) -> Void) {
+        
+        // this app doesn't have remote notification
+        // the follow code is to mock a local notification
+        // because watchkit simulator doesn't support local notification :(
+        
+        var dict = remoteNotification
+        let localNotification = UILocalNotification()
+        dict["date"] = NSDate()
+        localNotification.userInfo = dict
+        didReceiveLocalNotification(localNotification, withCompletion: completionHandler)
+    }
+    
+    override func didReceiveLocalNotification(notification: UILocalNotification, withCompletion completionHandler: (WKUserNotificationInterfaceType) -> Void) {
+        
+        let dict = notification.userInfo as [String:AnyObject]
+        let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
+        
+        islandNameLabel.setText(NSLocalizedString(ferry.island.name, comment:""))
+        timeLabel.setText(NSDateFormatter.localizedStringFromDate(
+            ferry.leavingTime,
+            dateStyle: .NoStyle,
+            timeStyle: .ShortStyle))
+        
+        timeLeftLabel.setDate(ferry.leavingTime)
+        ferryTypeLabel.setText(NSLocalizedString(ferry.type.rawValue, comment:""))
+        
+        completionHandler(WKUserNotificationInterfaceType.Custom)
     }
 
     override func willActivate() {
