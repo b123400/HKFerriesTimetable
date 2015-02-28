@@ -150,23 +150,36 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label width="1" height="58" alignment="center" text="Cheung Chau" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.60000000000000009" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="CBy-aC-v81"/>
+                        <segue destination="Maf-od-CYm" kind="relationship" relationship="dynamicNotificationInterface" id="9KV-9o-6va"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="644"/>
         </scene>
         <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <scene sceneID="As2-vB-c4i">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HK_Ferries_Watch_App" customModuleProvider="target"/>
+                <controller id="Maf-od-CYm" customClass="NotificationController" customModule="HK_Ferries_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Cheung Chau" id="ah6-4J-XpP"/>
+                        <label alignment="left" text="Fast ferry" id="GMf-AR-4Gr"/>
+                        <label alignment="left" text="15:00" id="sic-xe-7CX"/>
+                        <timer alignment="left" format="abbreviated" id="UET-he-L6d"/>
+                    </items>
+                    <connections>
+                        <outlet property="ferryTypeLabel" destination="GMf-AR-4Gr" id="Odx-oH-Ai0"/>
+                        <outlet property="islandNameLabel" destination="ah6-4J-XpP" id="LvX-2D-qtC"/>
+                        <outlet property="timeLabel" destination="sic-xe-7CX" id="QYN-NQ-KEO"/>
+                        <outlet property="timeLeftLabel" destination="UET-he-L6d" id="x6A-4b-Nyr"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="520" y="644"/>
         </scene>
     </scenes>
 </document>
