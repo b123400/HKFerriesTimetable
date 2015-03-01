@@ -12,7 +12,6 @@
 		CF1115B21975134300F8CA3C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1115B11975134300F8CA3C /* MobileCoreServices.framework */; };
 		CF153FFF196EEF40007599D3 /* BRClockLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF153FFE196EEF40007599D3 /* BRClockLayer.m */; };
 		CF3B78D31A9AF9FD00DC7EEA /* WatchSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B78D21A9AF9FD00DC7EEA /* WatchSettingViewController.swift */; };
-		CF3B78D41A9BCBBE00DC7EEA /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
 		CF41A6721A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A66F1A0B30200094789B /* Pods-ferriestimetable2.debug.xcconfig */; };
 		CF41A6731A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6701A0B30200094789B /* Pods-ferriestimetable2.distrubtion.xcconfig */; };
 		CF41A6741A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CF41A6711A0B30200094789B /* Pods-ferriestimetable2.release.xcconfig */; };
@@ -123,115 +122,6 @@
 		CFEABBFC1A2767DF00E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFEABBFD1A27699900E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
 		CFEABBFE1A27699A00E8C4F1 /* DateHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73661C1965C60B009A6CC8 /* DateHoliday.swift */; };
-		CFEABC001A276A7700E8C4F1 /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
-		CFEABC011A276A7700E8C4F1 /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
-		CFEABC021A276A7700E8C4F1 /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
-		CFEABC031A276A7700E8C4F1 /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
-		CFEABC041A276A7700E8C4F1 /* CheungChauToHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CB195F350E0066D9EE /* CheungChauToHoliday.plist */; };
-		CFEABC051A276A7700E8C4F1 /* FromCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CE195F350E0066D9EE /* FromCheungChauNormal.plist */; };
-		CFEABC061A276A7700E8C4F1 /* ToCheungChauSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EC195F350E0066D9EE /* ToCheungChauSaturday.plist */; };
-		CFEABC071A276A7700E8C4F1 /* ToCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EB195F350E0066D9EE /* ToCheungChauNormal.plist */; };
-		CFEABC081A276A7700E8C4F1 /* DiscoveryBayInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CC195F350E0066D9EE /* DiscoveryBayInfo.plist */; };
-		CFEABC091A276A7700E8C4F1 /* FromDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CF195F350E0066D9EE /* FromDiscoveryBayHoliday.plist */; };
-		CFEABC0A1A276A7700E8C4F1 /* FromDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D0195F350E0066D9EE /* FromDiscoveryBayNormal.plist */; };
-		CFEABC0B1A276A7700E8C4F1 /* FromDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D1195F350E0066D9EE /* FromDiscoveryBaySaturday.plist */; };
-		CFEABC0C1A276A7700E8C4F1 /* ToDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5ED195F350E0066D9EE /* ToDiscoveryBayHoliday.plist */; };
-		CFEABC0D1A276A7700E8C4F1 /* ToDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EE195F350E0066D9EE /* ToDiscoveryBayNormal.plist */; };
-		CFEABC0E1A276A7700E8C4F1 /* ToDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EF195F350E0066D9EE /* ToDiscoveryBaySaturday.plist */; };
-		CFEABC0F1A276A7700E8C4F1 /* HungHomInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E2195F350E0066D9EE /* HungHomInfo.plist */; };
-		CFEABC101A276A7700E8C4F1 /* FromHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D2195F350E0066D9EE /* FromHungHomHoliday.plist */; };
-		CFEABC111A276A7700E8C4F1 /* FromHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D3195F350E0066D9EE /* FromHungHomNormal.plist */; };
-		CFEABC121A276A7700E8C4F1 /* ToHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F0195F350E0066D9EE /* ToHungHomHoliday.plist */; };
-		CFEABC131A276A7700E8C4F1 /* ToHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F1195F350E0066D9EE /* ToHungHomNormal.plist */; };
-		CFEABC141A276A7700E8C4F1 /* KowloonCityInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */; };
-		CFEABC151A276A7700E8C4F1 /* FromKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D4195F350E0066D9EE /* FromKowloonCityHoliday.plist */; };
-		CFEABC161A276A7700E8C4F1 /* FromKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D5195F350E0066D9EE /* FromKowloonCityNormal.plist */; };
-		CFEABC171A276A7700E8C4F1 /* ToKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F2195F350E0066D9EE /* ToKowloonCityHoliday.plist */; };
-		CFEABC181A276A7700E8C4F1 /* ToKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F3195F350E0066D9EE /* ToKowloonCityNormal.plist */; };
-		CFEABC191A276A7700E8C4F1 /* MuiWoInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E6195F350E0066D9EE /* MuiWoInfo.plist */; };
-		CFEABC1A1A276A7700E8C4F1 /* FromMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D6195F350E0066D9EE /* FromMuiWoHoliday.plist */; };
-		CFEABC1B1A276A7700E8C4F1 /* FromMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D7195F350E0066D9EE /* FromMuiWoNormal.plist */; };
-		CFEABC1C1A276A7700E8C4F1 /* ToMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F4195F350E0066D9EE /* ToMuiWoHoliday.plist */; };
-		CFEABC1D1A276A7700E8C4F1 /* ToMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F5195F350E0066D9EE /* ToMuiWoNormal.plist */; };
-		CFEABC1E1A276A7700E8C4F1 /* ToMuiWoSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F6195F350E0066D9EE /* ToMuiWoSaturday.plist */; };
-		CFEABC1F1A276A7700E8C4F1 /* LammaSokKwuWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E4195F350E0066D9EE /* LammaSokKwuWanInfo.plist */; };
-		CFEABC201A276A7700E8C4F1 /* FromSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DD195F350E0066D9EE /* FromSKWHoliday.plist */; };
-		CFEABC211A276A7700E8C4F1 /* FromSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DE195F350E0066D9EE /* FromSKWNormal.plist */; };
-		CFEABC221A276A7700E8C4F1 /* ToSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FC195F350E0066D9EE /* ToSKWHoliday.plist */; };
-		CFEABC231A276A7700E8C4F1 /* ToSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */; };
-		CFEABC241A276A7700E8C4F1 /* LammaYungShueWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */; };
-		CFEABC251A276A7700E8C4F1 /* FromYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DF195F350E0066D9EE /* FromYSWHoliday.plist */; };
-		CFEABC261A276A7700E8C4F1 /* FromYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E0195F350E0066D9EE /* FromYSWNormal.plist */; };
-		CFEABC271A276A7700E8C4F1 /* FromYSWNormalSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E1195F350E0066D9EE /* FromYSWNormalSaturday.plist */; };
-		CFEABC281A276A7700E8C4F1 /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
-		CFEABC291A276A7700E8C4F1 /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
-		CFEABC2A1A276A7700E8C4F1 /* ParkIslandInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E8195F350E0066D9EE /* ParkIslandInfo.plist */; };
-		CFEABC2B1A276A7700E8C4F1 /* FromParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D8195F350E0066D9EE /* FromParkHoliday.plist */; };
-		CFEABC2C1A276A7700E8C4F1 /* FromParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D9195F350E0066D9EE /* FromParkNormal.plist */; };
-		CFEABC2D1A276A7700E8C4F1 /* FromParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DA195F350E0066D9EE /* FromParkSaturday.plist */; };
-		CFEABC2E1A276A7700E8C4F1 /* ToParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F7195F350E0066D9EE /* ToParkHoliday.plist */; };
-		CFEABC2F1A276A7700E8C4F1 /* ToParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F8195F350E0066D9EE /* ToParkNormal.plist */; };
-		CFEABC301A276A7700E8C4F1 /* ToParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F9195F350E0066D9EE /* ToParkSaturday.plist */; };
-		CFEABC311A276A7700E8C4F1 /* PengChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */; };
-		CFEABC321A276A7700E8C4F1 /* FromPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DB195F350E0066D9EE /* FromPengChauHoliday.plist */; };
-		CFEABC331A276A7700E8C4F1 /* FromPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DC195F350E0066D9EE /* FromPengChauNormal.plist */; };
-		CFEABC341A276A7700E8C4F1 /* ToPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */; };
-		CFEABC351A276A7700E8C4F1 /* ToPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */; };
-		CFEABC361A276A7900E8C4F1 /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
-		CFEABC371A276A7900E8C4F1 /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
-		CFEABC381A276A7900E8C4F1 /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
-		CFEABC391A276A7900E8C4F1 /* CheungChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CA195F350E0066D9EE /* CheungChauInfo.plist */; };
-		CFEABC3A1A276A7900E8C4F1 /* CheungChauFromHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C9195F350E0066D9EE /* CheungChauFromHoliday.plist */; };
-		CFEABC3B1A276A7900E8C4F1 /* CheungChauToHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CB195F350E0066D9EE /* CheungChauToHoliday.plist */; };
-		CFEABC3C1A276A7900E8C4F1 /* FromCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CE195F350E0066D9EE /* FromCheungChauNormal.plist */; };
-		CFEABC3D1A276A7900E8C4F1 /* ToCheungChauSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EC195F350E0066D9EE /* ToCheungChauSaturday.plist */; };
-		CFEABC3E1A276A7900E8C4F1 /* ToCheungChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EB195F350E0066D9EE /* ToCheungChauNormal.plist */; };
-		CFEABC3F1A276A7900E8C4F1 /* DiscoveryBayInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CC195F350E0066D9EE /* DiscoveryBayInfo.plist */; };
-		CFEABC401A276A7900E8C4F1 /* FromDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5CF195F350E0066D9EE /* FromDiscoveryBayHoliday.plist */; };
-		CFEABC411A276A7900E8C4F1 /* FromDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D0195F350E0066D9EE /* FromDiscoveryBayNormal.plist */; };
-		CFEABC421A276A7900E8C4F1 /* FromDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D1195F350E0066D9EE /* FromDiscoveryBaySaturday.plist */; };
-		CFEABC431A276A7900E8C4F1 /* ToDiscoveryBayHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5ED195F350E0066D9EE /* ToDiscoveryBayHoliday.plist */; };
-		CFEABC441A276A7900E8C4F1 /* ToDiscoveryBayNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EE195F350E0066D9EE /* ToDiscoveryBayNormal.plist */; };
-		CFEABC451A276A7900E8C4F1 /* ToDiscoveryBaySaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EF195F350E0066D9EE /* ToDiscoveryBaySaturday.plist */; };
-		CFEABC461A276A7900E8C4F1 /* HungHomInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E2195F350E0066D9EE /* HungHomInfo.plist */; };
-		CFEABC471A276A7900E8C4F1 /* FromHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D2195F350E0066D9EE /* FromHungHomHoliday.plist */; };
-		CFEABC481A276A7900E8C4F1 /* FromHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D3195F350E0066D9EE /* FromHungHomNormal.plist */; };
-		CFEABC491A276A7900E8C4F1 /* ToHungHomHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F0195F350E0066D9EE /* ToHungHomHoliday.plist */; };
-		CFEABC4A1A276A7900E8C4F1 /* ToHungHomNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F1195F350E0066D9EE /* ToHungHomNormal.plist */; };
-		CFEABC4B1A276A7900E8C4F1 /* KowloonCityInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E3195F350E0066D9EE /* KowloonCityInfo.plist */; };
-		CFEABC4C1A276A7900E8C4F1 /* FromKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D4195F350E0066D9EE /* FromKowloonCityHoliday.plist */; };
-		CFEABC4D1A276A7900E8C4F1 /* FromKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D5195F350E0066D9EE /* FromKowloonCityNormal.plist */; };
-		CFEABC4E1A276A7900E8C4F1 /* ToKowloonCityHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F2195F350E0066D9EE /* ToKowloonCityHoliday.plist */; };
-		CFEABC4F1A276A7900E8C4F1 /* ToKowloonCityNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F3195F350E0066D9EE /* ToKowloonCityNormal.plist */; };
-		CFEABC501A276A7900E8C4F1 /* MuiWoInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E6195F350E0066D9EE /* MuiWoInfo.plist */; };
-		CFEABC511A276A7900E8C4F1 /* FromMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D6195F350E0066D9EE /* FromMuiWoHoliday.plist */; };
-		CFEABC521A276A7900E8C4F1 /* FromMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D7195F350E0066D9EE /* FromMuiWoNormal.plist */; };
-		CFEABC531A276A7900E8C4F1 /* ToMuiWoHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F4195F350E0066D9EE /* ToMuiWoHoliday.plist */; };
-		CFEABC541A276A7900E8C4F1 /* ToMuiWoNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F5195F350E0066D9EE /* ToMuiWoNormal.plist */; };
-		CFEABC551A276A7900E8C4F1 /* ToMuiWoSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F6195F350E0066D9EE /* ToMuiWoSaturday.plist */; };
-		CFEABC561A276A7900E8C4F1 /* LammaSokKwuWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E4195F350E0066D9EE /* LammaSokKwuWanInfo.plist */; };
-		CFEABC571A276A7900E8C4F1 /* FromSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DD195F350E0066D9EE /* FromSKWHoliday.plist */; };
-		CFEABC581A276A7900E8C4F1 /* FromSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DE195F350E0066D9EE /* FromSKWNormal.plist */; };
-		CFEABC591A276A7900E8C4F1 /* ToSKWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FC195F350E0066D9EE /* ToSKWHoliday.plist */; };
-		CFEABC5A1A276A7900E8C4F1 /* ToSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */; };
-		CFEABC5B1A276A7900E8C4F1 /* LammaYungShueWanInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E5195F350E0066D9EE /* LammaYungShueWanInfo.plist */; };
-		CFEABC5C1A276A7900E8C4F1 /* FromYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DF195F350E0066D9EE /* FromYSWHoliday.plist */; };
-		CFEABC5D1A276A7900E8C4F1 /* FromYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E0195F350E0066D9EE /* FromYSWNormal.plist */; };
-		CFEABC5E1A276A7900E8C4F1 /* FromYSWNormalSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E1195F350E0066D9EE /* FromYSWNormalSaturday.plist */; };
-		CFEABC5F1A276A7900E8C4F1 /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
-		CFEABC601A276A7900E8C4F1 /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
-		CFEABC611A276A7900E8C4F1 /* ParkIslandInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E8195F350E0066D9EE /* ParkIslandInfo.plist */; };
-		CFEABC621A276A7900E8C4F1 /* FromParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D8195F350E0066D9EE /* FromParkHoliday.plist */; };
-		CFEABC631A276A7900E8C4F1 /* FromParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5D9195F350E0066D9EE /* FromParkNormal.plist */; };
-		CFEABC641A276A7900E8C4F1 /* FromParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DA195F350E0066D9EE /* FromParkSaturday.plist */; };
-		CFEABC651A276A7900E8C4F1 /* ToParkHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F7195F350E0066D9EE /* ToParkHoliday.plist */; };
-		CFEABC661A276A7900E8C4F1 /* ToParkNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F8195F350E0066D9EE /* ToParkNormal.plist */; };
-		CFEABC671A276A7900E8C4F1 /* ToParkSaturday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5F9195F350E0066D9EE /* ToParkSaturday.plist */; };
-		CFEABC681A276A7900E8C4F1 /* PengChauInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E9195F350E0066D9EE /* PengChauInfo.plist */; };
-		CFEABC691A276A7900E8C4F1 /* FromPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DB195F350E0066D9EE /* FromPengChauHoliday.plist */; };
-		CFEABC6A1A276A7900E8C4F1 /* FromPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5DC195F350E0066D9EE /* FromPengChauNormal.plist */; };
-		CFEABC6B1A276A7900E8C4F1 /* ToPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */; };
-		CFEABC6C1A276A7900E8C4F1 /* ToPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */; };
 		CFEABC6D1A276BCB00E8C4F1 /* Piers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5EA195F350E0066D9EE /* Piers.plist */; };
 		CFEABC6E1A276BCB00E8C4F1 /* Central.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5C8195F350E0066D9EE /* Central.plist */; };
 		CFEABC6F1A276BCB00E8C4F1 /* NorthPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5E7195F350E0066D9EE /* NorthPoint.plist */; };
@@ -1284,61 +1174,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEABC001A276A7700E8C4F1 /* Central.plist in Resources */,
-				CFEABC041A276A7700E8C4F1 /* CheungChauToHoliday.plist in Resources */,
-				CFEABC0B1A276A7700E8C4F1 /* FromDiscoveryBaySaturday.plist in Resources */,
-				CFEABC171A276A7700E8C4F1 /* ToKowloonCityHoliday.plist in Resources */,
-				CFEABC231A276A7700E8C4F1 /* ToSKWNormal.plist in Resources */,
-				CFEABC051A276A7700E8C4F1 /* FromCheungChauNormal.plist in Resources */,
-				CFEABC161A276A7700E8C4F1 /* FromKowloonCityNormal.plist in Resources */,
-				CFEABC071A276A7700E8C4F1 /* ToCheungChauNormal.plist in Resources */,
-				CFEABC241A276A7700E8C4F1 /* LammaYungShueWanInfo.plist in Resources */,
-				CFEABC021A276A7700E8C4F1 /* CheungChauInfo.plist in Resources */,
-				CFEABC131A276A7700E8C4F1 /* ToHungHomNormal.plist in Resources */,
-				CFEABC0C1A276A7700E8C4F1 /* ToDiscoveryBayHoliday.plist in Resources */,
-				CFEABC301A276A7700E8C4F1 /* ToParkSaturday.plist in Resources */,
-				CFEABC211A276A7700E8C4F1 /* FromSKWNormal.plist in Resources */,
-				CF3B78D41A9BCBBE00DC7EEA /* Piers.plist in Resources */,
-				CFEABC331A276A7700E8C4F1 /* FromPengChauNormal.plist in Resources */,
-				CFEABC1C1A276A7700E8C4F1 /* ToMuiWoHoliday.plist in Resources */,
-				CFEABC011A276A7700E8C4F1 /* NorthPoint.plist in Resources */,
-				CFEABC1D1A276A7700E8C4F1 /* ToMuiWoNormal.plist in Resources */,
-				CFEABC2B1A276A7700E8C4F1 /* FromParkHoliday.plist in Resources */,
-				CFEABC221A276A7700E8C4F1 /* ToSKWHoliday.plist in Resources */,
-				CFEABC091A276A7700E8C4F1 /* FromDiscoveryBayHoliday.plist in Resources */,
-				CFEABC0A1A276A7700E8C4F1 /* FromDiscoveryBayNormal.plist in Resources */,
-				CFEABC111A276A7700E8C4F1 /* FromHungHomNormal.plist in Resources */,
-				CFEABC2D1A276A7700E8C4F1 /* FromParkSaturday.plist in Resources */,
-				CFEABC1E1A276A7700E8C4F1 /* ToMuiWoSaturday.plist in Resources */,
-				CFEABC321A276A7700E8C4F1 /* FromPengChauHoliday.plist in Resources */,
-				CFEABC261A276A7700E8C4F1 /* FromYSWNormal.plist in Resources */,
-				CFEABC2C1A276A7700E8C4F1 /* FromParkNormal.plist in Resources */,
-				CFEABC101A276A7700E8C4F1 /* FromHungHomHoliday.plist in Resources */,
-				CFEABC2A1A276A7700E8C4F1 /* ParkIslandInfo.plist in Resources */,
-				CFEABC151A276A7700E8C4F1 /* FromKowloonCityHoliday.plist in Resources */,
-				CFEABC0E1A276A7700E8C4F1 /* ToDiscoveryBaySaturday.plist in Resources */,
-				CFEABC291A276A7700E8C4F1 /* ToYSWNormal.plist in Resources */,
-				CFEABC031A276A7700E8C4F1 /* CheungChauFromHoliday.plist in Resources */,
-				CFEABC341A276A7700E8C4F1 /* ToPengChauHoliday.plist in Resources */,
-				CFEABC181A276A7700E8C4F1 /* ToKowloonCityNormal.plist in Resources */,
-				CFEABC351A276A7700E8C4F1 /* ToPengChauNormal.plist in Resources */,
-				CFEABC281A276A7700E8C4F1 /* ToYSWHoliday.plist in Resources */,
-				CFEABC121A276A7700E8C4F1 /* ToHungHomHoliday.plist in Resources */,
-				CFEABC311A276A7700E8C4F1 /* PengChauInfo.plist in Resources */,
-				CFEABC191A276A7700E8C4F1 /* MuiWoInfo.plist in Resources */,
-				CFEABC0D1A276A7700E8C4F1 /* ToDiscoveryBayNormal.plist in Resources */,
-				CFEABC271A276A7700E8C4F1 /* FromYSWNormalSaturday.plist in Resources */,
-				CFEABC081A276A7700E8C4F1 /* DiscoveryBayInfo.plist in Resources */,
-				CFEABC0F1A276A7700E8C4F1 /* HungHomInfo.plist in Resources */,
-				CFEABC2E1A276A7700E8C4F1 /* ToParkHoliday.plist in Resources */,
-				CFEABC061A276A7700E8C4F1 /* ToCheungChauSaturday.plist in Resources */,
-				CFEABC251A276A7700E8C4F1 /* FromYSWHoliday.plist in Resources */,
-				CFEABC141A276A7700E8C4F1 /* KowloonCityInfo.plist in Resources */,
-				CFEABC1F1A276A7700E8C4F1 /* LammaSokKwuWanInfo.plist in Resources */,
-				CFEABC201A276A7700E8C4F1 /* FromSKWHoliday.plist in Resources */,
-				CFEABC1A1A276A7700E8C4F1 /* FromMuiWoHoliday.plist in Resources */,
-				CFEABC2F1A276A7700E8C4F1 /* ToParkNormal.plist in Resources */,
-				CFEABC1B1A276A7700E8C4F1 /* FromMuiWoNormal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,61 +1181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEABC371A276A7900E8C4F1 /* Central.plist in Resources */,
-				CFEABC3B1A276A7900E8C4F1 /* CheungChauToHoliday.plist in Resources */,
-				CFEABC421A276A7900E8C4F1 /* FromDiscoveryBaySaturday.plist in Resources */,
-				CFEABC4E1A276A7900E8C4F1 /* ToKowloonCityHoliday.plist in Resources */,
-				CFEABC5A1A276A7900E8C4F1 /* ToSKWNormal.plist in Resources */,
-				CFEABC3C1A276A7900E8C4F1 /* FromCheungChauNormal.plist in Resources */,
-				CFEABC4D1A276A7900E8C4F1 /* FromKowloonCityNormal.plist in Resources */,
-				CFEABC3E1A276A7900E8C4F1 /* ToCheungChauNormal.plist in Resources */,
-				CFEABC5B1A276A7900E8C4F1 /* LammaYungShueWanInfo.plist in Resources */,
-				CFEABC391A276A7900E8C4F1 /* CheungChauInfo.plist in Resources */,
-				CFEABC4A1A276A7900E8C4F1 /* ToHungHomNormal.plist in Resources */,
-				CFEABC431A276A7900E8C4F1 /* ToDiscoveryBayHoliday.plist in Resources */,
-				CFEABC671A276A7900E8C4F1 /* ToParkSaturday.plist in Resources */,
-				CFEABC581A276A7900E8C4F1 /* FromSKWNormal.plist in Resources */,
-				CFEABC6A1A276A7900E8C4F1 /* FromPengChauNormal.plist in Resources */,
-				CFEABC531A276A7900E8C4F1 /* ToMuiWoHoliday.plist in Resources */,
-				CFEABC381A276A7900E8C4F1 /* NorthPoint.plist in Resources */,
-				CFEABC541A276A7900E8C4F1 /* ToMuiWoNormal.plist in Resources */,
-				CFEABC621A276A7900E8C4F1 /* FromParkHoliday.plist in Resources */,
-				CFEABC591A276A7900E8C4F1 /* ToSKWHoliday.plist in Resources */,
-				CFEABC401A276A7900E8C4F1 /* FromDiscoveryBayHoliday.plist in Resources */,
-				CFEABC411A276A7900E8C4F1 /* FromDiscoveryBayNormal.plist in Resources */,
-				CFEABC481A276A7900E8C4F1 /* FromHungHomNormal.plist in Resources */,
-				CFEABC641A276A7900E8C4F1 /* FromParkSaturday.plist in Resources */,
-				CFEABC551A276A7900E8C4F1 /* ToMuiWoSaturday.plist in Resources */,
-				CFEABC691A276A7900E8C4F1 /* FromPengChauHoliday.plist in Resources */,
-				CFEABC5D1A276A7900E8C4F1 /* FromYSWNormal.plist in Resources */,
-				CFEABC631A276A7900E8C4F1 /* FromParkNormal.plist in Resources */,
-				CFEABC471A276A7900E8C4F1 /* FromHungHomHoliday.plist in Resources */,
-				CFEABC611A276A7900E8C4F1 /* ParkIslandInfo.plist in Resources */,
-				CFEABC4C1A276A7900E8C4F1 /* FromKowloonCityHoliday.plist in Resources */,
-				CFEABC451A276A7900E8C4F1 /* ToDiscoveryBaySaturday.plist in Resources */,
-				CFEABC601A276A7900E8C4F1 /* ToYSWNormal.plist in Resources */,
-				CFEABC361A276A7900E8C4F1 /* Piers.plist in Resources */,
-				CFEABC3A1A276A7900E8C4F1 /* CheungChauFromHoliday.plist in Resources */,
-				CFEABC6B1A276A7900E8C4F1 /* ToPengChauHoliday.plist in Resources */,
-				CFEABC4F1A276A7900E8C4F1 /* ToKowloonCityNormal.plist in Resources */,
-				CFEABC6C1A276A7900E8C4F1 /* ToPengChauNormal.plist in Resources */,
-				CFEABC5F1A276A7900E8C4F1 /* ToYSWHoliday.plist in Resources */,
-				CFEABC491A276A7900E8C4F1 /* ToHungHomHoliday.plist in Resources */,
-				CFEABC681A276A7900E8C4F1 /* PengChauInfo.plist in Resources */,
-				CFEABC501A276A7900E8C4F1 /* MuiWoInfo.plist in Resources */,
-				CFEABC441A276A7900E8C4F1 /* ToDiscoveryBayNormal.plist in Resources */,
-				CFEABC5E1A276A7900E8C4F1 /* FromYSWNormalSaturday.plist in Resources */,
-				CFEABC3F1A276A7900E8C4F1 /* DiscoveryBayInfo.plist in Resources */,
-				CFEABC461A276A7900E8C4F1 /* HungHomInfo.plist in Resources */,
-				CFEABC651A276A7900E8C4F1 /* ToParkHoliday.plist in Resources */,
-				CFEABC3D1A276A7900E8C4F1 /* ToCheungChauSaturday.plist in Resources */,
-				CFEABC5C1A276A7900E8C4F1 /* FromYSWHoliday.plist in Resources */,
-				CFEABC4B1A276A7900E8C4F1 /* KowloonCityInfo.plist in Resources */,
-				CFEABC561A276A7900E8C4F1 /* LammaSokKwuWanInfo.plist in Resources */,
-				CFEABC571A276A7900E8C4F1 /* FromSKWHoliday.plist in Resources */,
-				CFEABC511A276A7900E8C4F1 /* FromMuiWoHoliday.plist in Resources */,
-				CFEABC661A276A7900E8C4F1 /* ToParkNormal.plist in Resources */,
-				CFEABC521A276A7900E8C4F1 /* FromMuiWoNormal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -162,7 +162,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "8"
+      launchAutomaticallySubstyle = "4"
       notificationPayloadFile = "HK Ferries WatchKit Extension/PushNotificationPayload.json">
       <RemoteRunnable
          runnableDebuggingMode = "2"
