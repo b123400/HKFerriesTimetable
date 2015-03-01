@@ -181,15 +181,15 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
    
     @IBAction func aboutButtonPressed(sender: UIBarButtonItem) {
         let viewController = SettingViewController()
-        
+        let navController = UINavigationController(rootViewController: viewController)
 //        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("WatchSettingViewController") as WatchSettingViewController
         //self.storyboard!.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
-        viewController.modalPresentationStyle = .Popover
-        if let popVC = viewController.popoverPresentationController {
+        navController.modalPresentationStyle = .Popover
+        if let popVC = navController.popoverPresentationController {
             popVC.delegate = self
             popVC.barButtonItem = sender
         }
-        presentViewController(viewController, animated: true, completion: nil)
+        presentViewController(navController, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -203,6 +203,10 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     func presentationController(controller: UIPresentationController!,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
         
+        if let controller = controller.presentedViewController as? UINavigationController {
+            return controller
+        }
+            
         let navController = UINavigationController(rootViewController: controller.presentedViewController)
         return navController
     }

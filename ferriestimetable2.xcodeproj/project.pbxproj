@@ -178,7 +178,6 @@
 		CFEABCA21A276BCC00E8C4F1 /* ToPengChauHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FA195F350E0066D9EE /* ToPengChauHoliday.plist */; };
 		CFEABCA31A276BCC00E8C4F1 /* ToPengChauNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FB195F350E0066D9EE /* ToPengChauNormal.plist */; };
 		CFF9BB071976CFE9004E087E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFF9BB061976CFE9004E087E /* Settings.bundle */; };
-		CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9BB081976D1E9004E087E /* AboutViewController.swift */; };
 		CFFB9440196E6C14004ED1F3 /* BRClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB943F196E6C14004ED1F3 /* BRClockView.swift */; };
 		CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -389,7 +388,6 @@
 		CFEABBF21A27664700E8C4F1 /* FerryFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerryFinder.swift; sourceTree = "<group>"; };
 		CFEABBF41A2766B400E8C4F1 /* Pier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pier.swift; path = ../FerryKit/Pier.swift; sourceTree = "<group>"; };
 		CFF9BB061976CFE9004E087E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		CFF9BB081976D1E9004E087E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFFB943F196E6C14004ED1F3 /* BRClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRClockView.swift; sourceTree = "<group>"; };
 		CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -661,7 +659,6 @@
 				CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */,
 				CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */,
 				CF7FDFA81973D27300948061 /* MapViewController.swift */,
-				CFF9BB081976D1E9004E087E /* AboutViewController.swift */,
 				CF45D8711A9BEFA500F94B66 /* SettingViewController.swift */,
 				CF3B78D21A9AF9FD00DC7EEA /* WatchSettingViewController.swift */,
 				CFD0C9FE1971612F006A224B /* Clock View */,
@@ -1289,7 +1286,6 @@
 				CFEABBFD1A27699900E8C4F1 /* DateHoliday.swift in Sources */,
 				CFB6E0A4195D439E00F83035 /* AppDelegate.swift in Sources */,
 				CF7FDFA91973D27300948061 /* MapViewController.swift in Sources */,
-				CFF9BB091976D1E9004E087E /* AboutViewController.swift in Sources */,
 				CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

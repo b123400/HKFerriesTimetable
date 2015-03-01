@@ -41,6 +41,12 @@ class SettingViewController: IASKAppSettingsViewController, IASKSettingsDelegate
         // Dispose of any resources that can be recreated.
     }
     
+    func settingsViewController(sender: IASKAppSettingsViewController!, buttonTappedForSpecifier specifier: IASKSpecifier!) {
+        if specifier.key() == "about" {
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://b123400.net")!)
+        }
+    }
+    
     func settingsViewControllerDidEnd(sender: IASKAppSettingsViewController!) {
         dismissViewControllerAnimated(true, completion: nil)
     }
