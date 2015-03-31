@@ -13,7 +13,7 @@ import FerryKit
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var pierTable: WKInterfaceTable!
 
-    override init!() {
+    override init() {
         // Initialize variables here.
         super.init()
         

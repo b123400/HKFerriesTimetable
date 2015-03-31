@@ -17,7 +17,7 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
     let locationManager : CLLocationManager
     var currentLocation : CLLocation?
     
-    override init!() {
+    override init() {
         locationManager = CLLocationManager()
         super.init()
         
