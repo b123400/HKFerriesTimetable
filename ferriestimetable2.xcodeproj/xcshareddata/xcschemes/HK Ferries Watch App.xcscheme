@@ -167,7 +167,6 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.springboard"
-         launchOptions = "4"
          RemotePath = "/HK Ferries">
          <BuildableReference
             BuildableIdentifier = "primary"

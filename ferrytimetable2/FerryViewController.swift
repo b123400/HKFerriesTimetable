@@ -126,8 +126,8 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         return .FullScreen
     }
     
-    func presentationController(controller: UIPresentationController!,
-        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+    func presentationController(controller: UIPresentationController,
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
             
             let navController = UINavigationController(rootViewController: controller.presentedViewController)
             controller.presentedViewController.title = NSLocalizedString("Calendar",comment:"")

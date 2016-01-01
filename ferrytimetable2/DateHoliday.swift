@@ -11,7 +11,7 @@ import Foundation
 internal extension NSDate {
     func isHoliday()-> Bool {
         let calendar = NSCalendar.currentCalendar()
-        let flags: NSCalendarUnit = [.NSWeekdayCalendarUnit, .NSYearCalendarUnit, .NSMonthCalendarUnit, .NSDayCalendarUnit]
+        let flags: NSCalendarUnit = [.Weekday, .Year, .Month, .Day]
         let components = calendar.components(flags, fromDate: self)
         
         if components.weekday == 1 {

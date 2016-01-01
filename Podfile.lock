@@ -1,21 +1,28 @@
 PODS:
+  - Crashlytics (3.4.1):
+    - Fabric (~> 1.6.0)
+  - Fabric (1.6.1)
   - InAppSettingsKit (2.4.3)
   - Mixpanel (2.5.4)
   - MMWormhole (1.1.1):
-    - MMWormhole/Core
+    - MMWormhole/Core (= 1.1.1)
   - MMWormhole/Core (1.1.1)
   - PDTSimpleCalendar (0.7.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - InAppSettingsKit
   - Mixpanel
   - MMWormhole (~> 1.1.1)
   - PDTSimpleCalendar (~> 0.7.0)
 
 SPEC CHECKSUMS:
-  InAppSettingsKit: 315e2a196a06921f8f83de01a855ed98dc69851e
-  Mixpanel: 87167a0b0a74f11f0ee3787f291357494730617c
-  MMWormhole: 48452a7149eba409e9dffad661451fa25b9e97c4
-  PDTSimpleCalendar: b51e26a38a315ff8f4a038ab4cae00ad42bc1e92
+  Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
+  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
+  InAppSettingsKit: 8f4bf298c6d1452e1c1520029d857bf028afc46b
+  Mixpanel: 61f3f69428ec1f4c32245392471ccc2292c05e32
+  MMWormhole: 941cd168b4afd6073f883b82944d6eded4e00203
+  PDTSimpleCalendar: 8a5dcdb447810a77e68ac8e7b2ef55b6f52f25e9
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.39.0

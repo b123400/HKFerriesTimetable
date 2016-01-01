@@ -75,7 +75,6 @@
 		CF47A635195F350F0066D9EE /* ToSKWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */; };
 		CF47A636195F350F0066D9EE /* ToYSWHoliday.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */; };
 		CF47A637195F350F0066D9EE /* ToYSWNormal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */; };
-		CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
 		CF542BF01A9CBC5B0064E5CE /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BEF1A9CBC5B0064E5CE /* RowController.swift */; };
 		CF542BF41A9CC3D00064E5CE /* TimeTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BF31A9CC3D00064E5CE /* TimeTableInterfaceController.swift */; };
 		CF542BF61A9CC49E0064E5CE /* TimeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF542BF51A9CC49E0064E5CE /* TimeRowController.swift */; };
@@ -96,7 +95,6 @@
 		CFD0CA03197161AB006A224B /* NewNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA02197161AB006A224B /* NewNotificationViewController.swift */; };
 		CFD0CA071971C7B7006A224B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0CA061971C7B7006A224B /* NotificationTableViewController.swift */; };
 		CFDA3C7619647BB40079E924 /* FerryTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA3C7519647BB40079E924 /* FerryTimeTableViewCell.swift */; };
-		CFEA7E981A7CEA2500FF21BB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */; };
 		CFEABB7A1A27544800E8C4F1 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEABB791A27544800E8C4F1 /* WatchKit.framework */; };
 		CFEABB801A27544800E8C4F1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEABB7F1A27544800E8C4F1 /* InterfaceController.swift */; };
 		CFEABB821A27544900E8C4F1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEABB811A27544900E8C4F1 /* NotificationController.swift */; };
@@ -325,7 +323,6 @@
 		CF47A5FD195F350E0066D9EE /* ToSKWNormal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToSKWNormal.plist; sourceTree = "<group>"; };
 		CF47A5FE195F350E0066D9EE /* ToYSWHoliday.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWHoliday.plist; sourceTree = "<group>"; };
 		CF47A5FF195F350F0066D9EE /* ToYSWNormal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ToYSWNormal.plist; sourceTree = "<group>"; };
-		CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CF542BEF1A9CBC5B0064E5CE /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		CF542BF31A9CC3D00064E5CE /* TimeTableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableInterfaceController.swift; sourceTree = "<group>"; };
 		CF542BF51A9CC49E0064E5CE /* TimeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRowController.swift; sourceTree = "<group>"; };
@@ -397,7 +394,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEA7E981A7CEA2500FF21BB /* Crashlytics.framework in Frameworks */,
 				10A22FDD4620F856FCC6AF4A /* libPods-ferriestimetable2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +406,6 @@
 				CFFB9443196ED3C5004ED1F3 /* QuartzCore.framework in Frameworks */,
 				CFB016AF196B0790007D0068 /* MapKit.framework in Frameworks */,
 				CF7FDFA71973D0C000948061 /* CoreLocation.framework in Frameworks */,
-				CF4E27CF19C0ADDF00E18B40 /* Crashlytics.framework in Frameworks */,
 				5BD133D8150C4452AAD94F8C /* libPods-ferriestimetable2.a in Frameworks */,
 				CFEABBE81A27662100E8C4F1 /* FerryKit.framework in Frameworks */,
 			);
@@ -805,7 +800,6 @@
 				CFFB9442196ED3C5004ED1F3 /* QuartzCore.framework */,
 				CFB016AE196B0790007D0068 /* MapKit.framework */,
 				442F5E54C47E48CF91D96F70 /* libPods-ferriestimetable2.a */,
-				CF4E27CE19C0ADDF00E18B40 /* Crashlytics.framework */,
 				A51CB659071444085A69B5C0 /* libPods.a */,
 				0239FDDBBC70CC3FF4058027 /* libPods-ferriestimetable2Tests.a */,
 				CFEABB791A27544800E8C4F1 /* WatchKit.framework */,
@@ -836,6 +830,7 @@
 				CFB25C631A1E0C8A004E5430 /* Frameworks */,
 				CFB25C641A1E0C8A004E5430 /* Resources */,
 				9B3EC1F6FC8B236F41FD9192 /* Copy Pods Resources */,
+				3C302F97EFA86A1191AA1401 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -859,6 +854,7 @@
 				CF4E27CD19C0ADAC00E18B40 /* ShellScript */,
 				CFEABB941A27544900E8C4F1 /* Embed App Extensions */,
 				CFEABBC21A275A9200E8C4F1 /* Embed Frameworks */,
+				A9F346E513F3A294B14B1C81 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1202,6 +1198,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		3C302F97EFA86A1191AA1401 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9B3EC1F6FC8B236F41FD9192 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1217,6 +1228,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ferriestimetable2Tests/Pods-ferriestimetable2Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A9F346E513F3A294B14B1C81 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ferriestimetable2/Pods-ferriestimetable2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CF4E27CD19C0ADAC00E18B40 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1228,7 +1254,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run be3de76eb1918a93b4d68a8e87b983750d738aed 14ee308c3c10a8baa8cccc093c1c4c9c00d34c8c4b0b69aa8e7aa5dd0dae61c0";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" be3de76eb1918a93b4d68a8e87b983750d738aed 14ee308c3c10a8baa8cccc093c1c4c9c00d34c8c4b0b69aa8e7aa5dd0dae61c0";
 		};
 		D8227326116D8B35B8323B42 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

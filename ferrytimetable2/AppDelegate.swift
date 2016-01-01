@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Fabric
 import Crashlytics
 import FerryKit
 
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().synchronize()
         
         // Crashlytics
-        Crashlytics.startWithAPIKey("be3de76eb1918a93b4d68a8e87b983750d738aed")
+        Fabric.with([Crashlytics.self])
         
         // Mixpanel
         Mixpanel.sharedInstanceWithToken("5f7ac8807b7080e6ad4c04811451f32f")
@@ -47,8 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(application: UIApplication!,
-        didReceiveLocalNotification notification: UILocalNotification!) {
+    func application(application: UIApplication,
+        didReceiveLocalNotification notification: UILocalNotification) {
            
         handleLocalNotification(notification)
     }
@@ -66,8 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func application(application: UIApplication!,
-        didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!){
+    func application(application: UIApplication,
+        didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
         
             NSNotificationCenter.defaultCenter().postNotificationName(ApplicationDidRegisterUserNotification, object: nil, userInfo: ["setting":notificationSettings])
     }

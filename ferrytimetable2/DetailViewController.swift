@@ -84,7 +84,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        var autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as! Bool?
+        let autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as! Bool?
         if (autoScroll == true) {
             var nearestIndex:Int = -1
             var minInterval:NSTimeInterval = -1
@@ -225,7 +225,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     }
     
     func presentationController(controller: UIPresentationController,
-        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController?{
             
             if controller.presentedViewController.isKindOfClass(UINavigationController) {
                 return controller.presentedViewController

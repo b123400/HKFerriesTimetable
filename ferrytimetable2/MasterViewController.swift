@@ -65,7 +65,7 @@ class MasterViewController: UITableViewController, UIPopoverPresentationControll
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let object = islands[indexPath.row].objectForKey("name") as! NSString
         cell.textLabel!.text = NSLocalizedString(object as String,comment:"")
@@ -100,7 +100,7 @@ class MasterViewController: UITableViewController, UIPopoverPresentationControll
     
     func changePier (pier:Pier){
         currentPier = pier
-        var path = NSBundle.mainBundle().pathForResource(pier.rawValue, ofType: "plist");
+        let path = NSBundle.mainBundle().pathForResource(pier.rawValue, ofType: "plist");
         if path == nil {
             return
         }
@@ -196,7 +196,7 @@ class MasterViewController: UITableViewController, UIPopoverPresentationControll
 
     }
 
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
         return .FullScreen
     }
     

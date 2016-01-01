@@ -6,6 +6,8 @@ target "ferriestimetable2" do
   pod 'Mixpanel'
   pod 'MMWormhole', '~> 1.1.1'
   pod 'InAppSettingsKit'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 post_install do | installer |

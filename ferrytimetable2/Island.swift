@@ -90,7 +90,7 @@ public class Island: NSObject {
         
         if !date.isHoliday() {
             // saturday
-            let component = calendar?.components(.NSWeekdayCalendarUnit, fromDate: date)
+            let component = calendar?.components(.Weekday, fromDate: date)
             let weekday = component?.weekday
             if weekday != nil {
                 if weekday! == 7 {
