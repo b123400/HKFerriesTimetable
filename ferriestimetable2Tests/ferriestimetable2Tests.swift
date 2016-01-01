@@ -52,7 +52,7 @@ class ferriestimetable2Tests: XCTestCase {
             let islands = NSMutableArray(contentsOfFile: pierPath!)!
             
             for islandDict in islands {
-                let island = Island(dictionary: islandDict as NSDictionary, pier:pier)
+                let island = Island(dictionary: islandDict as! NSDictionary, pier:pier)
                 NSLog("===== Checking Island: %@ =====", island.name)
                 NSLog("Direction: ToIsland")
                 NSLog("Day: Normal")

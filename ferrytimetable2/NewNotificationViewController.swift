@@ -14,7 +14,7 @@ class NewNotificationViewController: UIViewController {
     var ferry : Ferry?
     @IBOutlet var dateLabel: UILabel!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificationRegistered:", name: ApplicationDidRegisterUserNotification, object: nil)
     }
@@ -50,8 +50,7 @@ class NewNotificationViewController: UIViewController {
     
     @IBAction func addNotificationTapped(sender: AnyObject) {
         let application = UIApplication.sharedApplication()
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert |
-            UIUserNotificationType.Badge, categories: nil
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [UIUserNotificationType.Sound , UIUserNotificationType.Alert, UIUserNotificationType.Badge], categories: nil
             ))
         UIAlertView(title:  NSLocalizedString("Notification added",comment:""), message:  NSLocalizedString("You can manage notification by tapping the button at the lower right corner",comment:""), delegate: nil, cancelButtonTitle:  NSLocalizedString("OK",comment:"")).show()
         dismissViewControllerAnimated(true, completion: nil)
@@ -61,9 +60,9 @@ class NewNotificationViewController: UIViewController {
         let interval = datePicker.countDownDuration
         let notification = UILocalNotification()
         notification.fireDate = ferry!.leavingTime.dateByAddingTimeInterval(-interval)
-        notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry!.island.name))
+        notification.alertBody = NSString(format: NSLocalizedString("Time to go to %@",comment:""),NSString(string: ferry!.island.name)) as String
         notification.alertAction = "Open"
-        notification.userInfo = ferry!.dictionaryRepresentation
+        notification.userInfo = ferry!.dictionaryRepresentation as [NSObject : AnyObject]
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         NSLog(ferry!.dictionaryRepresentation.description)

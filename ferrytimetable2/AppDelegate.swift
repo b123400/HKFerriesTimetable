@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         // Because some stupid compiler bug, we need to reference MasterViewController or else it will be ignored.
@@ -32,13 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Mixpanel
         Mixpanel.sharedInstanceWithToken("5f7ac8807b7080e6ad4c04811451f32f")
         
-        let autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as Bool?
+        let autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as! Bool?
         let autoScrollString = autoScroll == true ? "true" : "false"
         Mixpanel.sharedInstance().track("autoScroll", properties: ["enabled":autoScrollString])
         
-        let splitViewController = self.window!.rootViewController as UISplitViewController
-        let navigationController = splitViewController.viewControllers[0] as UINavigationController
-        splitViewController.delegate = navigationController.topViewController as MasterViewController
+        let splitViewController = self.window!.rootViewController as! UISplitViewController
+        let navigationController = splitViewController.viewControllers[0] as! UINavigationController
+        splitViewController.delegate = navigationController.topViewController as! MasterViewController
         splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         
         if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
@@ -55,10 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handleLocalNotification(notification:UILocalNotification) {
-        let dict = notification.userInfo as [String:AnyObject]
+        let dict = notification.userInfo as! [String:AnyObject]
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
-        let navController = self.window!.rootViewController!.storyboard!.instantiateViewControllerWithIdentifier("ferryNavigationController") as UINavigationController
-        let controller = navController.topViewController as FerryViewController
+        let navController = self.window!.rootViewController!.storyboard!.instantiateViewControllerWithIdentifier("ferryNavigationController") as! UINavigationController
+        let controller = navController.topViewController as! FerryViewController
         controller.ferry = ferry
         let delay = 0.5 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))

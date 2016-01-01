@@ -48,8 +48,8 @@ class InterfaceController: WKInterfaceController {
         
         pierTable.setNumberOfRows(islands.count, withRowType: "row")
         
-        for (i, island) in enumerate(islands) {
-            let controller = pierTable.rowControllerAtIndex(i) as RowController
+        for (i, island) in islands.enumerate() {
+            let controller = pierTable.rowControllerAtIndex(i) as! RowController
             controller.textLabel.setText(island.name)
         }
     }

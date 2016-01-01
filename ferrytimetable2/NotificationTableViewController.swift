@@ -18,7 +18,7 @@ class NotificationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        let count = UIApplication.sharedApplication().scheduledLocalNotifications.count
+        let count = UIApplication.sharedApplication().scheduledLocalNotifications?.count ?? 0
         let size = CGSizeMake(320.0, CGFloat(count) * 44.0)
         self.preferredContentSize = self.tableView.contentSize
     }
@@ -47,32 +47,32 @@ class NotificationTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return UIApplication.sharedApplication().scheduledLocalNotifications.count
+        return UIApplication.sharedApplication().scheduledLocalNotifications?.count ?? 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        let notification = UIApplication.sharedApplication().scheduledLocalNotifications[ indexPath.row ] as UILocalNotification
-        let dict = notification.userInfo as [String:AnyObject]
+        let notification = UIApplication.sharedApplication().scheduledLocalNotifications![ indexPath.row ]
+        let dict = notification.userInfo as! [String:AnyObject]
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
         
         if ferry.direction == Direction.ToIsland {
-            cell.textLabel!.text = NSString(format: NSLocalizedString("To %@",comment:""),ferry.island.name)
+            cell.textLabel!.text = NSString(format: NSLocalizedString("To %@",comment:""),ferry.island.name) as String
         } else {
-            cell.textLabel!.text = NSString(format: NSLocalizedString("From %@",comment:""),ferry.island.name)
+            cell.textLabel!.text = NSString(format: NSLocalizedString("From %@",comment:""),ferry.island.name) as String
         }
         
         let dateText = NSDateFormatter.localizedStringFromDate(notification.fireDate!, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
-        cell.detailTextLabel!.text = NSString(format: NSLocalizedString("Notify at %@",comment:""),dateText)
+        cell.detailTextLabel!.text = NSString(format: NSLocalizedString("Notify at %@",comment:""),dateText) as String
 
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if UIApplication.sharedApplication().scheduledLocalNotifications.count == 0 {
+        if UIApplication.sharedApplication().scheduledLocalNotifications?.count == 0 {
             return NSLocalizedString("No Notification",comment:"")
         }
         return ""
@@ -86,7 +86,7 @@ class NotificationTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
 //             Delete the row from the data source
-            let notification = UIApplication.sharedApplication().scheduledLocalNotifications[indexPath.row] as UILocalNotification
+            let notification = UIApplication.sharedApplication().scheduledLocalNotifications![indexPath.row]
             UIApplication.sharedApplication().cancelLocalNotification(notification)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
@@ -101,13 +101,13 @@ class NotificationTableViewController: UITableViewController {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "toFerry" {
-            let selectedIndex = tableView.indexPathForSelectedRow()?.row
+            let selectedIndex = tableView.indexPathForSelectedRow?.row
             if selectedIndex == nil {
                 return
             }
-            let ferryController = segue.destinationViewController as FerryViewController
-            let notification = UIApplication.sharedApplication().scheduledLocalNotifications[ selectedIndex! ] as UILocalNotification
-            let dict = notification.userInfo as [String:AnyObject]
+            let ferryController = segue.destinationViewController as! FerryViewController
+            let notification = UIApplication.sharedApplication().scheduledLocalNotifications![ selectedIndex! ]
+            let dict = notification.userInfo as! [String:AnyObject]
             let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
             ferryController.ferry = ferry
         }

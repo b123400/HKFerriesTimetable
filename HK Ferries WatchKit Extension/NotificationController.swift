@@ -39,7 +39,7 @@ class NotificationController: WKUserNotificationInterfaceController {
     
     override func didReceiveLocalNotification(notification: UILocalNotification, withCompletion completionHandler: (WKUserNotificationInterfaceType) -> Void) {
         
-        let dict = notification.userInfo as [String:AnyObject]
+        let dict = notification.userInfo as! [String:AnyObject]
         let ferry = Ferry.fromDict(dictionaryRepresentation: dict)
         
         islandNameLabel.setText(NSLocalizedString(ferry.island.name, comment:""))

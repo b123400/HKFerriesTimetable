@@ -31,7 +31,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
     }
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -97,20 +97,20 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         }
         if (durationLabel != nil) {
             let seconds = ferry?.duration
-            durationLabel!.text = NSString(format: "%.fmin", seconds!/60)
+            durationLabel!.text = NSString(format: "%.fmin", seconds!/60) as String
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "showMap" {
-            let mapController = segue.destinationViewController as MapViewController
+            let mapController = segue.destinationViewController as! MapViewController
             mapController.ferry = ferry
         }
     }
     
     @IBAction func notificationButtonTapped(sender: AnyObject) {
         
-        let notificationController = self.storyboard?.instantiateViewControllerWithIdentifier("addNotification") as NewNotificationViewController
+        let notificationController = self.storyboard?.instantiateViewControllerWithIdentifier("addNotification") as! NewNotificationViewController
         notificationController.ferry = ferry
         
         notificationController.modalPresentationStyle = UIModalPresentationStyle.Popover
@@ -122,7 +122,7 @@ class FerryViewController: UIViewController, UIPopoverPresentationControllerDele
         presentViewController(notificationController, animated: true, completion: nil)
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
         return .FullScreen
     }
     

@@ -22,7 +22,7 @@ extension NSTimeInterval {
             } else if minutes == 1 {
                 returnString = NSLocalizedString("1 minute",comment:"")
             } else {
-                returnString = NSString(format: "%d %@", minutes, NSLocalizedString("minutes", comment:""))
+                returnString = NSString(format: "%d %@", minutes, NSLocalizedString("minutes", comment:"")) as String
             }
         }else if minutes < 3*60 {
             let hour = Int(minutes/60)
@@ -31,10 +31,10 @@ extension NSTimeInterval {
                 if hour == 1 {
                     returnString = NSLocalizedString("1 hour",comment:"")
                 } else {
-                    returnString = NSString(format: "%d %@", hour, NSLocalizedString("hours",comment:""))
+                    returnString = NSString(format: "%d %@", hour, NSLocalizedString("hours",comment:"")) as String
                 }
             } else {
-                returnString = NSString(format: NSLocalizedString("%d hours and %@",comment:""), hour, NSTimeInterval(minutesLeft*60).toReadableString)
+                returnString = NSString(format: NSLocalizedString("%d hours and %@",comment:""), hour, NSTimeInterval(minutesLeft*60).toReadableString) as String
             }
         }
         return returnString
@@ -66,9 +66,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         
         if let _island = self.island as Island! {
             if currentDirection == Direction.ToIsland {
-                self.title = NSString(format:NSLocalizedString("To %@",comment:""), NSLocalizedString(_island.name,comment:""))
+                self.title = NSString(format:NSLocalizedString("To %@",comment:""), NSLocalizedString(_island.name,comment:"")) as String
             } else {
-                self.title = NSString(format:NSLocalizedString("From %@",comment:""), NSLocalizedString(_island.name,comment:""))
+                self.title = NSString(format:NSLocalizedString("From %@",comment:""), NSLocalizedString(_island.name,comment:"")) as String
             }
         }
     }
@@ -84,7 +84,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        var autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as Bool?
+        var autoScroll = NSUserDefaults.standardUserDefaults().valueForKey("autoScroll") as! Bool?
         if (autoScroll == true) {
             var nearestIndex:Int = -1
             var minInterval:NSTimeInterval = -1
@@ -131,7 +131,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as FerryTimeTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FerryTimeTableViewCell
         
         if indexPath.section == 0 {
             switch indexPath.row {
@@ -166,7 +166,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
             
             let timeLeft = ferry.leavingTime.timeIntervalSinceNow.toReadableString
             if timeLeft != "Now" && timeLeft != "" {
-                cell.timeLeftLabel.text = NSString(format: NSLocalizedString("%@ left", comment:""), timeLeft)
+                cell.timeLeftLabel.text = NSString(format: NSLocalizedString("%@ left", comment:""), timeLeft) as String
             } else {
                 cell.timeLeftLabel.text = timeLeft
             }
@@ -220,11 +220,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         presentViewController(calendarViewController, animated: true, completion: nil)
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle{
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
         return .FullScreen
     }
     
-    func presentationController(controller: UIPresentationController!,
+    func presentationController(controller: UIPresentationController,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
             
             if controller.presentedViewController.isKindOfClass(UINavigationController) {
@@ -258,15 +258,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showFerry" {
             
-            let navController = segue.destinationViewController as UINavigationController
-            let ferryController = navController.topViewController as FerryViewController
-            let ferry = currentTimetable[ tableView!.indexPathForSelectedRow()!.row ]
+            let navController = segue.destinationViewController as! UINavigationController
+            let ferryController = navController.topViewController as! FerryViewController
+            let ferry = currentTimetable[ tableView!.indexPathForSelectedRow!.row ]
             ferryController.ferry = ferry
-            tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow()!, animated: true)
+            tableView!.deselectRowAtIndexPath(tableView!.indexPathForSelectedRow!, animated: true)
         }
         
         if segue.identifier == "showNotification" {
-            let notificationViewController =  segue.destinationViewController as UIViewController
+            let notificationViewController =  segue.destinationViewController
             let popoverPresentationController = notificationViewController.popoverPresentationController
             if popoverPresentationController != nil {
                 popoverPresentationController!.delegate = self
@@ -274,8 +274,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UIPopoverPr
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if identifier == "showFerry" && tableView!.indexPathForSelectedRow()!.section == 0 {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "showFerry" && tableView!.indexPathForSelectedRow!.section == 0 {
             return false
         }
         return super.shouldPerformSegueWithIdentifier(identifier, sender: sender)

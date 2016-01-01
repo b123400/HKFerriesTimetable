@@ -180,7 +180,7 @@
 		<key>time</key>
 		<string>2330</string>
 		<key>kind</key>
-		<string>slow</string>
+		<string>fast</string>
 	</dict>
 </array>
 </plist>

@@ -27,7 +27,7 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         if let thisContext = context as? [String:AnyObject] {
-            island = (thisContext["island"] as Island)
+            island = (thisContext["island"] as! Island)
             let directionString: AnyObject? = thisContext["direction"]
             if let string = directionString as? String {
                 direction = Direction(rawValue: string)!
@@ -68,18 +68,18 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
         let count = ferries.count
         timeTable.setRowTypes(["row"] + [Int](0..<count).map({_ in "time"}))
         
-        let rowController = timeTable.rowControllerAtIndex(0) as RowController
+        let rowController = timeTable.rowControllerAtIndex(0) as! RowController
         rowController.textLabel.setText(
             NSString(format: direction == .ToIsland ?
                 NSLocalizedString("To %@", comment:"") :
                 NSLocalizedString("From %@", comment:""),
-                NSLocalizedString(island!.name, comment:"")))
+                NSLocalizedString(island!.name, comment:"")) as String)
         
         for i in (1...count) {
             let islandIndex = i - 1
             let ferry = ferries[islandIndex]
             
-            let timeRowController = timeTable.rowControllerAtIndex(i) as TimeRowController
+            let timeRowController = timeTable.rowControllerAtIndex(i) as! TimeRowController
             timeRowController.timeLabel.setText(
                 NSDateFormatter.localizedStringFromDate(
                     ferry.leavingTime,
@@ -100,10 +100,12 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
     
     func makeMenu () {
         clearAllMenuItems()
-        addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: direction == .ToIsland ? "From island" : "To island", action: "reverseDirection")
+        addMenuItemWithItemIcon(WKMenuItemIcon.Repeat,
+            title: direction == .ToIsland ? "From island" : "To island",
+            action: "reverseDirection")
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus){
         switch status {
         case CLAuthorizationStatus.AuthorizedAlways:
             break
@@ -113,10 +115,9 @@ class TimeTableInterfaceController: WKInterfaceController, CLLocationManagerDele
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location: AnyObject? = (locations as NSArray).lastObject
-        if let thisLocation = location as? CLLocation {
+        if let thisLocation = locations.last {
             currentLocation = thisLocation
             if let currentIsland = island {
                 if currentIsland.inLocation(thisLocation) {

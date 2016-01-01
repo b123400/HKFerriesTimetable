@@ -12,7 +12,7 @@ import FerryKit
 class WatchSettingViewController: UITableViewController {
     var selectedIsland : String?
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.title = "Apple Watch"
         selectedIsland = sharedDefaults.stringForKey(SettingWatchIslandNameKey)
@@ -57,15 +57,15 @@ class WatchSettingViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("switchCell", forIndexPath: indexPath) as UITableViewCell
-            let switchControl = cell.accessoryView as UISwitch
+            let cell = tableView.dequeueReusableCellWithIdentifier("switchCell", forIndexPath: indexPath)
+            let switchControl = cell.accessoryView as! UISwitch
             switchControl.on = sharedDefaults.boolForKey(SettingWatchGlanceDetectLocationKey)
             switchControl.removeTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
             switchControl.addTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
             return cell
             
         } else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("islandCell", forIndexPath: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("islandCell", forIndexPath: indexPath)
             let thisIsland = islands[indexPath.row]
             cell.textLabel?.text = NSLocalizedString(thisIsland.name, comment:"")
             if let selectedIslandName = selectedIsland {

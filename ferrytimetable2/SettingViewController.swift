@@ -9,13 +9,8 @@
 import UIKit
 
 class SettingViewController: IASKAppSettingsViewController, IASKSettingsDelegate {
-    
-    override init() {
-        super.init()
-        self.delegate = self
-    }
 
-    required init(coder aDecoder: NSCoder) {
+    required init!(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
         self.delegate = self
     }

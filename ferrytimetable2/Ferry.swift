@@ -34,10 +34,10 @@ public class Ferry: NSObject {
     }
     
     public class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Ferry {
-        let thisDict = dict["dict"]! as NSDictionary
-        let thisIsland = Island.fromDict(dictionaryRepresentation:dict["island"]! as Dictionary)
-        let thisDirection = Direction(rawValue:dict["direction"]! as String)!
-        let thisDate = dict["date"]! as NSDate
+        let thisDict = dict["dict"] as! NSDictionary
+        let thisIsland = Island.fromDict(dictionaryRepresentation:dict["island"] as! Dictionary)
+        let thisDirection = Direction(rawValue:dict["direction"] as! String)!
+        let thisDate = dict["date"] as! NSDate
         return Ferry(dictionary: thisDict, island: thisIsland, direction: thisDirection, date: thisDate)
     }
     
@@ -54,13 +54,13 @@ public class Ferry: NSObject {
     
     public var time : String {
         get {
-            return dict.objectForKey("time") as String
+            return dict.objectForKey("time") as! String
         }
     }
     
     public var type : FerryType {
         get {
-            let kind = dict.objectForKey("kind") as String
+            let kind = dict.objectForKey("kind") as! String
             let type = FerryType(rawValue: kind)
             return type!
         }
@@ -71,11 +71,11 @@ public class Ferry: NSObject {
     public func convertTime(time:String, fromDate date:NSDate) -> NSDate {
         
         let thisTime = NSString(string:time)
-        let startHour = thisTime.substringToIndex(2).toInt()
-        let startMinutes = thisTime.substringFromIndex(2).toInt()
+        let startHour = Int(thisTime.substringToIndex(2))
+        let startMinutes = Int(thisTime.substringFromIndex(2))
         
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(NSCalendarUnit.CalendarUnitYear|NSCalendarUnit.CalendarUnitMonth|NSCalendarUnit.CalendarUnitDay, fromDate: date)
+        let components = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: date)
         
         let thisComponents = NSDateComponents()
         thisComponents.year = components.year

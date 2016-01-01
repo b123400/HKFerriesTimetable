@@ -22,8 +22,8 @@ public class Island: NSObject {
     }
     
     class func fromDict(dictionaryRepresentation dict:[String: AnyObject]) -> Island{
-        let thisDict = dict["dict"]! as NSDictionary
-        let pier = Pier(rawValue: dict["pier"]! as String)!
+        let thisDict = dict["dict"] as! NSDictionary
+        let pier = Pier(rawValue: dict["pier"] as! String)!
         return Island(dictionary: thisDict, pier: pier)
     }
     
@@ -47,14 +47,14 @@ public class Island: NSObject {
     
     public var name : String {
         get {
-            return sourceDict.objectForKey("name") as String
+            return sourceDict.objectForKey("name") as! String
         }
     }
     
     public var location : CLLocationCoordinate2D {
         get {
-            let latString = sourceDict.objectForKey("location-lat") as NSString
-            let longString = sourceDict.objectForKey("location-long") as NSString
+            let latString = sourceDict.objectForKey("location-lat") as! NSString
+            let longString = sourceDict.objectForKey("location-long") as! NSString
             return CLLocationCoordinate2DMake(latString.doubleValue, longString.doubleValue)
         }
     }
@@ -90,7 +90,7 @@ public class Island: NSObject {
         
         if !date.isHoliday() {
             // saturday
-            let component = calendar?.components(.WeekdayCalendarUnit, fromDate: date)
+            let component = calendar?.components(.NSWeekdayCalendarUnit, fromDate: date)
             let weekday = component?.weekday
             if weekday != nil {
                 if weekday! == 7 {
@@ -102,11 +102,11 @@ public class Island: NSObject {
             }
         }
         
-        let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)")as String
-        let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")!) as Array<NSDictionary>
+        let timeString = detailDict.objectForKey("\(directionString)IslandPlist\(dateString)") as! String
+        let arr = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource(timeString, ofType: "plist")!) as! Array<NSDictionary>
         
         let ferries = arr.map {
-            (var thisTime) -> Ferry in
+            (thisTime) -> Ferry in
             return Ferry(dictionary: thisTime as Dictionary, island : self, direction: direction, date: date)
         }
         return ferries
@@ -135,11 +135,11 @@ public class Island: NSObject {
     public func getDurationMinutesForType(type:FerryType) -> NSTimeInterval? {
         switch type {
         case .Slow:
-            return (detailDict.objectForKey("TimeOfJourney-Slow") as NSNumber).doubleValue * 60
+            return (detailDict.objectForKey("TimeOfJourney-Slow") as! NSNumber).doubleValue * 60
         case .Fast:
-            return (detailDict.objectForKey("TimeOfJourney-Fast") as NSNumber).doubleValue * 60
+            return (detailDict.objectForKey("TimeOfJourney-Fast") as! NSNumber).doubleValue * 60
         case .Optional:
-            return (detailDict.objectForKey("TimeOfJourney-Optional") as NSNumber).doubleValue * 60
+            return (detailDict.objectForKey("TimeOfJourney-Optional") as! NSNumber).doubleValue * 60
         default:
             return nil;
         }
@@ -149,16 +149,16 @@ public class Island: NSObject {
         switch (type, date.isHoliday()) {
             
         case (FerryType.Slow, false),(FerryType.Optional, false):
-            return detailDict.objectForKey("PriceNormalSlow") as String
+            return detailDict.objectForKey("PriceNormalSlow") as! String
             
         case (FerryType.Slow, true),(FerryType.Optional, true):
-            return detailDict.objectForKey("PriceHolidaySlow") as String
+            return detailDict.objectForKey("PriceHolidaySlow") as! String
             
         case (FerryType.Fast, false):
-            return detailDict.objectForKey("PriceNormalFast") as String
+            return detailDict.objectForKey("PriceNormalFast") as! String
             
         case (FerryType.Fast, true):
-            return detailDict.objectForKey("PriceHolidayFast") as String
+            return detailDict.objectForKey("PriceHolidayFast") as! String
             
         default:
             return ""

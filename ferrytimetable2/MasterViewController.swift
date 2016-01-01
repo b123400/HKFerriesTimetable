@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import FerryKit
 
-class MasterViewController: UITableViewController, UITableViewDelegate, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
+class MasterViewController: UITableViewController, UIPopoverPresentationControllerDelegate, UISplitViewControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var pierSegmentedControl: UISegmentedControl!
     var detailViewController: DetailViewController? = nil
@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     
     class func nothing(){}
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -65,27 +65,27 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let object = islands[indexPath.row].objectForKey("name") as NSString
-        cell.textLabel!.text = NSLocalizedString(object,comment:"")
+        let object = islands[indexPath.row].objectForKey("name") as! NSString
+        cell.textLabel!.text = NSLocalizedString(object as String,comment:"")
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let indexPath = self.tableView.indexPathForSelectedRow()
+        let indexPath = self.tableView.indexPathForSelectedRow
         if indexPath == nil {
             return
         }
-        let islandDict = islands[indexPath!.row] as NSDictionary
+        let islandDict = islands[indexPath!.row] as! NSDictionary
         let island = Island(dictionary: islandDict, pier:currentPier)
 
-        let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         detailViewController.island = island
         
-        let splitViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController as UISplitViewController
+        let splitViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController as! UISplitViewController
         if splitViewController.viewControllers.count == 1 {
             // small screen
             showDetailViewController(detailViewController, sender: self)
@@ -136,7 +136,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus){
             switch status {
             case CLAuthorizationStatus.AuthorizedWhenInUse, CLAuthorizationStatus.AuthorizedWhenInUse:
                 manager.startUpdatingLocation()
@@ -145,15 +145,15 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
             }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
         
-        let location = (locations as NSArray).lastObject as CLLocation
+        let location = locations.last!
         let island = FerryFinder.shared.islandAtLocation(location)
         
         if let inIsland = island {
             for var i = 0; i < islands.count; i++ {
-                let existingName = islands[i].objectForKey("name") as NSString
+                let existingName = islands[i].objectForKey("name") as! NSString
                 if existingName == inIsland.name {
                     let targetIndexPath = NSIndexPath(forRow: i, inSection: 0)
                     tableView.selectRowAtIndexPath(targetIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
@@ -175,7 +175,7 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
         }
     }
         
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         NSLog(error.description)
     }
    
@@ -200,8 +200,8 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
         return .FullScreen
     }
     
-    func presentationController(controller: UIPresentationController!,
-        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!{
+    func presentationController(controller: UIPresentationController,
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController?{
         
         if let controller = controller.presentedViewController as? UINavigationController {
             return controller
@@ -222,15 +222,15 @@ class MasterViewController: UITableViewController, UITableViewDelegate, UIPopove
         return true
     }
     
-    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController!) -> UISplitViewControllerDisplayMode{
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
         return .AllVisible
     }
     
-    func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController!) -> Int {
-        return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+    func splitViewControllerSupportedInterfaceOrientations(splitViewController: UISplitViewController) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.AllButUpsideDown
     }
     
-    func splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController: UISplitViewController!) -> UIInterfaceOrientation{
+    func splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController: UISplitViewController) -> UIInterfaceOrientation{
         return UIInterfaceOrientation.LandscapeLeft
     }
 }

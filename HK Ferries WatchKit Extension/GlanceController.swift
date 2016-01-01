@@ -41,7 +41,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
             (message:AnyObject!) -> Void in
             let islandName = self.sharedDefaults.stringForKey(SettingWatchIslandNameKey)
             if let name = islandName {
-                self.setIsland(name)
+                self.setIslandName(name)
             }
         })
         
@@ -102,7 +102,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
                 islandLabel1.setText(
                     NSString(format:
                         NSLocalizedString(atIsland ? "From %@" : "To %@", comment:""),
-                        NSLocalizedString(currentIsland.name, comment:"")))
+                        NSLocalizedString(currentIsland.name, comment:"")) as String)
                 timeLabel1.setText(
                     NSDateFormatter.localizedStringFromDate(
                         ferry.leavingTime,
@@ -152,7 +152,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
                 islandLabel1.setText(
                     NSString(format:
                         NSLocalizedString("To %@", comment:""),
-                        NSLocalizedString(currentIsland.name, comment:"")))
+                        NSLocalizedString(currentIsland.name, comment:"")) as String)
                 
                 timeLabel1.setText(
                     NSDateFormatter.localizedStringFromDate(
@@ -178,7 +178,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
                 islandLabel2.setText(
                     NSString(format:
                         NSLocalizedString("From %@", comment:""),
-                        NSLocalizedString(currentIsland.name, comment:"")))
+                        NSLocalizedString(currentIsland.name, comment:"")) as String)
                 
                 timeLabel2.setText(
                     NSDateFormatter.localizedStringFromDate(
@@ -214,7 +214,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
     
     // Mark: Island
     
-    func setIsland (islandName : String) {
+    func setIslandName (islandName : String) {
         let islands = Pier.Central.islands() + Pier.NorthPoint.islands()
         for island in islands {
             if island.name == islandName {
@@ -232,7 +232,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
     func reloadIslandFromUserDefaults () {
         let islandName = sharedDefaults.stringForKey(SettingWatchIslandNameKey)
         if let preferredIslandName = islandName {
-            setIsland(preferredIslandName)
+            setIslandName(preferredIslandName)
         }
     }
     
@@ -250,7 +250,7 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus){
         switch status {
         case CLAuthorizationStatus.AuthorizedAlways:
             manager.startUpdatingLocation()
@@ -259,16 +259,15 @@ class GlanceController: WKInterfaceController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location: AnyObject? = (locations as NSArray).lastObject
-        if let thisLocation = location as? CLLocation {
+        if let thisLocation = locations.last {
             currentLocation = thisLocation
             updateDisplay()
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         currentLocation = nil
         updateDisplay()
     }

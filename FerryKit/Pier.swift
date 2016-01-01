@@ -28,7 +28,7 @@ public enum Pier : String{
             let sourceDicts = NSArray(contentsOfFile: path)
             if let dicts = sourceDicts as? [NSDictionary] {
                 return dicts.map {
-                    (var dict:NSDictionary) -> Island in
+                    (dict:NSDictionary) -> Island in
                     Island(dictionary: dict, pier: self)
                 }
             }
