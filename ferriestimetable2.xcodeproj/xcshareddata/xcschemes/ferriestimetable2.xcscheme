@@ -126,16 +126,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFEABBAE1A275A9100E8C4F1"
-               BuildableName = "ferrykitTests.xctest"
-               BlueprintName = "ferrykitTests"
-               ReferencedContainer = "container:ferriestimetable2.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "CFEABBDA1A27662100E8C4F1"
                BuildableName = "FerryKitTests.xctest"
                BlueprintName = "FerryKitTests"
